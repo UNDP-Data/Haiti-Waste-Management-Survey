@@ -69,7 +69,7 @@ export const Graph = (props: Props) => {
   const chartData = questions.map((question) => {
     const questionText = question.Question.en;
     const counts = countBy(graphData.filter((d:any) => d[question.DataLabel] !== undefined).map((d:any) => d[question.DataLabel]));
-    const dataFormatted = Object.keys(counts).map((key) => ({ label: key, xVal: counts[key] }));
+    const dataFormatted = question.Options.map((option) => ({ label: option.en, xVal: counts[option.DataLabel] }));
     const numRespondents = graphData.filter((d:any) => d[question.DataLabel] !== undefined).length;
     return (
       { questionText, data: dataFormatted, numRespondents }

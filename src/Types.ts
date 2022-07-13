@@ -1,13 +1,16 @@
+export interface OptionDataType {
+  DataLabel: string;
+  en: string;
+  fr: string;
+}
+
 export interface SurveyQuestionDataType {
   Question: {
     en: string;
     fr: string;
   };
   DataLabel: string;
-  Options: {
-    en: string[];
-    fr: string[];
-  };
+  Options: OptionDataType[];
   SubjectType: 'households' | 'enterprises' | 'projects' | 'dumpingSites' | 'healthFacilities' | 'townHalls';
 }
 

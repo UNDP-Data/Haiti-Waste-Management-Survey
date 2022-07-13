@@ -5,10 +5,12 @@
             "fr": ""
         },
         "DataLabel": "What is your assessment of the volume of solid waste  produced by your household?",
-        "Options": {
-            "en": ["Raised", "Medium", "Weak", "I do not know"],
-            "fr": []
-        },
+        "Options": [
+            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+            {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+            {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+        ],
         "SubjectType": "households"
     },
     {
@@ -17,10 +19,10 @@
             "fr": ""
         },
         "DataLabel": "Does your household sort solid waste (organic, inorganic) at home?",
-        "Options": {
-            "en": ["Yes", "No"],
-            "fr": []
-        },
+        "Options": [
+            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "No", "en": "No", "fr": "" }
+        ],
         "SubjectType": "households"
     },
     {
@@ -29,10 +31,10 @@
             "fr": ""
         },
         "DataLabel": "Are you ready to sort the waste before disposing of it to facilitate its recovery?",
-        "Options": {
-            "en": ["Yes", "No"],
-            "fr": []
-        },
+        "Options": [
+            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "No", "en": "No", "fr": "" }
+        ],
         "SubjectType": "households"
     },
     {
@@ -41,10 +43,12 @@
             "fr": ""
         },
         "DataLabel": "In your opinion, what is the level of responsibility of households in the management of solid waste in your municipality?",
-        "Options": {
-            "en": ["Important role to play", "Not important role to play", "No role", "I do not know"],
-            "fr": []
-        },
+        "Options": [
+            {"DataLabel": "Important role to play", "en": "Important role to play", "fr": "" },
+            {"DataLabel": "Not important role to play", "en": "Not important role to play", "fr": "" },
+            {"DataLabel": "No role", "en": "No role", "fr": "" },
+            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+        ],
         "SubjectType": "households"
     },
     {
@@ -53,10 +57,13 @@
             "fr": ""
         },
         "DataLabel": "Generally speaking, how would you rate public garbage collection services?",
-        "Options": {
-            "en": ["Excellent", "Very well", "Good", "Good enough", "Poor"],
-            "fr": []
-        },
+        "Options": [
+            {"DataLabel": "Excellent", "en": "Excellent", "fr": "" },
+            {"DataLabel": "Very well", "en": "Very well", "fr": "" },
+            {"DataLabel": "Good", "en": "Good", "fr": "" },
+            {"DataLabel": "Good enough", "en": "Good enough", "fr": "" },
+            {"DataLabel": "Poor", "en": "Poor", "fr": "" }
+        ],
         "SubjectType": "households"
     },
     {
@@ -65,10 +72,11 @@
             "fr": ""
         },
         "DataLabel": "Have you detected any innovations related to solid waste management in your municipality?",
-        "Options": {
-            "en": ["Yes", "No", "I do not know"],
-            "fr": []
-        },
+        "Options": [
+            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "No", "en": "No", "fr": "" },
+            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+        ],
         "SubjectType": "households"
     }
 ]

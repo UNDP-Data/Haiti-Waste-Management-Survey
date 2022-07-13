@@ -73,8 +73,6 @@ export const HorizontalBarChart = (props: Props) => {
                     height={20}
                     fill='#666'
                     width={Math.abs(widthScale(d.xVal) - widthScale(0))}
-                    rx={3}
-                    ry={3}
                   />
                   <text
                     fill='#212121'
