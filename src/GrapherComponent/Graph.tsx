@@ -19,6 +19,10 @@ const El = styled.div<ElProps>`
   width: ${(props) => (props.fullWidth ? '100%' : '75%')};
   box-shadow: var(--shadow-right);
   overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding: 2em;
   @media (min-width: 961px) {
     height: 74rem;
   }

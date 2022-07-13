@@ -1,10 +1,8 @@
-// import { useContext } from 'react';
 import styled from 'styled-components';
 import maxBy from 'lodash.maxby';
 // import orderBy from 'lodash.orderby';
 // import { format } from 'd3-format';
 import { scaleLinear } from 'd3-scale';
-// import Context from '../Context/Context';
 // import { COLOR_SCALES } from '../Constants';
 
 interface Props {
@@ -14,7 +12,7 @@ interface Props {
 }
 
 const El = styled.div`
-  height: calc(100% - 71px);
+  width: 45%;
 `;
 
 export const HorizontalBarChart = (props: Props) => {
@@ -23,14 +21,12 @@ export const HorizontalBarChart = (props: Props) => {
     data,
     numRespondents,
   } = props;
-  // const {
-  //   selectedSubjectType
-  // } = useContext(Context) as CtxDataType;
-  const svgWidth = window.innerWidth > 960 ? 500 : window.innerWidth;
+
+  const svgWidth = window.innerWidth > 400 ? 400 : window.innerWidth;
   const margin = {
-    top: 80,
+    top: 10,
     bottom: 10,
-    left: 125,
+    left: 150,
     right: 40,
   };
   const graphWidth = svgWidth - margin.left - margin.right;
@@ -41,17 +37,15 @@ export const HorizontalBarChart = (props: Props) => {
 
   return (
     <El>
-      <p>{questionText}</p>
-      <p>{numRespondents}</p>
+      <p>
+        {questionText}
+        {' '}
+        (
+        {numRespondents}
+        {' '}
+        respondents)
+      </p>
       <svg width='100%' viewBox={`0 0 ${svgWidth} ${svgHeight}`}>
-        <text
-          x={25}
-          y={50}
-          fontSize={18}
-          fill='#212121'
-        >
-          Test
-        </text>
         <g
           transform={`translate(${margin.left},${margin.top})`}
         >
@@ -66,7 +60,7 @@ export const HorizontalBarChart = (props: Props) => {
                     fill='#212121'
                     y={i * 25}
                     x={0}
-                    dx={-50}
+                    dx={-5}
                     dy={14}
                     fontSize={12}
                     textAnchor='end'
