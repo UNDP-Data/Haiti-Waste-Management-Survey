@@ -1,11 +1,13 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
-import { CtxDataType } from '../Types';
+import countBy from 'lodash.countby';
+import { CtxDataType, SurveyQuestionDataType } from '../Types';
 import Context from '../Context/Context';
 import { HorizontalBarChart } from './HorizontalBarChart';
 
 interface Props {
   data: any;
+  indicators: SurveyQuestionDataType[];
   fullWidth: boolean;
 }
 
@@ -28,13 +30,14 @@ const El = styled.div<ElProps>`
 export const Graph = (props: Props) => {
   const {
     data,
+    indicators,
     fullWidth,
   } = props;
   const {
     selectedSubjectType,
   } = useContext(Context) as CtxDataType;
 
-  let graphData;
+  let graphData = data.households;
   switch (selectedSubjectType) {
     case 'households':
       graphData = data.households;
@@ -55,19 +58,31 @@ export const Graph = (props: Props) => {
       graphData = data.households;
       break;
   }
-  // filter data based on checkbox selections
+
+  // TODO: filter data based on checkbox selections
+  const questions = indicators.filter((d) => d.SubjectType === selectedSubjectType);
+
+  const chartData = questions.map((question) => {
+    const questionText = question.Question.en;
+    const counts = countBy(graphData.filter((d:any) => d[question.DataLabel] !== undefined).map((d:any) => d[question.DataLabel]));
+    const dataFormatted = Object.keys(counts).map((key) => ({ label: key, xVal: counts[key] }));
+    const numRespondents = graphData.filter((d:any) => d[question.DataLabel] !== undefined).length;
+    return (
+      { questionText, data: dataFormatted, numRespondents }
+    );
+  });
+
   return (
     <El id='graph-node' fullWidth={fullWidth}>
-      <HorizontalBarChart
-        data={graphData}
-      />
+      {
+        chartData.map((d) => (
+          <HorizontalBarChart
+            questionText={d.questionText}
+            data={d.data}
+            numRespondents={d.numRespondents}
+          />
+        ))
+      }
     </El>
   );
 };
-// export const Graph = () => (
-//   <div>
-//     <h2>
-//       a graph here
-//     </h2>
-//   </div>
-// );

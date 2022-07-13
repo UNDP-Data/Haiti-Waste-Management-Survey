@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
-import { CtxDataType, IndicatorMetaDataType } from '../Types';
+import { CtxDataType, SurveyQuestionDataType } from '../Types';
 import { Logo } from '../Icons';
 import Context from '../Context/Context';
 import { Settings } from './Settings';
@@ -8,7 +8,7 @@ import { Graph } from './Graph';
 
 interface Props {
   data: any;
-  indicators?: IndicatorMetaDataType[];
+  indicators: SurveyQuestionDataType[];
 }
 
 interface SelectedSubjectType {
@@ -124,8 +124,6 @@ export const GrapherComponent = (props: Props) => {
     selectedSubjectType,
     updateSelectedSubjectType,
   } = useContext(Context) as CtxDataType;
-  console.log(data, indicators);
-  console.log(selectedSubjectType); // why is this not picking up the default selected subject type on page load?
   return (
     <>
       <Container>
@@ -163,6 +161,7 @@ export const GrapherComponent = (props: Props) => {
             <Settings />
             <Graph
               data={data}
+              indicators={indicators}
               fullWidth
             />
           </GraphEl>

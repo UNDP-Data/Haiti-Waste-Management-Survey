@@ -2,16 +2,15 @@
 import styled from 'styled-components';
 import maxBy from 'lodash.maxby';
 // import orderBy from 'lodash.orderby';
-import countBy from 'lodash.countby';
 // import { format } from 'd3-format';
 import { scaleLinear } from 'd3-scale';
-// import minBy from 'lodash.minby';
 // import Context from '../Context/Context';
-// import _, { sumBy } from 'lodash';
 // import { COLOR_SCALES } from '../Constants';
 
 interface Props {
+  questionText: string;
   data: any;
+  numRespondents: number;
 }
 
 const El = styled.div`
@@ -20,33 +19,30 @@ const El = styled.div`
 
 export const HorizontalBarChart = (props: Props) => {
   const {
+    questionText,
     data,
+    numRespondents,
   } = props;
   // const {
   //   selectedSubjectType
   // } = useContext(Context) as CtxDataType;
-  const svgWidth = window.innerWidth > 960 ? 1280 : 960;
+  const svgWidth = window.innerWidth > 960 ? 500 : window.innerWidth;
   const margin = {
     top: 80,
     bottom: 10,
-    left: 225,
+    left: 125,
     right: 40,
   };
   const graphWidth = svgWidth - margin.left - margin.right;
-  console.log(data);
-  const question = 'What is your assessment of the volume of solid waste  produced by your household?';
-  const dataFormatted:any = [];
-  const counts = countBy(data.filter((d:any) => d[question] !== undefined).map((d:any) => d[question]));
-  Object.keys(counts).map((key) => dataFormatted.push({ label: key, xVal: counts[key] }));
-  console.log(dataFormatted);
-  const svgHeight = dataFormatted.length * 25 + margin.top + margin.bottom;
-  const xMaxValue = maxBy(dataFormatted, (d:any) => d.xVal) ? maxBy(dataFormatted, (d:any) => d.xVal)?.xVal as number : 0;
+  const svgHeight = data.length * 25 + margin.top + margin.bottom;
+  const xMaxValue = maxBy(data, (d:any) => d.xVal) ? maxBy(data, (d:any) => d.xVal)?.xVal as number : 0;
 
   const widthScale = scaleLinear().domain([0, xMaxValue]).range([0, graphWidth]).nice();
 
   return (
     <El>
-      <p>{question}</p>
+      <p>{questionText}</p>
+      <p>{numRespondents}</p>
       <svg width='100%' viewBox={`0 0 ${svgWidth} ${svgHeight}`}>
         <text
           x={25}
@@ -60,7 +56,7 @@ export const HorizontalBarChart = (props: Props) => {
           transform={`translate(${margin.left},${margin.top})`}
         >
           {
-            dataFormatted.map((d:any, i:number) => {
+            data.map((d:any, i:number) => {
               if (d.xVal === undefined) return null;
               return (
                 <g
@@ -106,7 +102,7 @@ export const HorizontalBarChart = (props: Props) => {
             x1={widthScale(0)}
             x2={widthScale(0)}
             y1={-2.5}
-            y2={dataFormatted.length * 25 - 2.5}
+            y2={data.length * 25 - 2.5}
             stroke='#212121'
             strokeWidth={1}
           />

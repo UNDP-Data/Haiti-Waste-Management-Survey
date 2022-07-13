@@ -2,13 +2,10 @@
 import { useState, useEffect, useReducer } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import { json } from 'd3-request';
-// import { nest } from 'd3-collection';
-// import sortBy from 'lodash.sortby';
-// import uniqBy from 'lodash.uniqby';
 import { queue } from 'd3-queue';
 import { Spin } from 'antd';
 import 'antd/dist/antd.css';
-import { IndicatorMetaDataType } from './Types';
+import { SurveyQuestionDataType } from './Types';
 import { GrapherComponent } from './GrapherComponent';
 import Reducer from './Context/Reducer';
 import Context from './Context/Context';
@@ -180,7 +177,7 @@ const VizAreaEl = styled.div`
 
 const App = () => {
   const [finalData, setFinalData] = useState<any | undefined>(undefined);
-  const [indicatorsList, setIndicatorsList] = useState<IndicatorMetaDataType[] | undefined>(undefined);
+  const [indicatorsList, setIndicatorsList] = useState<SurveyQuestionDataType[] | undefined>(undefined);
   const initialState = {
     selectedSubjectType: 'households',
   };
@@ -197,8 +194,8 @@ const App = () => {
   useEffect(() => {
     queue()
       .defer(json, './data/households.json')
-      .defer(json, 'https://raw.githubusercontent.com/UNDP-Data/Indicators-MetaData/main/indicatorMetaData.json')
-      .await((err: any, householdsData: any[], indicatorMetaData: IndicatorMetaDataType[]) => {
+      .defer(json, './data/surveyQuestions.json')
+      .await((err: any, householdsData: any[], surveyQuestions: SurveyQuestionDataType[]) => {
         if (err) throw err;
 
         const data = {
@@ -206,14 +203,15 @@ const App = () => {
         };
 
         setFinalData(data);
-        setIndicatorsList(indicatorMetaData);
+        setIndicatorsList(surveyQuestions);
       });
   }, []);
+
   return (
     <>
       <GlobalStyle />
       {
-        finalData
+        finalData && indicatorsList
           ? (
             <>
               <Context.Provider
