@@ -1,14 +1,11 @@
-import {
-  useContext, useEffect, useRef, useState,
-} from 'react';
+import { useContext } from 'react';
 import styled from 'styled-components';
-import { DataType, IndicatorMetaDataWithYear } from '../Types';
-// import Context from '../Context/Context';
+import { CtxDataType } from '../Types';
+import Context from '../Context/Context';
 import { HorizontalBarChart } from './HorizontalBarChart';
 
 interface Props {
-  data: DataType[];
-  indicators: IndicatorMetaDataWithYear[];
+  data: any;
   fullWidth: boolean;
 }
 
@@ -31,19 +28,46 @@ const El = styled.div<ElProps>`
 export const Graph = (props: Props) => {
   const {
     data,
-    indicators,
     fullWidth,
   } = props;
-  // const {
-  //   year,
-  // } = useContext(Context) as CtxDataType;
+  const {
+    selectedSubjectType,
+  } = useContext(Context) as CtxDataType;
 
+  let graphData;
+  switch (selectedSubjectType) {
+    case 'households':
+      graphData = data.households;
+      break;
+    case 'enterprises':
+      graphData = data.enterprises;
+      break;
+    case 'projects':
+      graphData = data.projects;
+      break;
+    case 'dumpingSites':
+      graphData = data.dumpingSites;
+      break;
+    case 'healthFacilities':
+      graphData = data.healthFacilities;
+      break;
+    default:
+      graphData = data.households;
+      break;
+  }
+  // filter data based on checkbox selections
   return (
     <El id='graph-node' fullWidth={fullWidth}>
       <HorizontalBarChart
-        data={data}
-        indicators={indicators}
+        data={graphData}
       />
     </El>
   );
 };
+// export const Graph = () => (
+//   <div>
+//     <h2>
+//       a graph here
+//     </h2>
+//   </div>
+// );

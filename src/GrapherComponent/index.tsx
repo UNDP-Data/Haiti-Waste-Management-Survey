@@ -1,16 +1,18 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
-import { CtxDataType, DataType, IndicatorMetaDataWithYear } from '../Types';
+import { CtxDataType, IndicatorMetaDataType } from '../Types';
 import { Logo } from '../Icons';
 import Context from '../Context/Context';
 import { Settings } from './Settings';
 import { Graph } from './Graph';
 
 interface Props {
-  data: DataType[];
-  indicators: IndicatorMetaDataWithYear[];
-  regions: string[];
-  countries: string[];
+  data: any;
+  indicators?: IndicatorMetaDataType[];
+}
+
+interface SelectedSubjectType {
+  selected: boolean;
 }
 
 const Container = styled.div`
@@ -37,16 +39,12 @@ const HeadingEl = styled.div`
   align-items: center;
 `;
 
-interface SelectedData {
-  selected?: boolean;
-}
-
 const TitleEl = styled.div`
   display: flex;
   align-items: center;
 `;
 
-const TabsEl = styled.div<SelectedData>`
+const TabsEl = styled.div<SelectedSubjectType>`
   font-size: 1.2rem;
   padding: 1rem 0;
   line-height: 1.4rem;
@@ -121,14 +119,13 @@ export const GrapherComponent = (props: Props) => {
   const {
     data,
     indicators,
-    regions,
-    countries,
   } = props;
   const {
-    graphType,
-    updateGraphType,
+    selectedSubjectType,
+    updateSelectedSubjectType,
   } = useContext(Context) as CtxDataType;
-  const queryParams = new URLSearchParams(window.location.search);
+  console.log(data, indicators);
+  console.log(selectedSubjectType); // why is this not picking up the default selected subject type on page load?
   return (
     <>
       <Container>
@@ -143,35 +140,30 @@ export const GrapherComponent = (props: Props) => {
         </HeadingEl>
         <RootEl>
           <TabsContainerEl>
-            <TabsEl selected={graphType === 'map'} onClick={() => { updateGraphType('map'); }}>
+            <TabsEl selected={selectedSubjectType === 'households'} onClick={() => { updateSelectedSubjectType('households'); }}>
               <>Households</>
             </TabsEl>
-            <TabsEl selected={graphType === 'scatterPlot'} onClick={() => { updateGraphType('scatterPlot'); }}>
+            <TabsEl selected={selectedSubjectType === 'enterprises'} onClick={() => { updateSelectedSubjectType('enterprises'); }}>
               <>Enterprises</>
             </TabsEl>
-            <TabsEl selected={graphType === 'barGraph'} onClick={() => { updateGraphType('barGraph'); }}>
+            <TabsEl selected={selectedSubjectType === 'projects'} onClick={() => { updateSelectedSubjectType('projects'); }}>
               <>Projects</>
             </TabsEl>
-            <TabsEl selected={graphType === 'trendLine'} onClick={() => { updateGraphType('trendLine'); }}>
+            <TabsEl selected={selectedSubjectType === 'dumpingSites'} onClick={() => { updateSelectedSubjectType('dumpingSites'); }}>
               <>Dumping sites</>
             </TabsEl>
-            <TabsEl selected={graphType === 'multiCountryTrendLine'} onClick={() => { updateGraphType('multiCountryTrendLine'); }}>
+            <TabsEl selected={selectedSubjectType === 'healthFacilities'} onClick={() => { updateSelectedSubjectType('healthFacilities'); }}>
               <>Health facilities</>
             </TabsEl>
-            <TabsEl selected={graphType === 'multiCountryTrendLine'} onClick={() => { updateGraphType('multiCountryTrendLine'); }}>
+            <TabsEl selected={selectedSubjectType === 'townHalls'} onClick={() => { updateSelectedSubjectType('townHalls'); }}>
               <>Town halls</>
             </TabsEl>
           </TabsContainerEl>
           <GraphEl>
-            <Settings
-              indicators={indicators}
-              regions={regions}
-              countries={countries}
-            />
+            <Settings />
             <Graph
               data={data}
-              indicators={indicators}
-              fullWidth={queryParams.get('showSettings') === 'false'}
+              fullWidth
             />
           </GraphEl>
         </RootEl>
