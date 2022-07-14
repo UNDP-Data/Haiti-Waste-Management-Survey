@@ -56,8 +56,12 @@ const TabsEl = styled.div<SelectedSubjectType>`
   color:${(props) => (props.selected ? 'var(--primary-blue)' : 'var(--black-600)')};
   text-align: center;
   border-right: 1px solid var(--black-450);
+  &:last-of-type {
+    border-right: none;
+  }
   opacity :${(props) => (props.selected ? 1 : 0.6)};
   cursor: pointer;
+  flex: 1;
   div{
     margin-bottom: 0.5rem;
   }
