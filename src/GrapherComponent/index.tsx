@@ -119,6 +119,25 @@ const H2 = styled.div`
   }
 `;
 
+const Wrapper = styled.div`
+  width: 25%;
+  box-shadow: var(--shadow-right);
+  border-right: 1px solid var(--black-400);
+  @media (max-width: 960px) {
+    width: 100%;
+    box-shadow: var(--shadow-bottom);
+    border-right: 0px solid var(--black-400);
+    padding-bottom: 0;
+    height: auto;
+  } 
+`;
+
+const Card = styled.div`
+  padding: 2rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+`;
+
 export const GrapherComponent = (props: Props) => {
   const {
     data,
@@ -126,8 +145,48 @@ export const GrapherComponent = (props: Props) => {
   } = props;
   const {
     selectedSubjectType,
+    selectedDepartments,
     updateSelectedSubjectType,
   } = useContext(Context) as CtxDataType;
+
+  let graphData = data.households;
+  let unit = 'households';
+  switch (selectedSubjectType) {
+    case 'households':
+      graphData = data.households;
+      unit = 'households';
+      break;
+    case 'enterprises':
+      graphData = data.enterprises;
+      unit = 'enterprises';
+      break;
+    case 'projects':
+      graphData = data.projects;
+      unit = 'projects';
+      break;
+    case 'dumpingSites':
+      graphData = data.dumpingSites;
+      unit = 'dumping sites';
+      break;
+    case 'healthFacilities':
+      graphData = data.healthFacilities;
+      unit = 'health facilities';
+      break;
+    case 'townHalls':
+      graphData = data.townHalls;
+      unit = 'town halls';
+      break;
+    default:
+      graphData = data.households;
+      unit = 'households';
+      break;
+  }
+
+  // filter data based on checkbox selections
+  const filteredData = selectedDepartments.length > 0 ? graphData.filter((d:any) => selectedDepartments.indexOf(d.Department) > -1) : graphData;
+
+  const numRespondents = filteredData.length;
+
   return (
     <>
       <Container>
@@ -162,9 +221,16 @@ export const GrapherComponent = (props: Props) => {
             </TabsEl>
           </TabsContainerEl>
           <GraphEl>
-            <Settings />
+            <Wrapper>
+              <Card>
+                {numRespondents}
+                {' '}
+                {unit}
+              </Card>
+              <Settings />
+            </Wrapper>
             <Graph
-              data={data}
+              data={filteredData}
               indicators={indicators}
               fullWidth
             />

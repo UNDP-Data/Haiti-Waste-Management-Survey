@@ -10,24 +10,23 @@ import Context from '../Context/Context';
 // }
 
 const El = styled.div`
-  width: 25%;
-  box-shadow: var(--shadow-right);
+  width: 100%;
   height: 74rem;
   padding: 2rem;
-  border-right: 1px solid var(--black-400);
   overflow: auto;
+  border-top: 1px solid var(--black-400);
   @media (max-width: 960px) {
     width: 100%;
-    box-shadow: var(--shadow-bottom);
-    border-right: 0px solid var(--black-400);
+    /* box-shadow: var(--shadow-bottom); */
+    /* border-right: 0px solid var(--black-400); */
     padding-bottom: 0;
     height: auto;
   }  
 `;
 
 const FiltersEl = styled.div`
-  padding: 1rem 0 0 0;
-  border-top: 1px solid var(--black-400);
+  padding: 1rem 0;
+  /* border-bottom: 1px solid var(--black-400); */
   @media (max-width: 960px) {
     padding: 2rem 0;
   }  
