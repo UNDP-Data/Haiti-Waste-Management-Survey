@@ -33,18 +33,16 @@ const FiltersEl = styled.div`
   }  
 `;
 
-const CheckboxEl = styled.div`
-  margin: 1rem 0;
-  @media (max-width: 960px) {
-    margin: 0 0.5rem;
-  }  
+const FilterTitle = styled.div`
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-left: -5px;
+  margin-bottom: 1rem;
 `;
 
-const CheckboxContainer = styled.div`
-  display: inline;
-  @media (max-width: 960px) {
-    display: flex;
-  }  
+const CheckboxContainer = styled.div` 
 `;
 
 // export const Settings = (props: Props) => {
@@ -76,11 +74,12 @@ export const Settings = () => {
   return (
     <El>
       <FiltersEl>
+        <FilterTitle>
+          Select Department
+        </FilterTitle>
         <CheckboxContainer>
-          <CheckboxEl>
-            <Checkbox.Group options={departments} defaultValue={selectedDepartments} onChange={onChange} />
-            {/* <Checkbox checked={showLabel} onChange={(e) => { updateShowLabel(e.target.checked); }}>Show Label</Checkbox> */}
-          </CheckboxEl>
+          <Checkbox.Group options={departments} defaultValue={selectedDepartments} onChange={onChange} />
+          {/* <Checkbox checked={showLabel} onChange={(e) => { updateShowLabel(e.target.checked); }}>Show Label</Checkbox> */}
         </CheckboxContainer>
       </FiltersEl>
     </El>

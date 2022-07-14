@@ -165,6 +165,9 @@ const GlobalStyle = createGlobalStyle`
   .ant-tooltip-arrow-content{
     background-color: var(--black-550) !important;
   }
+  .ant-checkbox-wrapper{
+    width: 100%;
+  }
 `;
 
 const VizAreaEl = styled.div`
