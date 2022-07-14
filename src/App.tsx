@@ -194,12 +194,22 @@ const App = () => {
   useEffect(() => {
     queue()
       .defer(json, './data/households.json')
+      .defer(json, './data/enterprises.json')
+      .defer(json, './data/projects.json')
+      .defer(json, './data/dumpingSites.json')
+      .defer(json, './data/healthFacilities.json')
+      .defer(json, './data/townhalls.json')
       .defer(json, './data/surveyQuestions.json')
-      .await((err: any, householdsData: any[], surveyQuestions: SurveyQuestionDataType[]) => {
+      .await((err: any, householdsData: any[], enterprisesData: any[], projectsData: any[], dumpingSitesData: any[], healthFacilitiesData: any[], townHallsData: any[], surveyQuestions: SurveyQuestionDataType[]) => {
         if (err) throw err;
 
         const data = {
           households: householdsData,
+          enterprises: enterprisesData,
+          projects: projectsData,
+          dumpingSites: dumpingSitesData,
+          healthFacilities: healthFacilitiesData,
+          townHalls: townHallsData,
         };
 
         setFinalData(data);

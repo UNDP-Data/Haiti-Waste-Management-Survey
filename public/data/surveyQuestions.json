@@ -68,15 +68,250 @@
     },
     {
         "Question": {
+            "en": "Does the company/OCB have enough equipment for solid waste collection?",
+            "fr": ""
+        },
+        "DataLabel": "Does the company/CBO have enough materials for the collection of solid waste?",
+        "Options": [
+            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "No", "en": "No", "fr": "" }
+        ],
+        "SubjectType": "enterprises"
+    },
+    {
+        "Question": {
+            "en": "Does the company/OCB have solid waste treatment sites?",
+            "fr": ""
+        },
+        "DataLabel": "Does the company /OCB have solid waste treatment sites?",
+        "Options": [
+            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "No", "en": "No", "fr": "" }
+        ],
+        "SubjectType": "enterprises"
+    },
+    {
+        "Question": {
+            "en": "Are these sites wild or structured?",
+            "fr": ""
+        },
+        "DataLabel": "Are these sites wild or structured?",
+        "Options": [
+            {"DataLabel": "savages", "en": "savages", "fr": "" },
+            {"DataLabel": "Structured", "en": "Structured", "fr": "" }
+        ],
+        "SubjectType": "enterprises"
+    },
+    {
+        "Question": {
             "en": "Have you detected any innovations related to solid waste management in your municipality?",
             "fr": ""
         },
-        "DataLabel": "Have you detected any innovations related to solid waste management in your municipality?",
+        "DataLabel": "Have you detected any innovations related to solid waste management in your muni",
         "Options": [
             {"DataLabel": "Yes", "en": "Yes", "fr": "" },
             {"DataLabel": "No", "en": "No", "fr": "" },
             {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
         ],
-        "SubjectType": "households"
+        "SubjectType": "enterprises"
+    },
+    {
+        "Question": {
+            "en": "Are there other actors involved in solid waste management in your area of intervention?",
+            "fr": ""
+        },
+        "DataLabel": "Are there other actors involved in solid waste management in your area of interv",
+        "Options": [
+            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "No", "en": "No", "fr": "" },
+            {"DataLabel": "DK", "en": "I do not know", "fr": "" }
+        ],
+        "SubjectType": "projects"
+    },
+    {
+        "Question": {
+            "en": "Is the landfill site recognized/tolerated by the town hall?",
+            "fr": ""
+        },
+        "DataLabel": "Is the landfill site recognized/tolerated by the town hall?",
+        "Options": [
+            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "No", "en": "No", "fr": "" },
+            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+        ],
+        "SubjectType": "dumpingSites"
+    },
+    {
+        "Question": {
+            "en": "Is the landfill site under the responsibility of the town hall?",
+            "fr": ""
+        },
+        "DataLabel": "Is the landfill site under the responsibility of the town hall?",
+        "Options": [
+            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "No", "en": "No", "fr": "" },
+            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+        ],
+        "SubjectType": "dumpingSites"
+    },
+    {
+        "Question": {
+            "en": "How do you categorize this dump site?",
+            "fr": ""
+        },
+        "DataLabel": "How do you categorize this dump site?",
+        "Options": [
+            {"DataLabel": "Wild", "en": "Wild", "fr": "" },
+            {"DataLabel": "Structur", "en": "Structur", "fr": "" },
+            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+        ],
+        "SubjectType": "dumpingSites"
+    },
+    {
+        "Question": {
+            "en": "Can you give us the following details on the location of the landfill site?",
+            "fr": ""
+        },
+        "DataLabel": "Can you give us the following details on the location of the landfill site?",
+        "Options": [
+            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "No", "en": "No", "fr": "" }
+        ],
+        "SubjectType": "dumpingSites"
+    },
+    {
+        "Question": {
+            "en": "Can you provide us with the following information on the use of the site?",
+            "fr": ""
+        },
+        "DataLabel": "Can you provide us with the following information on the use of the site?",
+        "Options": [
+            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "No", "en": "No", "fr": "" }
+        ],
+        "SubjectType": "dumpingSites"
+    },
+    {
+        "Question": {
+            "en": "Does your H/CS have a dedicated budget for DBM management?",
+            "fr": ""
+        },
+        "DataLabel": "Does your H/CS have a dedicated budget for DBM management?",
+        "Options": [
+            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "Nope", "en": "Nope", "fr": "" }
+        ],
+        "SubjectType": "healthFacilities"
+    },
+    {
+        "Question": {
+            "en": "Does your H/CS have a hygiene and sanitation service?",
+            "fr": ""
+        },
+        "DataLabel": "Does your H/CS have a hygiene and sanitation service?",
+        "Options": [
+            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "Nope", "en": "Nope", "fr": "" }
+        ],
+        "SubjectType": "healthFacilities"
+    },
+    {
+        "Question": {
+            "en": "Have your H/CS staff been trained in DBM management?",
+            "fr": ""
+        },
+        "DataLabel": "Have your H/CS staff been trained in DBM management?",
+        "Options": [
+            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "Nope", "en": "Nope", "fr": "" }
+        ],
+        "SubjectType": "healthFacilities"
+    },
+    {
+        "Question": {
+            "en": "Do you consider the subject of GDM important for your work as a medical professional?",
+            "fr": ""
+        },
+        "DataLabel": "Do you consider the subject of BDM important for your work as a medical profess",
+        "Options": [
+            {"DataLabel": "Very important", "en": "Very important", "fr": "" },
+            {"DataLabel": "Important", "en": "Important", "fr": "" },
+            {"DataLabel": "Not important", "en": "Not important", "fr": "" }
+        ],
+        "SubjectType": "healthFacilities"
+    },
+    {
+        "Question": {
+            "en": "Do you sort waste according to its nature or its level of danger within your H/CS?",
+            "fr": ""
+        },
+        "DataLabel": "Do you sort waste according to its nature or its level of danger within your H/C",
+        "Options": [
+            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "Nope", "en": "Nope", "fr": "" }
+        ],
+        "SubjectType": "healthFacilities"
+    },
+    {
+        "Question": {
+            "en": "Do you have a clear idea of the route and final destination of the DBMs produced by your H/CS?",
+            "fr": ""
+        },
+        "DataLabel": "Do you have a clear idea of the route and final destination of the DBMs produced",
+        "Options": [
+            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "Nope", "en": "Nope", "fr": "" }
+        ],
+        "SubjectType": "healthFacilities"
+    },
+    {
+        "Question": {
+            "en": "Have you detected any innovations related to the management of HBMs in your municipality?",
+            "fr": ""
+        },
+        "DataLabel": "Have you detected any innovations related to the management of HBMs in your muni",
+        "Options": [
+            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "Nope", "en": "Nope", "fr": "" }
+        ],
+        "SubjectType": "healthFacilities"
+    },
+    {
+        "Question": {
+            "en": "Does the town hall have a budget dedicated specifically to solid waste management?",
+            "fr": ""
+        },
+        "DataLabel": "Does the town hall have a budget dedicated specifically to solid waste managemen",
+        "Options": [
+            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "No", "en": "No", "fr": "" },
+            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+        ],
+        "SubjectType": "townHalls"
+    },
+    {
+        "Question": {
+            "en": "Are there other actors involved in solid waste management in your municipality?",
+            "fr": ""
+        },
+        "DataLabel": "Are there other actors involved in solid waste management in your municipality?",
+        "Options": [
+            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "No", "en": "No", "fr": "" },
+            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+        ],
+        "SubjectType": "townHalls"
+    },
+    {
+        "Question": {
+            "en": "Have you detected any innovations related to solid waste management in your muni",
+            "fr": ""
+        },
+        "DataLabel": "Have you detected any innovations related to solid waste management in your muni",
+        "Options": [
+            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+            {"DataLabel": "No", "en": "No", "fr": "" }
+        ],
+        "SubjectType": "townHalls"
     }
 ]

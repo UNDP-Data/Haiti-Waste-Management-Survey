@@ -58,6 +58,9 @@ export const Graph = (props: Props) => {
     case 'healthFacilities':
       graphData = data.healthFacilities;
       break;
+    case 'townHalls':
+      graphData = data.townHalls;
+      break;
     default:
       graphData = data.households;
       break;
