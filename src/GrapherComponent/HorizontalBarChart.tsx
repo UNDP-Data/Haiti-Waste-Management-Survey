@@ -50,45 +50,43 @@ export const HorizontalBarChart = (props: Props) => {
           transform={`translate(${margin.left},${margin.top})`}
         >
           {
-            data.map((d:any, i:number) => {
-              if (d.xVal === undefined) return null;
-              return (
-                <g
-                  key={i}
+            data.map((d:any, i:number) => (
+              // if (d.xVal === undefined) return null;
+              <g
+                key={i}
+              >
+                <text
+                  fill='#212121'
+                  y={i * 25}
+                  x={0}
+                  dx={-5}
+                  dy={14}
+                  fontSize={12}
+                  textAnchor='end'
                 >
-                  <text
-                    fill='#212121'
-                    y={i * 25}
-                    x={0}
-                    dx={-5}
-                    dy={14}
-                    fontSize={12}
-                    textAnchor='end'
-                  >
-                    {d.label}
-                  </text>
-                  <rect
-                    y={i * 25}
-                    x={widthScale(Math.min(0, d.xVal))}
-                    height={20}
-                    fill='#666'
-                    width={Math.abs(widthScale(d.xVal) - widthScale(0))}
-                  />
-                  <text
-                    fill='#212121'
-                    fontWeight='bold'
-                    y={i * 25}
-                    x={d.xVal < 0 ? widthScale(Math.min(0, d.xVal)) : widthScale(d.xVal)}
-                    dx={d.xVal < 0 ? -5 : 5}
-                    textAnchor={d.xVal < 0 ? 'end' : 'start'}
-                    dy={14}
-                    fontSize={12}
-                  >
-                    {d.xVal}
-                  </text>
-                </g>
-              );
-            })
+                  {d.label}
+                </text>
+                <rect
+                  y={i * 25}
+                  x={0}
+                  height={20}
+                  fill='#666'
+                  width={d.xVal !== undefined ? widthScale(d.xVal) : 0}
+                />
+                <text
+                  fill='#212121'
+                  fontWeight='bold'
+                  y={i * 25}
+                  x={d.xVal !== undefined ? widthScale(d.xVal) : 0}
+                  dx={5}
+                  textAnchor='start'
+                  dy={14}
+                  fontSize={12}
+                >
+                  {d.xVal}
+                </text>
+              </g>
+            ))
           }
           <line
             x1={widthScale(0)}
