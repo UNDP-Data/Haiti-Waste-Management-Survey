@@ -1,3 +1,5 @@
+import { CheckboxValueType } from 'antd/lib/checkbox/Group';
+
 export interface OptionDataType {
   DataLabel: string;
   en: string;
@@ -16,5 +18,7 @@ export interface SurveyQuestionDataType {
 
 export interface CtxDataType {
   selectedSubjectType: 'households' | 'enterprises' | 'projects' | 'dumpingSites' | 'healthFacilities' | 'townHalls';
+  selectedDepartments: string[];
   updateSelectedSubjectType: (_d: 'households' | 'enterprises' | 'projects' | 'dumpingSites' | 'healthFacilities' | 'townHalls') => void;
+  updateSelectedDepartments: (_d: CheckboxValueType[]) => void;
 }

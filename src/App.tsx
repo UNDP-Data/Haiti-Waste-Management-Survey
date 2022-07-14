@@ -5,6 +5,7 @@ import { json } from 'd3-request';
 import { queue } from 'd3-queue';
 import { Spin } from 'antd';
 import 'antd/dist/antd.css';
+import { CheckboxValueType } from 'antd/es/checkbox/Group';
 import { SurveyQuestionDataType } from './Types';
 import { GrapherComponent } from './GrapherComponent';
 import Reducer from './Context/Reducer';
@@ -180,6 +181,7 @@ const App = () => {
   const [indicatorsList, setIndicatorsList] = useState<SurveyQuestionDataType[] | undefined>(undefined);
   const initialState = {
     selectedSubjectType: 'households',
+    selectedDepartments: [],
   };
 
   const [state, dispatch] = useReducer(Reducer, initialState);
@@ -188,6 +190,13 @@ const App = () => {
     dispatch({
       type: 'UPDATE_SELECTED_SUBJECT_TYPE',
       payload: selectedSubjectType,
+    });
+  };
+
+  const updateSelectedDepartments = (selectedDepartments: CheckboxValueType[]) => {
+    dispatch({
+      type: 'UPDATE_SELECTED_DEPARTMENTS',
+      payload: selectedDepartments,
     });
   };
 
@@ -228,6 +237,7 @@ const App = () => {
                 value={{
                   ...state,
                   updateSelectedSubjectType,
+                  updateSelectedDepartments,
                 }}
               >
                 <GrapherComponent

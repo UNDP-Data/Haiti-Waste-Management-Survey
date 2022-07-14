@@ -39,6 +39,7 @@ export const Graph = (props: Props) => {
   } = props;
   const {
     selectedSubjectType,
+    selectedDepartments,
   } = useContext(Context) as CtxDataType;
 
   let graphData = data.households;
@@ -66,14 +67,15 @@ export const Graph = (props: Props) => {
       break;
   }
 
-  // TODO: filter data based on checkbox selections
+  // filter data based on checkbox selections
+  const graphData2 = selectedDepartments.length > 0 ? graphData.filter((d:any) => selectedDepartments.indexOf(d.Department) > -1) : graphData;
   const questions = indicators.filter((d) => d.SubjectType === selectedSubjectType);
 
   const chartData = questions.map((question) => {
     const questionText = question.Question.en;
-    const counts = countBy(graphData.filter((d:any) => d[question.DataLabel] !== undefined).map((d:any) => d[question.DataLabel]));
+    const counts = countBy(graphData2.filter((d:any) => d[question.DataLabel] !== undefined).map((d:any) => d[question.DataLabel]));
     const dataFormatted = question.Options.map((option) => ({ label: option.en, xVal: counts[option.DataLabel] }));
-    const numRespondents = graphData.filter((d:any) => d[question.DataLabel] !== undefined).length;
+    const numRespondents = graphData2.filter((d:any) => d[question.DataLabel] !== undefined).length;
     return (
       { questionText, data: dataFormatted, numRespondents }
     );

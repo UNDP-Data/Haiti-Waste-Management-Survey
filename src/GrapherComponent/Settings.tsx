@@ -1,9 +1,9 @@
-// import { useContext } from 'react';
+import { useContext } from 'react';
 import styled from 'styled-components';
 import { Checkbox } from 'antd';
 import type { CheckboxValueType } from 'antd/es/checkbox/Group';
-// import { CtxDataType, IndicatorMetaDataType} from '../Types';
-// import Context from '../Context/Context';
+import { CtxDataType } from '../Types';
+import Context from '../Context/Context';
 
 // interface Props {
 //   indicators?: IndicatorMetaDataType[];
@@ -52,30 +52,34 @@ export const Settings = () => {
   // const {
   //   indicators,
   // } = props;
-  // const {
-  //   selectedSubjectType,
-  //   updateSelectedSubjectType,
-  // } = useContext(Context) as CtxDataType;
+  const {
+    selectedDepartments,
+    updateSelectedDepartments,
+  } = useContext(Context) as CtxDataType;
 
   const onChange = (checkedValues: CheckboxValueType[]) => {
-    console.log('checked = ', checkedValues);
+    updateSelectedDepartments(checkedValues);
   };
 
-  const options = [
-    { label: 'Apple', value: 'Apple' },
-    { label: 'Pear', value: 'Pear' },
-    { label: 'Orange', value: 'Orange' },
+  const departments = [
+    { label: 'nipple', value: 'nipple' },
+    { label: 'West', value: 'West' },
+    { label: 'North', value: 'North' },
+    { label: 'South', value: 'South' },
+    { label: 'Northeast', value: 'Northeast' },
+    { label: 'Center', value: 'Center' },
+    { label: 'South East', value: 'South East' },
+    { label: 'Grand Anse', value: 'Grand Anse' },
+    { label: 'Artibonite', value: 'Artibonite' },
+    { label: 'North West', value: 'North West' },
   ];
   return (
     <El>
       <FiltersEl>
         <CheckboxContainer>
           <CheckboxEl>
-            <Checkbox.Group options={options} defaultValue={['Apple']} onChange={onChange} />
+            <Checkbox.Group options={departments} defaultValue={selectedDepartments} onChange={onChange} />
             {/* <Checkbox checked={showLabel} onChange={(e) => { updateShowLabel(e.target.checked); }}>Show Label</Checkbox> */}
-          </CheckboxEl>
-          <CheckboxEl>
-            {/* <Checkbox checked={useSameRange} disabled={!yAxisIndicator} onChange={(e) => { updateUseSameRange(e.target.checked); }}>Use Same Range for Both Y-Axes</Checkbox> */}
           </CheckboxEl>
         </CheckboxContainer>
       </FiltersEl>
