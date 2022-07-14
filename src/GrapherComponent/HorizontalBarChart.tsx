@@ -70,7 +70,7 @@ export const HorizontalBarChart = (props: Props) => {
                   y={i * 25}
                   x={0}
                   height={20}
-                  fill='#666'
+                  fill='#2b83ba'
                   width={d.xVal !== undefined ? widthScale(d.xVal) : 0}
                 />
                 <text
