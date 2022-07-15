@@ -6,7 +6,7 @@ import { queue } from 'd3-queue';
 import { Spin } from 'antd';
 import 'antd/dist/antd.css';
 import { CheckboxValueType } from 'antd/es/checkbox/Group';
-import { SurveyQuestionDataType } from './Types';
+// import { SurveyQuestionDataType } from './Types';
 import { GrapherComponent } from './GrapherComponent';
 import Reducer from './Context/Reducer';
 import Context from './Context/Context';
@@ -181,7 +181,7 @@ const VizAreaEl = styled.div`
 
 const App = () => {
   const [finalData, setFinalData] = useState<any | undefined>(undefined);
-  const [indicatorsList, setIndicatorsList] = useState<SurveyQuestionDataType[] | undefined>(undefined);
+  const [questionsList, setQuestionsList] = useState<any | undefined>(undefined);
   const initialState = {
     selectedSubjectType: 'households',
     selectedDepartments: [],
@@ -220,7 +220,7 @@ const App = () => {
       .defer(json, './data/healthFacilities.json')
       .defer(json, './data/townhalls.json')
       .defer(json, './data/surveyQuestions.json')
-      .await((err: any, householdsData: any[], enterprisesData: any[], projectsData: any[], dumpingSitesData: any[], healthFacilitiesData: any[], townHallsData: any[], surveyQuestions: SurveyQuestionDataType[]) => {
+      .await((err: any, householdsData: any[], enterprisesData: any[], projectsData: any[], dumpingSitesData: any[], healthFacilitiesData: any[], townHallsData: any[], surveyQuestions: any[]) => {
         if (err) throw err;
 
         const data = {
@@ -233,7 +233,7 @@ const App = () => {
         };
 
         setFinalData(data);
-        setIndicatorsList(surveyQuestions);
+        setQuestionsList(surveyQuestions);
       });
   }, []);
 
@@ -241,7 +241,7 @@ const App = () => {
     <>
       <GlobalStyle />
       {
-        finalData && indicatorsList
+        finalData && questionsList
           ? (
             <>
               <Context.Provider
@@ -254,7 +254,7 @@ const App = () => {
               >
                 <GrapherComponent
                   data={finalData}
-                  indicators={indicatorsList}
+                  questions={questionsList}
                 />
               </Context.Provider>
             </>

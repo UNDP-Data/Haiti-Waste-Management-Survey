@@ -1,31 +1,18 @@
-import { useContext } from 'react';
 import styled from 'styled-components';
 import countBy from 'lodash.countby';
-import { CtxDataType, SurveyQuestionDataType } from '../Types';
-import Context from '../Context/Context';
+import { SurveyQuestionDataType } from '../Types';
 import { HorizontalBarChart } from './HorizontalBarChart';
 
 interface Props {
   data: any;
-  indicators: SurveyQuestionDataType[];
-  fullWidth: boolean;
+  questions: SurveyQuestionDataType[];
 }
 
-interface ElProps {
-  fullWidth: boolean;
-}
-
-const El = styled.div<ElProps>`
-  width: ${(props) => (props.fullWidth ? '100%' : '75%')};
-  box-shadow: var(--shadow-right);
+const El = styled.div`
   overflow: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
-  padding: 2em;
-  @media (min-width: 961px) {
-    height: 74rem;
-  }
   @media (max-width: 960px) {
     width: 100%;
   }
@@ -34,14 +21,8 @@ const El = styled.div<ElProps>`
 export const Graph = (props: Props) => {
   const {
     data,
-    indicators,
-    fullWidth,
+    questions,
   } = props;
-  const {
-    selectedSubjectType,
-  } = useContext(Context) as CtxDataType;
-
-  const questions = indicators.filter((d) => d.SubjectType === selectedSubjectType);
 
   const chartData = questions.map((question) => {
     const questionText = question.Question.en;
@@ -54,7 +35,7 @@ export const Graph = (props: Props) => {
   });
 
   return (
-    <El id='graph-node' fullWidth={fullWidth}>
+    <El id='graph-node'>
       {
         chartData.map((d) => (
           <HorizontalBarChart
