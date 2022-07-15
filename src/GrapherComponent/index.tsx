@@ -1,14 +1,14 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
-import { CtxDataType, SurveyQuestionDataType } from '../Types';
+import { CtxDataType } from '../Types';
 import { Logo } from '../Icons';
 import Context from '../Context/Context';
 import { Settings } from './Settings';
-import { Graph } from './Graph';
+import { GraphGroup } from './GraphGroup';
 
 interface Props {
   data: any;
-  indicators: SurveyQuestionDataType[];
+  questions: any;
 }
 
 interface SelectedSubjectType {
@@ -120,7 +120,7 @@ const H2 = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 25%;
+  flex: 1;
   box-shadow: var(--shadow-right);
   border-right: 1px solid var(--black-400);
   @media (max-width: 960px) {
@@ -141,7 +141,7 @@ const Card = styled.div`
 export const GrapherComponent = (props: Props) => {
   const {
     data,
-    indicators,
+    questions,
   } = props;
   const {
     selectedSubjectType,
@@ -233,10 +233,9 @@ export const GrapherComponent = (props: Props) => {
               </Card>
               <Settings />
             </Wrapper>
-            <Graph
+            <GraphGroup
               data={filteredData}
-              indicators={indicators}
-              fullWidth
+              questionGroups={questions[selectedSubjectType].questionGroups}
             />
           </GraphEl>
         </RootEl>

@@ -16,6 +16,12 @@ export interface SurveyQuestionDataType {
   SubjectType: 'households' | 'enterprises' | 'projects' | 'dumpingSites' | 'healthFacilities' | 'townHalls';
 }
 
+export interface SurveyQuestionGroupDataType {
+  en: string;
+  fr: string;
+  questions: SurveyQuestionDataType[];
+}
+
 export interface CtxDataType {
   selectedSubjectType: 'households' | 'enterprises' | 'projects' | 'dumpingSites' | 'healthFacilities' | 'townHalls';
   selectedDepartments: string[];
