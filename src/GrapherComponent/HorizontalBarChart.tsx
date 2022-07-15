@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import maxBy from 'lodash.maxby';
 // import orderBy from 'lodash.orderby';
-// import { format } from 'd3-format';
+import { format } from 'd3-format';
 import { scaleLinear } from 'd3-scale';
 // import { COLOR_SCALES } from '../Constants';
 
@@ -27,7 +27,7 @@ export const HorizontalBarChart = (props: Props) => {
     top: 10,
     bottom: 10,
     left: 150,
-    right: 40,
+    right: 55,
   };
   const graphWidth = svgWidth - margin.left - margin.right;
   const svgHeight = data.length * 25 + margin.top + margin.bottom;
@@ -73,18 +73,27 @@ export const HorizontalBarChart = (props: Props) => {
                   fill='#2b83ba'
                   width={d.xVal !== undefined ? widthScale(d.xVal) : 0}
                 />
-                <text
-                  fill='#212121'
-                  fontWeight='bold'
-                  y={i * 25}
-                  x={d.xVal !== undefined ? widthScale(d.xVal) : 0}
-                  dx={5}
-                  textAnchor='start'
-                  dy={14}
-                  fontSize={12}
-                >
-                  {d.xVal}
-                </text>
+                {
+                  (d.xVal !== undefined)
+                  && (
+                    <text
+                      fill='#212121'
+                      fontWeight='bold'
+                      y={i * 25}
+                      x={d.xVal !== undefined ? widthScale(d.xVal) : 0}
+                      dx={5}
+                      textAnchor='start'
+                      dy={14}
+                      fontSize={12}
+                    >
+                      {d.xVal}
+                      {' '}
+                      (
+                      {format('.0%')(d.xVal / numRespondents)}
+                      )
+                    </text>
+                  )
+                }
               </g>
             ))
           }
