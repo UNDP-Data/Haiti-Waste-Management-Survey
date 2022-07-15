@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
 import { Checkbox } from 'antd';
-import type { CheckboxValueType } from 'antd/es/checkbox/Group';
 import { CtxDataType } from '../Types';
 import Context from '../Context/Context';
 
@@ -54,10 +53,6 @@ export const Settings = () => {
     updateSelectedDepartments,
   } = useContext(Context) as CtxDataType;
 
-  const onChange = (checkedValues: CheckboxValueType[]) => {
-    updateSelectedDepartments(checkedValues);
-  };
-
   const departments = [
     { label: 'nipple', value: 'nipple' },
     { label: 'West', value: 'West' },
@@ -70,6 +65,12 @@ export const Settings = () => {
     { label: 'Artibonite', value: 'Artibonite' },
     { label: 'North West', value: 'North West' },
   ];
+
+  // const genders = [
+  //   { label: 'Woman', value: 'Women' },
+  //   { label: 'Man', value: 'Man' }
+  // ];
+
   return (
     <El>
       <FiltersEl>
@@ -77,10 +78,18 @@ export const Settings = () => {
           Select Department
         </FilterTitle>
         <CheckboxContainer>
-          <Checkbox.Group options={departments} defaultValue={selectedDepartments} onChange={onChange} />
+          <Checkbox.Group options={departments} defaultValue={selectedDepartments} onChange={(e) => { updateSelectedDepartments(e); }} />
           {/* <Checkbox checked={showLabel} onChange={(e) => { updateShowLabel(e.target.checked); }}>Show Label</Checkbox> */}
         </CheckboxContainer>
       </FiltersEl>
+      {/* <FiltersEl>
+        <FilterTitle>
+          Select Respondent Gender
+        </FilterTitle>
+        <CheckboxContainer>
+          <Checkbox.Group options={genders} defaultValue={selectedDepartments} onChange={onChange} />
+        </CheckboxContainer>
+      </FiltersEl> */}
     </El>
   );
 };
