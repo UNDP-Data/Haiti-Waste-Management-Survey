@@ -162,7 +162,7 @@
         "DataLabel": "How do you categorize this dump site?",
         "Options": [
             {"DataLabel": "Wild", "en": "Wild", "fr": "" },
-            {"DataLabel": "Structur", "en": "Structur", "fr": "" },
+            {"DataLabel": "Structur", "en": "Structured", "fr": "" },
             {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
         ],
         "SubjectType": "dumpingSites"
