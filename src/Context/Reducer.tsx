@@ -4,6 +4,8 @@ export default (state: any, action: any) => {
       return { ...state, selectedSubjectType: action.payload };
     case 'UPDATE_SELECTED_DEPARTMENTS':
       return { ...state, selectedDepartments: action.payload };
+    case 'UPDATE_SELECTED_GENDERS':
+      return { ...state, selectedGenders: action.payload };
     default:
       return { ...state };
   }

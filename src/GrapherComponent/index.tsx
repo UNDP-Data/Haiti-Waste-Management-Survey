@@ -146,6 +146,7 @@ export const GrapherComponent = (props: Props) => {
   const {
     selectedSubjectType,
     selectedDepartments,
+    selectedGenders,
     updateSelectedSubjectType,
   } = useContext(Context) as CtxDataType;
 
@@ -183,7 +184,10 @@ export const GrapherComponent = (props: Props) => {
   }
 
   // filter data based on checkbox selections
-  const filteredData = selectedDepartments.length > 0 ? graphData.filter((d:any) => selectedDepartments.indexOf(d.Department) > -1) : graphData;
+  let filteredData = selectedDepartments.length > 0 ? graphData.filter((d:any) => selectedDepartments.indexOf(d.Department) > -1) : graphData;
+  if (selectedSubjectType === 'households') {
+    filteredData = selectedGenders.length > 0 ? filteredData.filter((d:any) => selectedGenders.indexOf(d['Gender of respondent']) > -1) : filteredData;
+  }
 
   const numRespondents = filteredData.length;
 

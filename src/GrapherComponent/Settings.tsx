@@ -49,8 +49,11 @@ export const Settings = () => {
   //   indicators,
   // } = props;
   const {
+    selectedSubjectType,
     selectedDepartments,
+    selectedGenders,
     updateSelectedDepartments,
+    updateSelectedGenders,
   } = useContext(Context) as CtxDataType;
 
   const departments = [
@@ -66,10 +69,10 @@ export const Settings = () => {
     { label: 'North West', value: 'North West' },
   ];
 
-  // const genders = [
-  //   { label: 'Woman', value: 'Women' },
-  //   { label: 'Man', value: 'Man' }
-  // ];
+  const genders = [
+    { label: 'Woman', value: 'Women' },
+    { label: 'Man', value: 'Man' },
+  ];
 
   return (
     <El>
@@ -82,14 +85,19 @@ export const Settings = () => {
           {/* <Checkbox checked={showLabel} onChange={(e) => { updateShowLabel(e.target.checked); }}>Show Label</Checkbox> */}
         </CheckboxContainer>
       </FiltersEl>
-      {/* <FiltersEl>
-        <FilterTitle>
-          Select Respondent Gender
-        </FilterTitle>
-        <CheckboxContainer>
-          <Checkbox.Group options={genders} defaultValue={selectedDepartments} onChange={onChange} />
-        </CheckboxContainer>
-      </FiltersEl> */}
+      {
+        (selectedSubjectType === 'households')
+        && (
+          <FiltersEl>
+            <FilterTitle>
+              Select Respondent Gender
+            </FilterTitle>
+            <CheckboxContainer>
+              <Checkbox.Group options={genders} defaultValue={selectedGenders} onChange={(e) => { updateSelectedGenders(e); }} />
+            </CheckboxContainer>
+          </FiltersEl>
+        )
+      }
     </El>
   );
 };
