@@ -15,6 +15,11 @@ const El = styled.div`
   width: 45%;
 `;
 
+const GraphTitle = styled.p`
+  font-size: 14px;
+  line-height: 1.5
+`;
+
 export const HorizontalBarChart = (props: Props) => {
   const {
     questionText,
@@ -27,7 +32,7 @@ export const HorizontalBarChart = (props: Props) => {
     top: 10,
     bottom: 10,
     left: 150,
-    right: 55,
+    right: 60,
   };
   const graphWidth = svgWidth - margin.left - margin.right;
   const svgHeight = data.length * 25 + margin.top + margin.bottom;
@@ -37,14 +42,14 @@ export const HorizontalBarChart = (props: Props) => {
 
   return (
     <El>
-      <p>
+      <GraphTitle>
         {questionText}
         {' '}
         (
         {numRespondents}
         {' '}
         respondents)
-      </p>
+      </GraphTitle>
       <svg width='100%' viewBox={`0 0 ${svgWidth} ${svgHeight}`}>
         <g
           transform={`translate(${margin.left},${margin.top})`}
