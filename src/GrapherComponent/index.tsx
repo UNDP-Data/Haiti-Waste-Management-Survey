@@ -203,6 +203,7 @@ export const GrapherComponent = (props: Props) => {
             </div>
           </TitleEl>
         </HeadingEl>
+        <p style={{ marginBottom: '2em' }}>As its first challenge, the UNDP Haiti Accelerator Lab is working on solid waste management. Solid waste is one of the major problems faced by the local authorities in Haiti. Despite the intervention of multiple actors such as the central government, the municipalities, private enterprises and NGOs, this problem remains unsolved particularly in the urban centres. To avail data for decision making and to deepen the knowledge on waste management in Haiti, the Accelerator Lab conducted a national survey to gather data on perceptions, local initiatives and public actions related to waste management. This page allows users to explore data and insights from this survey.</p>
         <RootEl>
           <TabsContainerEl>
             <TabsEl selected={selectedSubjectType === 'households'} onClick={() => { updateSelectedSubjectType('households'); }}>
