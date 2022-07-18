@@ -119,7 +119,7 @@
                         },
                         "DataLabel": "Are these sites wild or structured?",
                         "Options": [
-                            {"DataLabel": "savages", "en": "savages", "fr": "" },
+                            {"DataLabel": "savages", "en": "Natural", "fr": "" },
                             {"DataLabel": "Structured", "en": "Structured", "fr": "" }
                         ],
                         "SubjectType": "enterprises"
