@@ -57,21 +57,21 @@ export const Settings = () => {
   } = useContext(Context) as CtxDataType;
 
   const departments = [
-    { label: 'nipple', value: 'nipple' },
-    { label: 'West', value: 'West' },
-    { label: 'North', value: 'North' },
-    { label: 'South', value: 'South' },
-    { label: 'Northeast', value: 'Northeast' },
-    { label: 'Center', value: 'Center' },
-    { label: 'South East', value: 'South East' },
-    { label: 'Grand Anse', value: 'Grand Anse' },
     { label: 'Artibonite', value: 'Artibonite' },
-    { label: 'North West', value: 'North West' },
+    { label: 'Centre', value: 'Center' },
+    { label: 'Grand\'Anse', value: 'Grand Anse' },
+    { label: 'Nippes', value: 'nipple' },
+    { label: 'Nord', value: 'North' },
+    { label: 'Nord-Est', value: 'Northeast' },
+    { label: 'Nord-Ouest', value: 'North West' },
+    { label: 'Ouest', value: 'West' },
+    { label: 'Sud-Est', value: 'South East' },
+    { label: 'Sud', value: 'South' },
   ];
 
   const genders = [
-    { label: 'Woman', value: 'Women' },
-    { label: 'Man', value: 'Man' },
+    { label: 'Female', value: 'Women' },
+    { label: 'Male', value: 'Man' },
   ];
 
   return (

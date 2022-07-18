@@ -251,7 +251,7 @@
                         "DataLabel": "Does your H/CS have a dedicated budget for DBM management?",
                         "Options": [
                             {"DataLabel": "yes", "en": "Yes", "fr": "" },
-                            {"DataLabel": "Nope", "en": "Nope", "fr": "" }
+                            {"DataLabel": "Nope", "en": "No", "fr": "" }
                         ],
                         "SubjectType": "healthFacilities"
                     },
@@ -263,7 +263,7 @@
                         "DataLabel": "Does your H/CS have a hygiene and sanitation service?",
                         "Options": [
                             {"DataLabel": "yes", "en": "Yes", "fr": "" },
-                            {"DataLabel": "Nope", "en": "Nope", "fr": "" }
+                            {"DataLabel": "Nope", "en": "No", "fr": "" }
                         ],
                         "SubjectType": "healthFacilities"
                     },
@@ -275,7 +275,7 @@
                         "DataLabel": "Have your H/CS staff been trained in DBM management?",
                         "Options": [
                             {"DataLabel": "yes", "en": "Yes", "fr": "" },
-                            {"DataLabel": "Nope", "en": "Nope", "fr": "" }
+                            {"DataLabel": "Nope", "en": "No", "fr": "" }
                         ],
                         "SubjectType": "healthFacilities"
                     },
@@ -300,7 +300,7 @@
                         "DataLabel": "Do you sort waste according to its nature or its level of danger within your H/C",
                         "Options": [
                             {"DataLabel": "yes", "en": "Yes", "fr": "" },
-                            {"DataLabel": "Nope", "en": "Nope", "fr": "" }
+                            {"DataLabel": "Nope", "en": "No", "fr": "" }
                         ],
                         "SubjectType": "healthFacilities"
                     },
@@ -312,7 +312,7 @@
                         "DataLabel": "Do you have a clear idea of the route and final destination of the DBMs produced",
                         "Options": [
                             {"DataLabel": "yes", "en": "Yes", "fr": "" },
-                            {"DataLabel": "Nope", "en": "Nope", "fr": "" }
+                            {"DataLabel": "Nope", "en": "No", "fr": "" }
                         ],
                         "SubjectType": "healthFacilities"
                     },
@@ -324,7 +324,7 @@
                         "DataLabel": "Have you detected any innovations related to the management of HBMs in your muni",
                         "Options": [
                             {"DataLabel": "yes", "en": "Yes", "fr": "" },
-                            {"DataLabel": "Nope", "en": "Nope", "fr": "" }
+                            {"DataLabel": "Nope", "en": "No", "fr": "" }
                         ],
                         "SubjectType": "healthFacilities"
                     }
