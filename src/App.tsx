@@ -186,6 +186,7 @@ const App = () => {
     selectedSubjectType: 'households',
     selectedDepartments: [],
     selectedGenders: [],
+    selectedEducations: [],
   };
 
   const [state, dispatch] = useReducer(Reducer, initialState);
@@ -208,6 +209,13 @@ const App = () => {
     dispatch({
       type: 'UPDATE_SELECTED_GENDERS',
       payload: selectedGenders,
+    });
+  };
+
+  const updateSelectedEducations = (selectedEducations: CheckboxValueType[]) => {
+    dispatch({
+      type: 'UPDATE_SELECTED_EDUCATIONS',
+      payload: selectedEducations,
     });
   };
 
@@ -250,6 +258,7 @@ const App = () => {
                   updateSelectedSubjectType,
                   updateSelectedDepartments,
                   updateSelectedGenders,
+                  updateSelectedEducations,
                 }}
               >
                 <GrapherComponent

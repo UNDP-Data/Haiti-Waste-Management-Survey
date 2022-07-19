@@ -52,8 +52,10 @@ export const Settings = () => {
     selectedSubjectType,
     selectedDepartments,
     selectedGenders,
+    selectedEducations,
     updateSelectedDepartments,
     updateSelectedGenders,
+    updateSelectedEducations,
   } = useContext(Context) as CtxDataType;
 
   const departments = [
@@ -74,6 +76,14 @@ export const Settings = () => {
     { label: 'Male', value: 'Man' },
   ];
 
+  const education = [
+    { label: 'University', value: 'University' },
+    { label: 'Secondary school', value: 'Secondary' },
+    { label: 'Primary school', value: 'Primary' },
+    { label: 'Literacy program', value: 'Participated in a literacy program' },
+    { label: 'No formal education', value: 'Unschooled' },
+  ];
+
   return (
     <El>
       <FiltersEl>
@@ -88,14 +98,24 @@ export const Settings = () => {
       {
         (selectedSubjectType === 'households')
         && (
-          <FiltersEl>
-            <FilterTitle>
-              Select Respondent Gender
-            </FilterTitle>
-            <CheckboxContainer>
-              <Checkbox.Group options={genders} defaultValue={selectedGenders} onChange={(e) => { updateSelectedGenders(e); }} />
-            </CheckboxContainer>
-          </FiltersEl>
+          <>
+            <FiltersEl>
+              <FilterTitle>
+                Select Respondent Gender
+              </FilterTitle>
+              <CheckboxContainer>
+                <Checkbox.Group options={genders} defaultValue={selectedGenders} onChange={(e) => { updateSelectedGenders(e); }} />
+              </CheckboxContainer>
+            </FiltersEl>
+            <FiltersEl>
+              <FilterTitle>
+                Select Head of Household&apos;s Education Level
+              </FilterTitle>
+              <CheckboxContainer>
+                <Checkbox.Group options={education} defaultValue={selectedEducations} onChange={(e) => { updateSelectedEducations(e); }} />
+              </CheckboxContainer>
+            </FiltersEl>
+          </>
         )
       }
     </El>

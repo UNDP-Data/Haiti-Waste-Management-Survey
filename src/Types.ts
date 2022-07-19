@@ -26,7 +26,9 @@ export interface CtxDataType {
   selectedSubjectType: 'households' | 'enterprises' | 'projects' | 'dumpingSites' | 'healthFacilities' | 'townHalls';
   selectedDepartments: string[];
   selectedGenders: string[];
+  selectedEducations: string[];
   updateSelectedSubjectType: (_d: 'households' | 'enterprises' | 'projects' | 'dumpingSites' | 'healthFacilities' | 'townHalls') => void;
   updateSelectedDepartments: (_d: CheckboxValueType[]) => void;
   updateSelectedGenders: (_d: CheckboxValueType[]) => void;
+  updateSelectedEducations: (_d: CheckboxValueType[]) => void;
 }
