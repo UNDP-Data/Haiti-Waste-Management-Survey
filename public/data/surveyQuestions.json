@@ -102,6 +102,257 @@
                 "fr": "",
                 "questions": [
                     {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "What is your household doing to get rid of/manage its waste?",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Use/Purchase of town hall services/SNGRS",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Use/Purchase of town hall services/SNGRS...22",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Purchase of services from a private company or an individual",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Purchase of servicesfrom a private company or an individual",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Throwing into the street, sewers",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Throwing into the street, sewers...24",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Throwing into public garbage cans/dumpsters",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Throwing into public garbage cans/dumpsters...25",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Throwing into a ravine, the river, the sea",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Throwing into a ravine, the river, the sea...26",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Throwing into the plot ('jaden') or free land",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Throwing into the plot (\"jaden\") or free land",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Throwing into an empty lot/landfill",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Throwing into an empty lot/landfill...28",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Burning",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Burning",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Recycling (manure, handicrafts)",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Recycling (manure, handicrafts)",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "households"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "How often does your household empty its poubels of solid waste?",
+                            "fr": ""
+                        },
+                        "DataLabel": "How often does your household empty its poubels of solid waste?",
+                        "Options": [
+                            {"DataLabel": "3 times every 15 days", "en": "3 times every 15 days", "fr": "" },
+                            {"DataLabel": "2 times every 15 days", "en": "2 times every 15 days", "fr": "" },
+                            {"DataLabel": "Once every 15 days", "en": "Once every 15 days", "fr": "" },
+                            {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
+                        ],
+                        "SubjectType": "households"
+                    },
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "How often does your household use the following methods to dispose of its waste?",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Use/Purchase of town hall services/SNGRS",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Use/Purchase of town hall services/SNGRS...32",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Purchase of services from a private company or an individual",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Purchase of services from a private company or an individual",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Throwing into the street, sewers",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Throwing into the street, sewers...34",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Throwing into public garbage cans/dumpsters",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Throwing into public garbage cans/dumpsters...35",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Throwing into a ravine, the river, the sea",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Throwing into a ravine, the river, the sea...36",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Throwing into the plot ('jaden') or free land",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Throwing into the plot (\"jaden\")",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Throwing into an empty lot/landfill",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Throwing into an empty lot/landfill...38",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Brulage",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Brulage",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Composting (manure)",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Composting (Manure)",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "households"
+                    },
+                    {
                         "Type": "single",
                         "Question": {
                             "en": "Does your household sort solid waste (organic, inorganic) at home?",
@@ -130,6 +381,19 @@
                     {
                         "Type": "single",
                         "Question": {
+                            "en": "Does your household store its solid waste in sachets?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Does your household store its solid waste  in sachets?",
+                        "Options": [
+                            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "No", "en": "No", "fr": "" }
+                        ],
+                        "SubjectType": "households"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
                             "en": "Level of responsibility of households in the management of solid waste in your municipality?",
                             "fr": ""
                         },
@@ -138,6 +402,22 @@
                             {"DataLabel": "Important role to play", "en": "Important role to play", "fr": "" },
                             {"DataLabel": "Not important role to play", "en": "Not important role to play", "fr": "" },
                             {"DataLabel": "No role", "en": "No role", "fr": "" },
+                            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                        ],
+                        "SubjectType": "households"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Who do you think is responsible for solid waste management in your municipality?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Who do you think is responsible for solid waste management in your municipality?",
+                        "Options": [
+                            {"DataLabel": "Households", "en": "Households", "fr": "" },
+                            {"DataLabel": "Private companies", "en": "Private companies", "fr": "" },
+                            {"DataLabel": "The state", "en": "The state", "fr": "" },
+                            {"DataLabel": "The town hall", "en": "The town hall", "fr": "" },
                             {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
                         ],
                         "SubjectType": "households"
@@ -155,6 +435,60 @@
                             {"DataLabel": "Good", "en": "Good", "fr": "" },
                             {"DataLabel": "Good enough", "en": "Good enough", "fr": "" },
                             {"DataLabel": "Poor", "en": "Poor", "fr": "" }
+                        ],
+                        "SubjectType": "households"
+                    }
+                ]
+            },
+            {
+                "en": "Purchase of Services",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Does your household buy garbage collection services?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Does your household buy garbage collection services?",
+                        "Options": [
+                            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "No", "en": "No", "fr": "" }
+                        ],
+                        "SubjectType": "households"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "What is your level of satisfaction with the quality of services offered by your waste collection providers?",
+                            "fr": ""
+                        },
+                        "DataLabel": "What is your level of satisfaction with the quality of services offered by your waste collection providers?",
+                        "Options": [
+                            {"DataLabel": "High", "en": "High", "fr": "" },
+                            {"DataLabel": "Mean", "en": "Average", "fr": "" },
+                            {"DataLabel": "Weak", "en": "Low", "fr": "" },
+                            {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
+                        ],
+                        "SubjectType": "households"
+                    }
+                ]
+            },
+            {
+                "en": "Actors involved in solid waste management",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Do you know of any actors or institutions involved in solid waste management in your municipality?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Do you knowof any actors or institutions involved in solid waste management in yourmunicipality?",
+                        "Options": [
+                            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "No", "en": "No", "fr": "" },
+                            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
                         ],
                         "SubjectType": "households"
                     }
