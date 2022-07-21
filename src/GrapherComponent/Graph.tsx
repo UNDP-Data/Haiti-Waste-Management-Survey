@@ -9,13 +9,9 @@ interface Props {
 }
 
 const El = styled.div`
-  overflow: auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 2em;
-  @media (max-width: 960px) {
-    width: 100%;
-  }
+  margin-bottom: 2em;
 `;
 
 export const Graph = (props: Props) => {
@@ -35,7 +31,7 @@ export const Graph = (props: Props) => {
   });
 
   return (
-    <El id='graph-node'>
+    <El className='graph-node'>
       {
         chartData.map((d) => (
           <HorizontalBarChart

@@ -6,8 +6,9 @@
                 "fr": "",
                 "questions": [
                     {
+                        "Type": "single",
                         "Question": {
-                            "en": "What is your assessment of the volume of solid waste  produced by your household?",
+                            "en": "What is your assessment of the volume of solid waste produced by your household?",
                             "fr": ""
                         },
                         "DataLabel": "What is your assessment of the volume of solid waste  produced by your household?",
@@ -18,6 +19,81 @@
                             {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
                         ],
                         "SubjectType": "households"
+                    },
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "At what level does your household produce the following waste?",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Organic waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Organic waste",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Plastic waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Plastic waste...16",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Metals",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Metals...17",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Medical waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Medical waste...18",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Other",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Other...19",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "households"
                     }
                 ]
             },
@@ -26,6 +102,7 @@
                 "fr": "",
                 "questions": [
                     {
+                        "Type": "single",
                         "Question": {
                             "en": "Does your household sort solid waste (organic, inorganic) at home?",
                             "fr": ""
@@ -38,6 +115,7 @@
                         "SubjectType": "households"
                     },
                     {
+                        "Type": "single",
                         "Question": {
                             "en": "Are you ready to sort the waste before disposing of it to facilitate its recovery?",
                             "fr": ""
@@ -50,6 +128,7 @@
                         "SubjectType": "households"
                     },
                     {
+                        "Type": "single",
                         "Question": {
                             "en": "Level of responsibility of households in the management of solid waste in your municipality?",
                             "fr": ""
@@ -64,6 +143,7 @@
                         "SubjectType": "households"
                     },
                     {
+                        "Type": "single",
                         "Question": {
                             "en": "How would you rate public garbage collection services?",
                             "fr": ""

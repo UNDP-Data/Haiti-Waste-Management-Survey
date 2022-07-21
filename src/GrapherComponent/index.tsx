@@ -236,10 +236,19 @@ export const GrapherComponent = (props: Props) => {
               </Card>
               <Settings />
             </Wrapper>
-            <GraphGroup
-              data={filteredData}
-              questionGroups={questions[selectedSubjectType].questionGroups}
-            />
+            <div id='graph-group-node' style={{ flex: 3, padding: '2em' }}>
+              {
+                questions[selectedSubjectType].questionGroups.map((group:any) => (
+                  <div style={{ marginBottom: '4em' }}>
+                    <h2>{group.en}</h2>
+                    <GraphGroup
+                      data={filteredData}
+                      questions={group.questions}
+                    />
+                  </div>
+                ))
+              }
+            </div>
           </GraphEl>
         </RootEl>
       </Container>

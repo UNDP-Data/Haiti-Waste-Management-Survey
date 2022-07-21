@@ -1,39 +1,48 @@
 import styled from 'styled-components';
-import { SurveyQuestionGroupDataType } from '../Types';
+// import { SurveyQuestionGroupDataType } from '../Types';
 import { Graph } from './Graph';
 
 interface Props {
   data: any;
-  questionGroups: SurveyQuestionGroupDataType[];
+  questions: any;
 }
 
 const El = styled.div`
   flex: 3;
-  padding: 2em;
 `;
 
 const GraphGroupDiv = styled.div`
-  margin-bottom: 4em;
 `;
 
 export const GraphGroup = (props: Props) => {
   const {
     data,
-    questionGroups,
+    questions,
   } = props;
   return (
-    <El id='graph-group-node'>
+    <El>
       {
-        questionGroups.map((d) => (
-          <GraphGroupDiv>
-            <h2>{d.en}</h2>
+        questions.map((d:any) => {
+          if (d.Type === 'multiquestion') {
+            return (
+              <GraphGroupDiv>
+                <p>{ d.Label.en }</p>
+                <Graph
+                  questions={d.Subquestions}
+                  data={data}
+                />
+              </GraphGroupDiv>
+            );
+          }
+          return (
             <Graph
-              questions={d.questions}
+              questions={[d]}
               data={data}
             />
-          </GraphGroupDiv>
-        ))
+          );
+        })
       }
+
     </El>
   );
 };

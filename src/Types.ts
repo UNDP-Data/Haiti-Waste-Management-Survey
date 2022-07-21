@@ -20,6 +20,7 @@ export interface SurveyQuestionGroupDataType {
   en: string;
   fr: string;
   questions: SurveyQuestionDataType[];
+  type: 'single' | 'multiquestion';
 }
 
 export interface CtxDataType {
