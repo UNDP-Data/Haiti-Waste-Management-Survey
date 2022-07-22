@@ -571,20 +571,15 @@
                             "en": "How many people work in the project?",
                             "fr": ""
                         },
-                        "DataLabel": "How many people work in the project?",
+                        "DataLabel": "n_people",
                         "Options": [
-                            {"DataLabel": "2", "en": "2", "fr": "2" },
-                            {"DataLabel": "3", "en": "3", "fr": "3" },
-                            {"DataLabel": "7", "en": "7", "fr": "7" },
-                            {"DataLabel": "9", "en": "9", "fr": "9" },
-                            {"DataLabel": "10", "en": "10", "fr": "10" },
-                            {"DataLabel": "13", "en": "13", "fr": "13" },
-                            {"DataLabel": "14", "en": "14", "fr": "14" },
-                            {"DataLabel": "15", "en": "15", "fr": "15" },
-                            {"DataLabel": "25", "en": "25", "fr": "25" },
-                            {"DataLabel": "32", "en": "32", "fr": "32" },
-                            {"DataLabel": "33", "en": "33", "fr": "33" },
-                            {"DataLabel": "900", "en": "900", "fr": "900" }
+                            {"DataLabel": "Less than 5", "en": "Less than 5", "fr": "" },
+                            {"DataLabel": "5 - 10", "en": "5 - 10", "fr": "5 - 10" },
+                            {"DataLabel": "10 - 15", "en": "10 - 15", "fr": "10 - 15" },
+                            {"DataLabel": "15 - 20", "en": "15 - 20", "fr": "15 - 20" },
+                            {"DataLabel": "20 - 50", "en": "20 - 50", "fr": "20 - 50" },
+                            {"DataLabel": "50 - 100", "en": "50 - 100", "fr": "50 - 100" },
+                            {"DataLabel": "Over 100", "en": "Over 100", "fr": "" }
                         ],
                         "SubjectType": "projects"
                     },
@@ -594,18 +589,15 @@
                             "en": "How many women?",
                             "fr": ""
                         },
-                        "DataLabel": "How many women?",
+                        "DataLabel": "n_women",
                         "Options": [
-                            {"DataLabel": "0", "en": "0", "fr": "0" },
-                            {"DataLabel": "1", "en": "1", "fr": "1" },
-                            {"DataLabel": "2", "en": "2", "fr": "2" },
-                            {"DataLabel": "3", "en": "3", "fr": "3" },
-                            {"DataLabel": "4", "en": "4", "fr": "4" },
-                            {"DataLabel": "5", "en": "5", "fr": "5" },
-                            {"DataLabel": "12", "en": "12", "fr": "12" },
-                            {"DataLabel": "13", "en": "13", "fr": "13" },
-                            {"DataLabel": "14", "en": "14", "fr": "14" },
-                            {"DataLabel": "15", "en": "15", "fr": "15" }
+                            {"DataLabel": "Less than 5", "en": "Less than 5", "fr": "" },
+                            {"DataLabel": "5 - 10", "en": "5 - 10", "fr": "5 - 10" },
+                            {"DataLabel": "10 - 15", "en": "10 - 15", "fr": "10 - 15" },
+                            {"DataLabel": "15 - 20", "en": "15 - 20", "fr": "15 - 20" },
+                            {"DataLabel": "20 - 50", "en": "20 - 50", "fr": "20 - 50" },
+                            {"DataLabel": "50 - 100", "en": "50 - 100", "fr": "50 - 100" },
+                            {"DataLabel": "Over 100", "en": "Over 100", "fr": "" }
                         ],
                         "SubjectType": "projects"
                     },
@@ -615,19 +607,15 @@
                             "en": "How many men?",
                             "fr": ""
                         },
-                        "DataLabel": "How many men?",
+                        "DataLabel": "n_men",
                         "Options": [
-                            {"DataLabel": "1", "en": "1", "fr": "1" },
-                            {"DataLabel": "2", "en": "2", "fr": "2" },
-                            {"DataLabel": "4", "en": "4", "fr": "4" },
-                            {"DataLabel": "7", "en": "7", "fr": "7" },
-                            {"DataLabel": "9", "en": "9", "fr": "9" },
-                            {"DataLabel": "10", "en": "10", "fr": "10" },
-                            {"DataLabel": "12", "en": "12", "fr": "12" },
-                            {"DataLabel": "13", "en": "13", "fr": "13" },
-                            {"DataLabel": "17", "en": "17", "fr": "17" },
-                            {"DataLabel": "19", "en": "19", "fr": "19" },
-                            {"DataLabel": "20", "en": "20", "fr": "20" }
+                            {"DataLabel": "Less than 5", "en": "Less than 5", "fr": "" },
+                            {"DataLabel": "5 - 10", "en": "5 - 10", "fr": "5 - 10" },
+                            {"DataLabel": "10 - 15", "en": "10 - 15", "fr": "10 - 15" },
+                            {"DataLabel": "15 - 20", "en": "15 - 20", "fr": "15 - 20" },
+                            {"DataLabel": "20 - 50", "en": "20 - 50", "fr": "20 - 50" },
+                            {"DataLabel": "50 - 100", "en": "50 - 100", "fr": "50 - 100" },
+                            {"DataLabel": "Over 100", "en": "Over 100", "fr": "" }
                         ],
                         "SubjectType": "projects"
                     }
@@ -643,20 +631,16 @@
                             "en": "Annual project budget",
                             "fr": ""
                         },
-                        "DataLabel": "Annual project budget (gourdes)",
+                        "DataLabel": "budget",
                         "Options": [
-                            {"DataLabel": "50000", "en": "50000", "fr": "50000" },
-                            {"DataLabel": "77750", "en": "77750", "fr": "77750" },
-                            {"DataLabel": "320000", "en": "320000", "fr": "320000" },
-                            {"DataLabel": "335000", "en": "335000", "fr": "335000" },
-                            {"DataLabel": "800000", "en": "800000", "fr": "800000" },
-                            {"DataLabel": "900000", "en": "900000", "fr": "900000" },
-                            {"DataLabel": "3250000", "en": "3250000", "fr": "3250000" },
-                            {"DataLabel": "34500000", "en": "34500000", "fr": "34500000" },
-                            {"DataLabel": "50000000", "en": "50000000", "fr": "50000000" },
-                            {"DataLabel": "495000000", "en": "495000000", "fr": "495000000" },
-                            {"DataLabel": "182562693", "en": "182562693", "fr": "182562693" },
-                            {"DataLabel": "904282502", "en": "904282502", "fr": "904282502" }
+                            {"DataLabel": "Less than 50 000", "en": "Less than 50 000", "fr": "" },
+                            {"DataLabel": "50 000 - 100 000", "en": "50 000 - 100 000", "fr": "50 000 - 100 000" },
+                            {"DataLabel": "100 000 - 250 000", "en": "100 000 - 250 000", "fr": "100 000 - 250 000" },
+                            {"DataLabel": "250 000 - 500 000", "en": "250 000 - 500 000", "fr": "250 000 - 500 000" },
+                            {"DataLabel": "500 000 - 1M", "en": "500 000 - 1M", "fr": "500 000 - 1M" },
+                            {"DataLabel": "1M - 10M", "en": "1M - 10M", "fr": "1M - 10M" },
+                            {"DataLabel": "10M - 100M", "en": "10M - 100M", "fr": "10M - 100M" },
+                            {"DataLabel": "Over 100M", "en": "Over 100M", "fr": "" }
                         ],
                         "SubjectType": "projects"
                     },
