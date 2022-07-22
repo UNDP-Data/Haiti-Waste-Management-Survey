@@ -1623,10 +1623,11 @@
     "healthFacilities": {
         "questionGroups": [
             {
-                "en": "All",
+                "en": "Characteristics of the health care establishment",
                 "fr": "",
                 "questions": [
                     {
+                        "Type": "single",
                         "Question": {
                             "en": "Does your H/CS have a dedicated budget for DBM management?",
                             "fr": ""
@@ -1639,18 +1640,76 @@
                         "SubjectType": "healthFacilities"
                     },
                     {
+                        "Type": "single",
                         "Question": {
-                            "en": "Does your H/CS have a hygiene and sanitation service?",
+                            "en": "Has this fund increased or decreased in the last five years?",
                             "fr": ""
                         },
-                        "DataLabel": "Does your H/CS have a hygiene and sanitation service?",
+                        "DataLabel": "Has this fund increased or decreased over the past five years?",
                         "Options": [
-                            {"DataLabel": "yes", "en": "Yes", "fr": "" },
-                            {"DataLabel": "Nope", "en": "No", "fr": "" }
+                            {"DataLabel": "Increases", "en": "Increased", "fr": "" },
+                            {"DataLabel": "Steady", "en": "Steady", "fr": "" },
+                            {"DataLabel": "Decreases", "en": "Decreased", "fr": "" }
                         ],
                         "SubjectType": "healthFacilities"
                     },
                     {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Give us your assessment of the availability of resources dedicated to the management of DBMs within your H/CS",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Human resources",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Human ressources",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "Draw/total absence", "en": "Draw/total absence", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Financial resources",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Financial ressources",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "Draw/total absence", "en": "Draw/total absence", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Material resources",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Material resources",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" },
+                                    {"DataLabel": "Draw/total absence", "en": "Draw/total absence", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "healthFacilities"
+                    }
+                ]
+            },
+            {
+                "en": "Personnel",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
                         "Question": {
                             "en": "Have your H/CS staff been trained in DBM management?",
                             "fr": ""
@@ -1663,6 +1722,20 @@
                         "SubjectType": "healthFacilities"
                     },
                     {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Have you personally attended any training sessions on DBM management during your academic and professional journey?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Have you personally attended training sessions on DBM management during your aca",
+                        "Options": [
+                            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "Nope", "en": "No", "fr": "" }
+                        ],
+                        "SubjectType": "healthFacilities"
+                    },
+                    {
+                        "Type": "single",
                         "Question": {
                             "en": "Do you consider the subject of GDM important for your work as a medical professional?",
                             "fr": ""
@@ -1676,8 +1749,334 @@
                         "SubjectType": "healthFacilities"
                     },
                     {
+                        "Type": "single",
                         "Question": {
-                            "en": "Do you sort waste according to its nature or its level of danger within your H/CS?",
+                            "en": "Is there a manual giving the main orientations concerning the DBM management within your H/CS?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Is there a manual giving the main guidelines for DBM management within your H/CS",
+                        "Options": [
+                            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "Nope", "en": "No", "fr": "" }
+                        ],
+                        "SubjectType": "healthFacilities"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Have the staff of your H/CS been made aware of the risks associated with the handling of DBMs?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Have your H/CS staff been made aware of the risks associated with handling DBM?",
+                        "Options": [
+                            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "Nope", "en": "No", "fr": "" }
+                        ],
+                        "SubjectType": "healthFacilities"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Does your H/CS have one or more employees responsible for the management of DBMs?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Does your H/CS have an employee(s) responsible for managing DBM?",
+                        "Options": [
+                            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "Nope", "en": "No", "fr": "" }
+                        ],
+                        "SubjectType": "healthFacilities"
+                    }
+                ]
+            },
+            {
+                "en": "Production of biomedical waste",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Can you estimate the amount (kg) of DBM produced by your H/CS per day?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Can you make an estimate (in kg) of the quantity (kg) of DBM produced by your H/",
+                        "Options": [
+                            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "Nope", "en": "No", "fr": "" }
+                        ],
+                        "SubjectType": "healthFacilities"
+                    },
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Do we have an estimate of the amount of the following waste produced by your H/CS?",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Sharp waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Sharps/sharps waste",
+                                "Options": [
+                                    {"DataLabel": "Less than 5kg", "en": "Less than 5kg", "fr": "" },
+                                    {"DataLabel": "5 - 10kg", "en": "5 - 10kg", "fr": "" },
+                                    {"DataLabel": "10 - 20kg", "en": "10 - 20kg", "fr": "" },
+                                    {"DataLabel": "20 - 50kg", "en": "20 - 50kg", "fr": "" },
+                                    {"DataLabel": "50 - 100kg", "en": "50 - 100kg", "fr": "" },
+                                    {"DataLabel": "Over 100kg", "en": "Over 100kg", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Anatomical waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Anatomical waste",
+                                "Options": [
+                                    {"DataLabel": "Less than 5kg", "en": "Less than 5kg", "fr": "" },
+                                    {"DataLabel": "5 - 10kg", "en": "5 - 10kg", "fr": "" },
+                                    {"DataLabel": "10 - 20kg", "en": "10 - 20kg", "fr": "" },
+                                    {"DataLabel": "20 - 50kg", "en": "20 - 50kg", "fr": "" },
+                                    {"DataLabel": "50 - 100kg", "en": "50 - 100kg", "fr": "" },
+                                    {"DataLabel": "Over 100kg", "en": "Over 100kg", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Pharmaceutical waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Pharmaceutical waste",
+                                "Options": [
+                                    {"DataLabel": "Less than 5kg", "en": "Less than 5kg", "fr": "" },
+                                    {"DataLabel": "5 - 10kg", "en": "5 - 10kg", "fr": "" },
+                                    {"DataLabel": "10 - 20kg", "en": "10 - 20kg", "fr": "" },
+                                    {"DataLabel": "20 - 50kg", "en": "20 - 50kg", "fr": "" },
+                                    {"DataLabel": "50 - 100kg", "en": "50 - 100kg", "fr": "" },
+                                    {"DataLabel": "Over 100kg", "en": "Over 100kg", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Radioactive waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Radioactive waste",
+                                "Options": [
+                                    {"DataLabel": "Less than 5kg", "en": "Less than 5kg", "fr": "" },
+                                    {"DataLabel": "5 - 10kg", "en": "5 - 10kg", "fr": "" },
+                                    {"DataLabel": "10 - 20kg", "en": "10 - 20kg", "fr": "" },
+                                    {"DataLabel": "20 - 50kg", "en": "20 - 50kg", "fr": "" },
+                                    {"DataLabel": "50 - 100kg", "en": "50 - 100kg", "fr": "" },
+                                    {"DataLabel": "Over 100kg", "en": "Over 100kg", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Chemical waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Chemical waste",
+                                "Options": [
+                                    {"DataLabel": "Less than 5kg", "en": "Less than 5kg", "fr": "" },
+                                    {"DataLabel": "5 - 10kg", "en": "5 - 10kg", "fr": "" },
+                                    {"DataLabel": "10 - 20kg", "en": "10 - 20kg", "fr": "" },
+                                    {"DataLabel": "20 - 50kg", "en": "20 - 50kg", "fr": "" },
+                                    {"DataLabel": "50 - 100kg", "en": "50 - 100kg", "fr": "" },
+                                    {"DataLabel": "Over 100kg", "en": "Over 100kg", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "healthFacilities"
+                    },
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Indicate whether waste handling personnel use the following protective equipment",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Gloves",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Gloves",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Boots",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Boots",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Aprons",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Aprons",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Masks",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Masks",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Glasses",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Glasses",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "None of these materials",
+                                    "fr": ""
+                                },
+                                "DataLabel": "None of these materials",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "healthFacilities"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Have you detected recurrent cases of diseases related to the mismanagement of DBMs in your municipality or department?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Have you detected recurrent cases of illnesses/symptoms related to poor manageme",
+                        "Options": [
+                            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "Nope", "en": "No", "fr": "" }
+                        ],
+                        "SubjectType": "healthFacilities"
+                    },
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Specify if these are the following diseases",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Skin disease",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Skin illness",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Respiratory disease",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Breathing illness",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Malaria",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Malaria",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Dengue fever",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Dengue fever",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Typhoid",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Typhoid",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Diarrhea",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Diarrhea",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Vaginal infection",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Vaginal infection",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "healthFacilities"
+                    }
+                ]
+            },
+            {
+                "en": "Containers and other receptacles for DBM storage",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Do you sort waste according to its nature or level of dangerousness within your H/CS?",
                             "fr": ""
                         },
                         "DataLabel": "Do you sort waste according to its nature or its level of danger within your H/C",
@@ -1686,8 +2085,198 @@
                             {"DataLabel": "Nope", "en": "No", "fr": "" }
                         ],
                         "SubjectType": "healthFacilities"
+                    }
+                ]
+            },
+            {
+                "en": "DBM storage spaces",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Is there a space dedicated specifically to DBM storage?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Is there a space/warehouse dedicated specifically to the storage of DBM?",
+                        "Options": [
+                            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "Nope", "en": "No", "fr": "" }
+                        ],
+                        "SubjectType": "healthFacilities"
                     },
                     {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Is the DBM storage space accessible to everyone?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Is the DBM storage space accessible to everyone?",
+                        "Options": [
+                            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "Nope", "en": "No", "fr": "" }
+                        ],
+                        "SubjectType": "healthFacilities"
+                    }
+                ]
+            },
+            {
+                "en": "Collection and transport of DBMs",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Specify whether the following institutions provide DBM transportation services produced by your H/CS",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Town hall",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Does this institution provide transportation services for DBMs produced by your...91",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Formal private companies",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Does this institution provide transportation services for DBMs produced by your...92",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Informal private enterprises",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Does this institution provide transportation services for DBMs produced by your...93",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "NGO",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Does this institution provide transportation services for DBMs produced by your...94",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Community-based organizations",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Does this institution provide transportation services for DBMs produced by your...95",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Other",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Does this institution provide transportation services for DBMs produced by your...96",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "healthFacilities"
+                    },
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Specify whether you use the following means to transport DBMs from your H/CS to landfill sites",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Closed devices",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Specify whether these means are used to transport HMD from your H/CS to landfill...98",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Open devices",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Specify whether these means are used to transport HMD from your H/CS to landfill...99",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Other",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Specify whether these means are used to transport HMD from your H/CS to landfill...100",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "healthFacilities"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Do you think that the methods of collecting and transporting DBMs within your H/CS are safe?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Do you think the methods of collecting and transporting HBMs are safe?",
+                        "Options": [
+                            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "Nope", "en": "No", "fr": "" }
+                        ],
+                        "SubjectType": "healthFacilities"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Have you ever recorded any cases of injury in the last 12 months during DBM collection and transport activities?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Have you ever recorded any cases of injury in the last 12 months during the coll",
+                        "Options": [
+                            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "Nope", "en": "No", "fr": "" }
+                        ],
+                        "SubjectType": "healthFacilities"
+                    }
+                ]
+            },
+            {
+                "en": "Treatment / Elimination of DBM",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
                         "Question": {
                             "en": "Do you have a clear idea of the route and final destination of the DBMs produced by your H/CS?",
                             "fr": ""
@@ -1698,16 +2287,132 @@
                             {"DataLabel": "Nope", "en": "No", "fr": "" }
                         ],
                         "SubjectType": "healthFacilities"
-                    },
+                    }
+                ]
+            },
+            {
+                "en": "",
+                "fr": "",
+                "questions": [
                     {
-                        "Question": {
-                            "en": "Have you detected any innovations related to the management of HBMs in your municipality?",
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Are there partnership relationships between your H/CS and the following actors in relation to the management of DBMs?",
                             "fr": ""
                         },
-                        "DataLabel": "Have you detected any innovations related to the management of HBMs in your muni",
-                        "Options": [
-                            {"DataLabel": "yes", "en": "Yes", "fr": "" },
-                            {"DataLabel": "Nope", "en": "No", "fr": "" }
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Private companies",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Are there partnership relations between your H/CS and the following actors in re...122",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Quantities private enterprises",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Are there partnership relations between your H/CS and the following actors in re...123",
+                                "Options": [
+                                    {"DataLabel": "1", "en": "1", "fr": "1" },
+                                    {"DataLabel": "2", "en": "2", "fr": "2" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "NGO",
+                                    "fr": ""
+                                },
+                                "DataLabel": "NGOs - Are there partnership relations between your H/CS and the following actor",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "NGO quantity",
+                                    "fr": ""
+                                },
+                                "DataLabel": "NGO quantity",
+                                "Options": [
+                                    {"DataLabel": "1", "en": "1", "fr": "1" },
+                                    {"DataLabel": "2", "en": "2", "fr": "2" },
+                                    {"DataLabel": "3", "en": "3", "fr": "3" },
+                                    {"DataLabel": "5", "en": "5", "fr": "5" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Community-based organizations",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Community organizations",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Quantity of community organizations",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Quantity community organizations",
+                                "Options": [
+                                    {"DataLabel": "1", "en": "1", "fr": "1" },
+                                    {"DataLabel": "2", "en": "2", "fr": "2" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "NRSS",
+                                    "fr": ""
+                                },
+                                "DataLabel": "SNGRS",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "UNDP",
+                                    "fr": ""
+                                },
+                                "DataLabel": "UNDP",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "UNEP",
+                                    "fr": ""
+                                },
+                                "DataLabel": "UNEP",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Other UN agencies",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Other UN Agencies",
+                                "Options": [
+                                    {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "Nope", "en": "No", "fr": "" }
+                                ]
+                            }
                         ],
                         "SubjectType": "healthFacilities"
                     }
