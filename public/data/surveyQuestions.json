@@ -660,48 +660,1140 @@
     "enterprises": {
         "questionGroups": [
             {
-                "en": "All",
+                "en": "Equipment and infrastructure",
                 "fr": "",
                 "questions": [
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Does the company/OCB have enough equipment for solid waste collection?",
+                            "en": "Does the company/CBO have enough materials for the collection of solid waste?",
                             "fr": ""
                         },
                         "DataLabel": "Does the company/CBO have enough materials for the collection of solid waste?",
                         "Options": [
                             {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                             {"DataLabel": "No", "en": "No", "fr": "" }
+
+                        ],
+                        "SubjectType": "projects"
+                    },
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Can you tell us if the company/OCB has the following solid waste collection machines?",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Garbage truck",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Garbage truck",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Benne truck",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Dump truck",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Three-wheeled motorcycle",
+                                    "fr": ""
+                                },
+                                "DataLabel": "three wheel motorcycle",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Wheelbarrows",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Wheelbarrows",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Shovels",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Shovels",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "projects"
+                    }                    
+                ]
+            },
+            {
+                "en": "Human Resources",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "How many employees of the company/OCB work in the solid waste sector?",
+                            "fr": ""
+                        },
+                        "DataLabel": "n_people",
+                        "Options": [
+                            {"DataLabel": "Less than 5", "en": "Less than 5", "fr": "" },
+                            {"DataLabel": "5 - 10", "en": "5 - 10", "fr": "5 - 10" },
+                            {"DataLabel": "10 - 15", "en": "10 - 15", "fr": "10 - 15" },
+                            {"DataLabel": "15 - 20", "en": "15 - 20", "fr": "15 - 20" },
+                            {"DataLabel": "20 - 50", "en": "20 - 50", "fr": "20 - 50" },
+                            {"DataLabel": "50 - 100", "en": "50 - 100", "fr": "50 - 100" },
+                            {"DataLabel": "Over 100", "en": "Over 100", "fr": "" }
+                        ],
+                        "SubjectType": "projects"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "How many women?",
+                            "fr": ""
+                        },
+                        "DataLabel": "n_women",
+                        "Options": [
+                            {"DataLabel": "Less than 5", "en": "Less than 5", "fr": "" },
+                            {"DataLabel": "5 - 10", "en": "5 - 10", "fr": "5 - 10" },
+                            {"DataLabel": "10 - 15", "en": "10 - 15", "fr": "10 - 15" },
+                            {"DataLabel": "15 - 20", "en": "15 - 20", "fr": "15 - 20" },
+                            {"DataLabel": "20 - 50", "en": "20 - 50", "fr": "20 - 50" },
+                            {"DataLabel": "50 - 100", "en": "50 - 100", "fr": "50 - 100" },
+                            {"DataLabel": "Over 100", "en": "Over 100", "fr": "" }
+                        ],
+                        "SubjectType": "projects"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "How many men?",
+                            "fr": ""
+                        },
+                        "DataLabel": "n_men",
+                        "Options": [
+                            {"DataLabel": "Less than 5", "en": "Less than 5", "fr": "" },
+                            {"DataLabel": "5 - 10", "en": "5 - 10", "fr": "5 - 10" },
+                            {"DataLabel": "10 - 15", "en": "10 - 15", "fr": "10 - 15" },
+                            {"DataLabel": "15 - 20", "en": "15 - 20", "fr": "15 - 20" },
+                            {"DataLabel": "20 - 50", "en": "20 - 50", "fr": "20 - 50" },
+                            {"DataLabel": "50 - 100", "en": "50 - 100", "fr": "50 - 100" },
+                            {"DataLabel": "Over 100", "en": "Over 100", "fr": "" }
+                        ],
+                        "SubjectType": "projects"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "The dominant types of employment in your company",
+                            "fr": ""
+                        },
+                        "DataLabel": "The dominant types of employment in your company",
+                        "Options": [
+                            {"DataLabel": "Permanent", "en": "Permanent", "fr": "" },
+                            {"DataLabel": "Seasonal", "en": "Seasonal", "fr": "" }
+                        ],
+                        "SubjectType": "projects"
+                    }
+                ]
+            },
+            {
+                "en": "Financial Resources",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "What are the main sources of financing for the company/OCB?",
+                            "fr": ""
+                        },
+                        "DataLabel": "What are the main sources of funding for the company /OCB?",
+                        "Options": [
+                            {"DataLabel": "Credit", "en": "Credit", "fr": "" },
+                            {"DataLabel": "Credit Donation", "en": "Credit Donation", "fr": "" },
+                            {"DataLabel": "Credit Equity", "en": "Credit Equity", "fr": "" },
+                            {"DataLabel": "Don", "en": "Don", "fr": "" },
+                            {"DataLabel": "Equity", "en": "Equity", "fr": "" },
+                            {"DataLabel": "Equity Credit", "en": "Equity Credit", "fr": "" },
+                            {"DataLabel": "Equity Grant", "en": "Equity Grant", "fr": "" },
+                            {"DataLabel": "Grant Equity", "en": "Grant Equity", "fr": "" }
+                        ],
+                        "SubjectType": "projects"
+                    }
+                ]
+            },
+            {
+                "en": "Activities related to solid waste collection at company level",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Specify for us if your company /OCB offers the following services",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Solid waste collection",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Solid waste collection...44",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Composting organic waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Composting organic waste...45",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Industrial or semi-industrial recycling of plastic waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Industrial or semi-industrial recycling of plastic waste...46",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Crafts with plastic waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Crafts with plastic waste...47",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Industrial or semi-industrial recycling of metal waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Industrial or semi-industrial recycling of metal waste...48",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Crafts with scrap metal",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Crafts with scrap metal...49",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Industrial or semi-industrial recycling of paper/cardboard waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Industrial or semi-industrial recycling of paper/cardboard waste...50",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Crafts with paper/cardboard waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Crafts with paper/cardboard waste...51",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Industrial or semi-industrial recycling of glass waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Industrial or semi-industrial recycling of glass waste...52",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Crafts with glass scraps",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Crafts with glass scraps...53",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Collection and sale of organic waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Collection and sale of organic waste...54",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Collection and sale of plastic waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Collection and sale of plastic waste...55",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Collection and sale of scrap metal",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Collection and sale of scrap metal...56",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Collection and sale of paper/cardboard waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Collection and sale of paper/cardboard waste...57",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            }
                         ],
                         "SubjectType": "enterprises"
                     },
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Does the company/OCB have solid waste treatment sites?",
+                            "en": "Has the Company/OCB made any changes in any area of solid waste management in the last five years?",
                             "fr": ""
                         },
-                        "DataLabel": "Does the company /OCB have solid waste treatment sites?",
+                        "DataLabel": "Has the Company/OCB made any changes in any area of solid waste management in th",
                         "Options": [
                             {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                             {"DataLabel": "No", "en": "No", "fr": "" }
+
+                        ],
+                        "SubjectType": "enterprises"
+                    },
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "If yes, what other area has the company/OCB made these changes?",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Solid waste collection",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Solid waste collection...63",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Composting organic waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Composting organic waste...64",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Industrial or semi-industrial recycling of plastic waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Industrial or semi-industrial recycling of plastic waste...65",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Crafts with plastic waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Crafts with plastic waste...66",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Industrial or semi-industrial recycling of metal waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Industrial or semi-industrial recycling of metal waste...67",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Crafts with scrap metal",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Crafts with scrap metal...68",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Industrial or semi-industrial recycling of paper/cardboard waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Industrial or semi-industrial recycling of paper/cardboard waste...69",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Crafts with paper/cardboard waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Crafts with paper/cardboard waste...70",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Industrial or semi-industrial recycling of glass waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Industrial or semi-industrial recycling of glass waste...71",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Crafts with glass scraps",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Crafts with glass scraps...72",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Collection and sale of organic waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Collection and sale of organic waste...73",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Collection and sale of plastic waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Collection and sale of plastic waste...74",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Collection and sale of scrap metal",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Collection and sale of scrap metal...75",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Collection and sale of paper/cardboard waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Collection and sale of paper/cardboard waste...76",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "enterprises"
+                    }               
+                ]
+            },
+            {
+                "en": "Actors",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Are there other actors involved in solid waste management in your municipality?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Are there other actors involved in solid waste management in your municipality?",
+                        "Options": [
+                            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "No", "en": "No", "fr": "" },
+                            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                        ],
+                        "SubjectType": "enterprises"
+                    }                 
+                ]
+            },
+            {
+                "en": "Partnership Relations",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Are there partnerships between your company/OCB and the following actors in relation to solid waste?",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Town hall",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Town hall...95",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Private companies",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Private companies...96",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "NGO",
+                                    "fr": ""
+                                },
+                                "DataLabel": "NGO...97",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Community organizations",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Community organizations...98",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "SNGRS",
+                                    "fr": ""
+                                },
+                                "DataLabel": "SNGRS...99",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Minister of the Environment",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Minister of the Environment...100",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "MTPTC",
+                                    "fr": ""
+                                },
+                                "DataLabel": "MTPTC...101",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Other state institutions",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Other state institutions...102",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "UNDP",
+                                    "fr": ""
+                                },
+                                "DataLabel": "UNDP...103",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "UNEP",
+                                    "fr": ""
+                                },
+                                "DataLabel": "UNEP...104",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Other UN agencies",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Other UN Agencies...105",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            }
+                        ],
+                        "SubjectType": "enterprises"
+                    }                    
+                ]
+            },
+            {
+                "en": "Give us your assessments  regarding the level of waste generation of the following spaces/institutions",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Give us your assessments regarding the level of waste generation of the following spaces/institutions",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Households",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Households",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Public markets",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Public markets",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Companies",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Companies",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Schools",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Schools",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Hospitals/Health Centres",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Hospitals/Health Centers",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            }
+                        ],
+                        "SubjectType": "enterprises"
+                    }                    
+                ]
+            },
+            {
+                "en": "At what level do the following types of waste meet in your municipality?",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "At what level do the following types of waste meet in your municipality?",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Agricultural waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Agricultural waste",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Organic waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Organic waste",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Plastic waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "plastic waste",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Metals",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Metals lo",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Medical waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "medical waste",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Paper/cardboard waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Paper/cardboard waste",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Textile waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Textile waste",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Others",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Others",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            }
+                        ],
+                        "SubjectType": "enterprises"
+                    }                    
+                ]
+            },
+            {
+                "en": "The negative impact of solid waste on the community",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Have you detected recurrent cases of solid waste-related diseases in your municipality?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Have you detected any recurrent cases of solid waste-related diseases in your mu",
+                        "Options": [
+                            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "No", "en": "No", "fr": "" },
+                            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                        ],
+                        "SubjectType": "enterprises"
+                    },
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Specify whether you have observed the following diseases",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Skin illness",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Skin illness",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Breathing illness",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Breathing illness",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Malaria",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Malaria",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Dengue fever",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Dengue fever",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Typhoid",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Typhoid",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Diarrhea",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Diarrhea",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Vaginal infection",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Vaginal infection",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            }
                         ],
                         "SubjectType": "enterprises"
                     },
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Are these sites natural or structured?",
+                            "en": "Have you detected any environmental problems related to solid waste management in your municipality?",
                             "fr": ""
                         },
-                        "DataLabel": "Are these sites wild or structured?",
+                        "DataLabel": "Have you identified any environmental problems related to solid waste management",
                         "Options": [
-                            {"DataLabel": "savages", "en": "Natural", "fr": "" },
-                            {"DataLabel": "Structured", "en": "Structured", "fr": "" }
+                            {"DataLabel": "yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "No", "en": "No", "fr": "" },
+                            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
                         ],
                         "SubjectType": "enterprises"
                     },
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Specify if you have observed the following environmental problems",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Landfill sites are close to rivers, shores, water sources and people's places of",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Landfill sites are close to rivers, shores, water sources and people's places of",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Unsanitary road networks",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Unsanitary road networks",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Obstruction of road networks",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Obstruction of road networks",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Unsanitary public markets",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Unsanitary public markets",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Unsanitary public beaches",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Unsanitary public beaches",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Destruction of mangroves",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Destruction of mangroves",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "enterprises"
+                    }                     
+                ]
+            },
+            {
+                "en": "Community Commitments",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "In your opinion, what is the level of commitment of the population of your municipality in the management of solid waste?",
+                            "fr": ""
+                        },
+                        "DataLabel": "According to you, what is the level of commitment of the population of your muni",
+                        "Options": [
+                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                            {"DataLabel": "Weak", "en": "Weak", "fr": "" }
+                        ],
+                        "SubjectType": "enterprises"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "In your opinion, what is the level of awareness of the population of your municipality in terms of solid waste management?",
+                            "fr": ""
+                        },
+                        "DataLabel": "In your opinion, what is the level of awareness of the population of your munici",
+                        "Options": [
+                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                            {"DataLabel": "Weak", "en": "Weak", "fr": "" }
+                        ],
+                        "SubjectType": "enterprises"
+                    }
+                ]
+            },
+            {
+                "en": "Innovative solutions",
+                "fr": "",
+                "questions": [
                     {
                         "Type": "single",
                         "Question": {
