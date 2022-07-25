@@ -394,7 +394,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Level of responsibility of households in the management of solid waste in your municipality?",
+                            "en": "In your opinion, what is the level of responsibility of households in the management of solid waste in your municipality?",
                             "fr": ""
                         },
                         "DataLabel": "In your opinion, what is the level of responsibility of households in the management of solid waste in your municipality?",
@@ -421,22 +421,6 @@
                             {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
                         ],
                         "SubjectType": "households"
-                    },
-                    {
-                        "Type": "single",
-                        "Question": {
-                            "en": "How would you rate public garbage collection services?",
-                            "fr": ""
-                        },
-                        "DataLabel": "Generally speaking, how would you rate public garbage collection services?",
-                        "Options": [
-                            {"DataLabel": "Excellent", "en": "Excellent", "fr": "" },
-                            {"DataLabel": "Very well", "en": "Very well", "fr": "" },
-                            {"DataLabel": "Good", "en": "Good", "fr": "" },
-                            {"DataLabel": "Good enough", "en": "Good enough", "fr": "" },
-                            {"DataLabel": "Poor", "en": "Poor", "fr": "" }
-                        ],
-                        "SubjectType": "households"
                     }
                 ]
             },
@@ -456,21 +440,6 @@
                             {"DataLabel": "No", "en": "No", "fr": "" }
                         ],
                         "SubjectType": "households"
-                    },
-                    {
-                        "Type": "single",
-                        "Question": {
-                            "en": "What is your level of satisfaction with the quality of services offered by your waste collection providers?",
-                            "fr": ""
-                        },
-                        "DataLabel": "What is your level of satisfaction with the quality of services offered by your waste collection providers?",
-                        "Options": [
-                            {"DataLabel": "High", "en": "High", "fr": "" },
-                            {"DataLabel": "Mean", "en": "Average", "fr": "" },
-                            {"DataLabel": "Weak", "en": "Low", "fr": "" },
-                            {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
-                        ],
-                        "SubjectType": "households"
                     }
                 ]
             },
@@ -485,6 +454,198 @@
                             "fr": ""
                         },
                         "DataLabel": "Do you knowof any actors or institutions involved in solid waste management in yourmunicipality?",
+                        "Options": [
+                            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "No", "en": "No", "fr": "" },
+                            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                        ],
+                        "SubjectType": "households"
+                    }
+                ]
+            },
+            {
+                "en": "Assessments of waste generation by spaces/institutions",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Assessments regarding the level of waste generation of the following spaces/institutions",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Households",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Households",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Procurement",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Procurement",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Enterprises",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Enterprises",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Schools",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Schools",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Hospitals/Health Centres",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Hospitals/Health Centres",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "households"
+                    }
+                ]
+            },
+            {
+                "en": "The negative impact of solid waste on the community",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Have you detected recurrent cases of solid waste-related diseases in your municipality?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Have you detected recurrent cases of solid waste-related diseases in your municipality?",
+                        "Options": [
+                            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "No", "en": "No", "fr": "" },
+                            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                        ],
+                        "SubjectType": "households"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Have you detected any environmental problems related to solid waste management in your municipality?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Have you detected any environmental problems related to solid waste management in your municipality?",
+                        "Options": [
+                            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "No", "en": "No", "fr": "" },
+                            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                        ],
+                        "SubjectType": "households"
+                    }
+                ]
+            },
+            {
+                "en": "Community Commitments",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "In your opinion, what is the level of commitment of the town hall of your area of intervention in the management of solid waste?",
+                            "fr": ""
+                        },
+                        "DataLabel": "In your opinion, what is the level of commitment of the town hall of your area of intervention in the management of solid waste",
+                        "Options": [
+                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                            {"DataLabel": "Weak", "en": "Weak", "fr": "" }
+                        ],
+                        "SubjectType": "households"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "In your opinion, what is the level of commitment of the population of your municipality in the management of solid waste?",
+                            "fr": ""
+                        },
+                        "DataLabel": "In your opinion, what is the level of commitment of the population of your municipality in the management of solid waste",
+                        "Options": [
+                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                            {"DataLabel": "Weak", "en": "Weak", "fr": "" }
+                        ],
+                        "SubjectType": "households"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "In your opinion, what is the level of awareness of the population of your municipality in terms of solid waste management?",
+                            "fr": ""
+                        },
+                        "DataLabel": "In your opinion, what is the level of awareness of the population of your municipality in terms of solid waste management",
+                        "Options": [
+                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                            {"DataLabel": "Weak", "en": "Weak", "fr": "" }
+                        ],
+                        "SubjectType": "households"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Have you observed any changes in household behaviour in the area of solid waste management over the past three years?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Have you observed any changes in household behaviour in the area of solid waste management over the past three years?",
+                        "Options": [
+                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                            {"DataLabel": "Weak", "en": "Weak", "fr": "" }
+                        ],
+                        "SubjectType": "households"
+                    }
+                ]
+            },
+            {
+                "en": "Innovative Solutions",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Have you detected any innovations related to solid waste management in your municipality?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Have you detected any innovations related to solid waste management in your municipality?",
                         "Options": [
                             {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                             {"DataLabel": "No", "en": "No", "fr": "" },
