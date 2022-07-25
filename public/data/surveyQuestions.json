@@ -3660,12 +3660,121 @@
     "townHalls": {
         "questionGroups": [
             {
-                "en": "All",
+                "en": "Equipment and infrastructure",
                 "fr": "",
                 "questions": [
                     {
+                        "Type": "single",
                         "Question": {
-                            "en": "Does the town hall have a budget dedicated specifically to solid waste management?",
+                            "en": "Does the town hall have a department in charge of the GDS in your municipality?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Does the town hall have a department in charge of SWM in your municipality?",
+                        "Options": [
+                            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "No", "en": "No", "fr": "" },
+                            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                        ],
+                        "SubjectType": "enterprises"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Does the town hall have adequate equipment for waste collection?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Does the town hall have adequate materials for waste collection?",
+                        "Options": [
+                            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "No", "en": "No", "fr": "" },
+                            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                        ],
+                        "SubjectType": "enterprises"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Does the town hall have solid waste landfill sites of more than 1000 square meters?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Does the town hall have solid waste dump sites of more than 1000 square meters?",
+                        "Options": [
+                            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "No", "en": "No", "fr": "" },
+                            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                        ],
+                        "SubjectType": "enterprises"
+                    }   
+                ]
+            },
+            {
+                "en": "Human Resources",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "How many employees of the company/OCB work in the solid waste sector?",
+                            "fr": ""
+                        },
+                        "DataLabel": "n_people",
+                        "Options": [
+                            {"DataLabel": "Less than 5", "en": "Less than 5", "fr": "" },
+                            {"DataLabel": "5 - 10", "en": "5 - 10", "fr": "5 - 10" },
+                            {"DataLabel": "10 - 15", "en": "10 - 15", "fr": "10 - 15" },
+                            {"DataLabel": "15 - 20", "en": "15 - 20", "fr": "15 - 20" },
+                            {"DataLabel": "20 - 50", "en": "20 - 50", "fr": "20 - 50" },
+                            {"DataLabel": "50 - 100", "en": "50 - 100", "fr": "50 - 100" },
+                            {"DataLabel": "Over 100", "en": "Over 100", "fr": "" }
+                        ],
+                        "SubjectType": "townHalls"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "How many women?",
+                            "fr": ""
+                        },
+                        "DataLabel": "n_women",
+                        "Options": [
+                            {"DataLabel": "Less than 5", "en": "Less than 5", "fr": "" },
+                            {"DataLabel": "5 - 10", "en": "5 - 10", "fr": "5 - 10" },
+                            {"DataLabel": "10 - 15", "en": "10 - 15", "fr": "10 - 15" },
+                            {"DataLabel": "15 - 20", "en": "15 - 20", "fr": "15 - 20" },
+                            {"DataLabel": "20 - 50", "en": "20 - 50", "fr": "20 - 50" },
+                            {"DataLabel": "50 - 100", "en": "50 - 100", "fr": "50 - 100" },
+                            {"DataLabel": "Over 100", "en": "Over 100", "fr": "" }
+                        ],
+                        "SubjectType": "townHalls"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "How many men?",
+                            "fr": ""
+                        },
+                        "DataLabel": "n_men",
+                        "Options": [
+                            {"DataLabel": "Less than 5", "en": "Less than 5", "fr": "" },
+                            {"DataLabel": "5 - 10", "en": "5 - 10", "fr": "5 - 10" },
+                            {"DataLabel": "10 - 15", "en": "10 - 15", "fr": "10 - 15" },
+                            {"DataLabel": "15 - 20", "en": "15 - 20", "fr": "15 - 20" },
+                            {"DataLabel": "20 - 50", "en": "20 - 50", "fr": "20 - 50" },
+                            {"DataLabel": "50 - 100", "en": "50 - 100", "fr": "50 - 100" },
+                            {"DataLabel": "Over 100", "en": "Over 100", "fr": "" }
+                        ],
+                        "SubjectType": "townHalls"
+                    }
+                ]
+            },
+            {
+                "en": "Financial Resources",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Does the town hall have a budget dedicated specifically to  solid waste management?",
                             "fr": ""
                         },
                         "DataLabel": "Does the town hall have a budget dedicated specifically to solid waste managemen",
@@ -3675,8 +3784,277 @@
                             {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
                         ],
                         "SubjectType": "townHalls"
+                    }
+                ]
+            },
+            {
+                "en": "Activities related to solid waste collection at town hall level",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Can you tell us if the town hall carries out the following activities related to solid waste?",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Waste collection",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Waste collection...39",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Sorting",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Sorting...40",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Treatment",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Treatment...41",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Transport",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Transportation...42",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Landfilled",
+                                    "fr": ""
+                                },
+                                "DataLabel": "landfilled...43",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Burning",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Burning...44",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Recycling, composting",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Recycling, composting...45",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Other",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Others...46",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "townHalls"
                     },
                     {
+                        "Type": "single",
+                        "Question": {
+                            "en": "How often does the town hall carry out waste collection activities in the municipality?",
+                            "fr": ""
+                        },
+                        "DataLabel": "How many collection days per month does the town hall carry out?",
+                        "Options": [
+                            {"DataLabel": "Three times a month", "en": "Three times a month", "fr": "" },
+                            {"DataLabel": "Twice a month", "en": "Twice a month", "fr": "" },
+                            {"DataLabel": "Once a month", "en": "Once a month", "fr": "" },
+                            {"DataLabel": "None", "en": "None", "fr": "" }
+
+                        ],
+                        "SubjectType": "townHalls"
+                    },
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "What are the solid waste activities that consume the highest resources at the town hall level?",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Waste collection",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Waste collection...48",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Sorting",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Sorting...49",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Treatment",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Treatment...50",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Transport",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Transportation...51",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Landfilled",
+                                    "fr": ""
+                                },
+                                "DataLabel": "landfilled...52",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Burning",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Burning...53",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Recycling, composting",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Recycling, composting...54",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Promotion for recycling",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Promotion for recycling (including crafts)",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Sensitization",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Sensitization",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "townHalls"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Do we weigh the solid waste collected daily or weekly?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Do we weigh the solid waste collected per day or per week?",
+                        "Options": [
+                            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "No", "en": "No", "fr": "" }
+
+                        ],
+                        "SubjectType": "townHalls"
+                    }               
+                ]
+            },
+            {
+                "en": "Actors",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
                         "Question": {
                             "en": "Are there other actors involved in solid waste management in your municipality?",
                             "fr": ""
@@ -3687,17 +4065,728 @@
                             {"DataLabel": "No", "en": "No", "fr": "" },
                             {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
                         ],
+                        "SubjectType": "projects"
+                    },
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Give the following details about the actors",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Private companies",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Private companies...73",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Quantities private companies",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Quantities private companies...74",
+                                "Options": [
+                                    {"DataLabel": "0", "en": "0", "fr": "0" },
+                                    {"DataLabel": "1", "en": "1", "fr": "1" },
+                                    {"DataLabel": "2", "en": "2", "fr": "2" },
+                                    {"DataLabel": "3", "en": "3", "fr": "3" },
+                                    {"DataLabel": "4", "en": "4", "fr": "4" },
+                                    {"DataLabel": "5", "en": "5", "fr": "5" },
+                                    {"DataLabel": "30", "en": "30", "fr": "30"}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "NGO",
+                                    "fr": ""
+                                },
+                                "DataLabel": "NGO...75",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "NGO quantity",
+                                    "fr": ""
+                                },
+                                "DataLabel": "NGO quantity...76",
+                                "Options": [
+                                    {"DataLabel": "0", "en": "0", "fr": "0" },
+                                    {"DataLabel": "1", "en": "1", "fr": "1" },
+                                    {"DataLabel": "2", "en": "2", "fr": "2" },
+                                    {"DataLabel": "3", "en": "3", "fr": "3" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Community-based organizations",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Community organizations...77",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Quantity of community-based organizations",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Quantity community organizations...78",
+                                "Options": [
+                                    {"DataLabel": "0", "en": "0", "fr": "0" },
+                                    {"DataLabel": "1", "en": "1", "fr": "1" },
+                                    {"DataLabel": "2", "en": "2", "fr": "2" },
+                                    {"DataLabel": "3", "en": "3", "fr": "3" },
+                                    {"DataLabel": "5", "en": "5", "fr": "5" },
+                                    {"DataLabel": "6", "en": "6", "fr": "6" },
+                                    {"DataLabel": "20", "en": "20", "fr": "20"}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "NRSS",
+                                    "fr": ""
+                                },
+                                "DataLabel": "SNGRS...79",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "OCB working in sold waste recovery",
+                                    "fr": ""
+                                },
+                                "DataLabel": "CBO working in solid waste recovery",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "SMEs working in the collection and recovery of solid waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "SMEs working in the collection and recovery of solid waste",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Informal collectors",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Informal collectors...82",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Other",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Others...83",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            }
+                        ],
+                        "SubjectType": "townHalls"
+                    }                    
+                ]
+            },
+            {
+                "en": "Partnership Relations",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Are there partnerships between the town hall and the following actors in relation to solid waste?",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Private companies",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Private companies...89",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "NGO",
+                                    "fr": ""
+                                },
+                                "DataLabel": "NGO...90",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "NGO quantity",
+                                    "fr": ""
+                                },
+                                "DataLabel": "NGO quantity...91",
+                                "Options": [
+                                    {"DataLabel": "1", "en": "1", "fr": "1" },
+                                    {"DataLabel": "2", "en": "2", "fr": "2" },
+                                    {"DataLabel": "4", "en": "4", "fr": "4" },
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Community-based organizations",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Community organizations...92",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Quantity of community-based organizations",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Quantity community organizations...93",
+                                "Options": [
+                                    {"DataLabel": "1", "en": "1", "fr": "1" },
+                                    {"DataLabel": "2", "en": "2", "fr": "2" },
+                                    {"DataLabel": "3", "en": "3", "fr": "3" },
+                                    {"DataLabel": "5", "en": "5", "fr": "5" },
+                                    {"DataLabel": "6", "en": "6", "fr": "6" },
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "NRSS",
+                                    "fr": ""
+                                },
+                                "DataLabel": "SNGRS...94",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "UNDP",
+                                    "fr": ""
+                                },
+                                "DataLabel": "UNDP...95",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "UNEP",
+                                    "fr": ""
+                                },
+                                "DataLabel": "UNEP...96",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Other UN agencies",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Other UN Agencies...97",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Decentralised cooperation (with foreign municipalities)",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Decentralized cooperation (with foreign municipalities)...98",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": ""}
+                                ]
+                            }
+                        ],
+                        "SubjectType": "townHalls"
+                    }                    
+                ]
+            },
+            {
+                "en": "Give us an estimate of the level of waste generation",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Give us an estimate of the level of waste generation of the following spaces/institutions",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Households",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Households...122",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Procurement",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Public markets...123",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Enterprises",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Companies",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Schools",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Schools",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Hospitals/Health Centres",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Hospitals/Health Centers",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            }
+                        ],
+                        "SubjectType": "townHalls"
+                    }                    
+                ]
+            },
+            {
+                "en": "At what level do the following types of waste meet in your municipality?",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "At what level do the following types of waste meet in your municipality?",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Agricultural waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Agricultural waste",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Plastic waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "plastic waste",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Metals",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Metals (iron, aluminum)",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Medical waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "medical waste",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Textile waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Textile waste",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Industrial waste",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Industrial waste",
+                                "Options": [
+                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                                    {"DataLabel": "Weak", "en": "Weak", "fr": ""}
+                                ]
+                            }
+                        ],
+                        "SubjectType": "townHalls"
+                    }                    
+                ]
+            },
+            {
+                "en": "The negative impact of solid waste on the community",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Have you detected recurrent cases of solid waste-related diseases in your municipality?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Have you detected any recurrent cases of solid waste-related illnesses in your m",
+                        "Options": [
+                            {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                            {"DataLabel": "No", "en": "No", "fr": "" },
+                            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                        ],
                         "SubjectType": "townHalls"
                     },
                     {
-                        "Question": {
-                            "en": "Have you detected any innovations related to solid waste management in your municipality?",
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Specify whether you have observed the following diseases",
                             "fr": ""
                         },
-                        "DataLabel": "Have you detected any innovations related to solid waste management in your muni",
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Skin illness",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Skin illness",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Breathing illness",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Breathing illness",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Malaria",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Malaria",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Dengue fever",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Dengue fever",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Typhoid",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Typhoid",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Diarrhea",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Diarrhea",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Vaginal infection",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Vaginal infection",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "townHalls"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Have you detected any environmental problems related to solid waste management in your municipality?",
+                            "fr": ""
+                        },
+                        "DataLabel": "Have you identified any environmental problems related to solid waste management",
                         "Options": [
                             {"DataLabel": "Yes", "en": "Yes", "fr": "" },
-                            {"DataLabel": "No", "en": "No", "fr": "" }
+                            {"DataLabel": "No", "en": "No", "fr": "" },
+                            {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                        ],
+                        "SubjectType": "townHalls"
+                    },
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Specify if you have observed the following environmental problems",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Landfill sites are close to rivers, shores, water sources and people's places of",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Landfill sites are close to rivers, shores, water sources and people's places of",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Unsanitary road networks",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Unsanitary road networks",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Obstruction of road networks",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Obstruction of road networks",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Obstruction of stormwater drainage ditches",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Obstruction of rainwater drainage ditches",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Flooding",
+                                    "fr": ""
+                                },
+                                "DataLabel": "floods",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Unhealthy public procurement",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Unsanitary public markets",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Unsanitary public beaches",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Unsanitary public beaches",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Destruction of mangroves",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Destruction of mangroves",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            },
+                            {
+                                "Question": {
+                                    "en": "Animal mortality",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Animal mortality",
+                                "Options": [
+                                    {"DataLabel": "Yes", "en": "Yes", "fr": "" },
+                                    {"DataLabel": "No", "en": "No", "fr": "" }
+                                ]
+                            }
+                        ],
+                        "SubjectType": "townHalls"
+                    }                     
+                ]
+            },
+            {
+                "en": "Community commitments",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "In your opinion, what is the level of commitment of the population of your municipality in the management of solid waste",
+                            "fr": ""
+                        },
+                        "DataLabel": "According to you, what is the level of commitment of the population of your muni",
+                        "Options": [
+                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                            {"DataLabel": "Weak", "en": "Weak", "fr": "" }
+                        ],
+                        "SubjectType": "townHalls"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "In your opinion, what is the level of commitment of the population of your municipality in the management of solid waste",
+                            "fr": ""
+                        },
+                        "DataLabel": "In your opinion, what is the level of awareness of the population of your munici",
+                        "Options": [
+                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Medium", "en": "Medium", "fr": "" },
+                            {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                         ],
                         "SubjectType": "townHalls"
                     }
