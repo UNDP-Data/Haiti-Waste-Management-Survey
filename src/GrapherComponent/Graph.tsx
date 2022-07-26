@@ -23,7 +23,6 @@ export const Graph = (props: Props) => {
   } = props;
 
   const chartData = questions.map((question) => {
-    // console.log(question);
     const questionText = question.Question.en;
     let dataFormatted;
     const numRespondents = data.filter((d:any) => d[question.DataLabel] !== undefined).length;
@@ -40,6 +39,25 @@ export const Graph = (props: Props) => {
       );
     }
 
+    if (question.ResponseType === 'multi select') {
+      const responses = data.map((d:any) => d[question.DataLabel]).filter((d:any) => d !== undefined);
+      const counts = question.Options.map((option) => {
+        let count = 0;
+        responses.forEach((response:any) => {
+          if (response.indexOf(option.DataLabel) > -1) count += 1;
+        });
+        return ({ label: option.DataLabel, xVal: count });
+      });
+      return (
+        {
+          questionText,
+          data: counts,
+          numRespondents,
+          chartType: 'barChart',
+        }
+      );
+    }
+
     const counts = countBy(data.filter((d:any) => d[question.DataLabel] !== undefined).map((d:any) => d[question.DataLabel]));
     dataFormatted = question.Options.map((option) => ({ label: option.en, xVal: counts[option.DataLabel] }));
     return (
@@ -51,7 +69,6 @@ export const Graph = (props: Props) => {
       }
     );
   });
-  // console.log(chartData);
 
   return (
     <El className='graph-node'>
