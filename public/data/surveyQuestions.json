@@ -460,7 +460,77 @@
                             {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
                         ],
                         "SubjectType": "households"
-                    }
+                    },
+                    {
+                        "Type": "multiquestion",
+                        "Label": {
+                            "en": "Give the following details regarding the areas of intervention of the following actors",
+                            "fr": ""
+                        },
+                        "Subquestions": [
+                            {
+                                "Question": {
+                                    "en": "Private companies",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Private companies...62",
+                                "Options": [
+                                    {"DataLabel": "Waste collection", "en": "Waste collection", "fr": "" },
+                                    {"DataLabel": "Sorting", "en": "Sorting", "fr": "" },
+                                    {"DataLabel": "Treatment", "en": "Treatment", "fr": "" },
+                                    {"DataLabel": "Transport", "en": "Transport", "fr": "" },
+                                    {"DataLabel": "Storage", "en": "Storage", "fr": "" },
+                                    {"DataLabel": "Landfill", "en": "Landfill", "fr": "" },
+                                    {"DataLabel": "Incineration/destruction", "en": "Incineration/destruction", "fr": "" },
+                                    {"DataLabel": "Recycling (including crafts)", "en": "Recycling (including crafts)", "fr": "" },
+                                    {"DataLabel": "Technology", "en": "Technology", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ],
+                                "ResponseType": "multi select"
+                            },
+                            {
+                                "Question": {
+                                    "en": "Town hall",
+                                    "fr": ""
+                                },
+                                "DataLabel": "SpecifywhethertheTownHallis_n",
+                                "Options": [
+                                    {"DataLabel": "Waste collection", "en": "Waste collection", "fr": "" },
+                                    {"DataLabel": "Sorting", "en": "Sorting", "fr": "" },
+                                    {"DataLabel": "Treatment", "en": "Treatment", "fr": "" },
+                                    {"DataLabel": "Transport", "en": "Transport", "fr": "" },
+                                    {"DataLabel": "Storage", "en": "Storage", "fr": "" },
+                                    {"DataLabel": "Landfill", "en": "Landfill", "fr": "" },
+                                    {"DataLabel": "Incineration/destruction", "en": "Incineration/destruction", "fr": "" },
+                                    {"DataLabel": "Recycling (including crafts)", "en": "Recycling (including crafts)", "fr": "" },
+                                    {"DataLabel": "Technology", "en": "Technology", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ],
+                                "ResponseType": "multi select"
+                            },
+                            {
+                                "Question": {
+                                    "en": "Community organizations",
+                                    "fr": ""
+                                },
+                                "DataLabel": "Community-based organizations...65",
+                                "Options": [
+                                    {"DataLabel": "Waste collection", "en": "Waste collection", "fr": "" },
+                                    {"DataLabel": "Sorting", "en": "Sorting", "fr": "" },
+                                    {"DataLabel": "Treatment", "en": "Treatment", "fr": "" },
+                                    {"DataLabel": "Transport", "en": "Transport", "fr": "" },
+                                    {"DataLabel": "Storage", "en": "Storage", "fr": "" },
+                                    {"DataLabel": "Landfill", "en": "Landfill", "fr": "" },
+                                    {"DataLabel": "Incineration/destruction", "en": "Incineration/destruction", "fr": "" },
+                                    {"DataLabel": "Recycling (including crafts)", "en": "Recycling (including crafts)", "fr": "" },
+                                    {"DataLabel": "Technology", "en": "Technology", "fr": "" },
+                                    {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
+                                ],
+                                "ResponseType": "multi select"
+                            }
+                        ],
+                        "SubjectType": "households"
+                    }   
                 ]
             },
             {
