@@ -3803,7 +3803,7 @@
                                     "en": "Waste collection",
                                     "fr": ""
                                 },
-                                "DataLabel": "Waste collection...39",
+                                "DataLabel": "Waste collection",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -3815,7 +3815,7 @@
                                     "en": "Sorting",
                                     "fr": ""
                                 },
-                                "DataLabel": "Sorting...40",
+                                "DataLabel": "Sorting",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -3828,7 +3828,7 @@
                                     "en": "Treatment",
                                     "fr": ""
                                 },
-                                "DataLabel": "Treatment...41",
+                                "DataLabel": "Treatment",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -3841,7 +3841,7 @@
                                     "en": "Transport",
                                     "fr": ""
                                 },
-                                "DataLabel": "Transportation...42",
+                                "DataLabel": "Transportation",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -3853,7 +3853,7 @@
                                     "en": "Landfilled",
                                     "fr": ""
                                 },
-                                "DataLabel": "landfilled...43",
+                                "DataLabel": "landfilled",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -3865,7 +3865,7 @@
                                     "en": "Burning",
                                     "fr": ""
                                 },
-                                "DataLabel": "Burning...44",
+                                "DataLabel": "Burning",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -3877,7 +3877,7 @@
                                     "en": "Recycling, composting",
                                     "fr": ""
                                 },
-                                "DataLabel": "Recycling, composting...45",
+                                "DataLabel": "Recycling, composting",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -3889,7 +3889,7 @@
                                     "en": "Other",
                                     "fr": ""
                                 },
-                                "DataLabel": "Others...46",
+                                "DataLabel": "Others",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -3927,7 +3927,7 @@
                                     "en": "Waste collection",
                                     "fr": ""
                                 },
-                                "DataLabel": "Waste collection...48",
+                                "DataLabel": "Waste collection2",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -3939,7 +3939,7 @@
                                     "en": "Sorting",
                                     "fr": ""
                                 },
-                                "DataLabel": "Sorting...49",
+                                "DataLabel": "Sorting3",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -3951,7 +3951,7 @@
                                     "en": "Treatment",
                                     "fr": ""
                                 },
-                                "DataLabel": "Treatment...50",
+                                "DataLabel": "Treatment4",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -3963,7 +3963,7 @@
                                     "en": "Transport",
                                     "fr": ""
                                 },
-                                "DataLabel": "Transportation...51",
+                                "DataLabel": "Transportation5",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -3975,7 +3975,7 @@
                                     "en": "Landfilled",
                                     "fr": ""
                                 },
-                                "DataLabel": "landfilled...52",
+                                "DataLabel": "landfilled6",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -3987,7 +3987,7 @@
                                     "en": "Burning",
                                     "fr": ""
                                 },
-                                "DataLabel": "Burning...53",
+                                "DataLabel": "Burning7",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -3999,7 +3999,7 @@
                                     "en": "Recycling, composting",
                                     "fr": ""
                                 },
-                                "DataLabel": "Recycling, composting...54",
+                                "DataLabel": "Recycling, composting8",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -4079,7 +4079,7 @@
                                     "en": "Private companies",
                                     "fr": ""
                                 },
-                                "DataLabel": "Private companies...73",
+                                "DataLabel": "Private companies",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -4091,7 +4091,7 @@
                                     "en": "Quantities private companies",
                                     "fr": ""
                                 },
-                                "DataLabel": "Quantities private companies...74",
+                                "DataLabel": "Quantities private companies",
                                 "Options": [
                                     {"DataLabel": "0", "en": "0", "fr": "0" },
                                     {"DataLabel": "1", "en": "1", "fr": "1" },
@@ -4107,7 +4107,7 @@
                                     "en": "NGO",
                                     "fr": ""
                                 },
-                                "DataLabel": "NGO...75",
+                                "DataLabel": "NGO",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -4119,7 +4119,7 @@
                                     "en": "NGO quantity",
                                     "fr": ""
                                 },
-                                "DataLabel": "NGO quantity...76",
+                                "DataLabel": "NGO quantity",
                                 "Options": [
                                     {"DataLabel": "0", "en": "0", "fr": "0" },
                                     {"DataLabel": "1", "en": "1", "fr": "1" },
@@ -4132,7 +4132,7 @@
                                     "en": "Community-based organizations",
                                     "fr": ""
                                 },
-                                "DataLabel": "Community organizations...77",
+                                "DataLabel": "Community organizations",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -4144,7 +4144,7 @@
                                     "en": "Quantity of community-based organizations",
                                     "fr": ""
                                 },
-                                "DataLabel": "Quantity community organizations...78",
+                                "DataLabel": "Quantity community organizations",
                                 "Options": [
                                     {"DataLabel": "0", "en": "0", "fr": "0" },
                                     {"DataLabel": "1", "en": "1", "fr": "1" },
@@ -4160,7 +4160,7 @@
                                     "en": "NRSS",
                                     "fr": ""
                                 },
-                                "DataLabel": "SNGRS...79",
+                                "DataLabel": "SNGRS",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -4196,7 +4196,7 @@
                                     "en": "Informal collectors",
                                     "fr": ""
                                 },
-                                "DataLabel": "Informal collectors...82",
+                                "DataLabel": "Informal collectors",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -4208,7 +4208,7 @@
                                     "en": "Other",
                                     "fr": ""
                                 },
-                                "DataLabel": "Others...83",
+                                "DataLabel": "Others16",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -4236,7 +4236,7 @@
                                     "en": "Private companies",
                                     "fr": ""
                                 },
-                                "DataLabel": "Private companies...89",
+                                "DataLabel": "Private companies22",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -4248,7 +4248,7 @@
                                     "en": "NGO",
                                     "fr": ""
                                 },
-                                "DataLabel": "NGO...90",
+                                "DataLabel": "NGO23",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -4260,7 +4260,7 @@
                                     "en": "NGO quantity",
                                     "fr": ""
                                 },
-                                "DataLabel": "NGO quantity...91",
+                                "DataLabel": "NGO quantity24",
                                 "Options": [
                                     {"DataLabel": "1", "en": "1", "fr": "1" },
                                     {"DataLabel": "2", "en": "2", "fr": "2" },
@@ -4275,7 +4275,7 @@
                                     "en": "Community-based organizations",
                                     "fr": ""
                                 },
-                                "DataLabel": "Community organizations...92",
+                                "DataLabel": "Community organizations25",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -4287,7 +4287,7 @@
                                     "en": "Quantity of community-based organizations",
                                     "fr": ""
                                 },
-                                "DataLabel": "Quantity community organizations...93",
+                                "DataLabel": "Quantity community organizations26",
                                 "Options": [
                                     {"DataLabel": "1", "en": "1", "fr": "1" },
                                     {"DataLabel": "2", "en": "2", "fr": "2" },
@@ -4304,7 +4304,7 @@
                                     "en": "NRSS",
                                     "fr": ""
                                 },
-                                "DataLabel": "SNGRS...94",
+                                "DataLabel": "SNGRS27",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -4316,7 +4316,7 @@
                                     "en": "UNDP",
                                     "fr": ""
                                 },
-                                "DataLabel": "UNDP...95",
+                                "DataLabel": "UNDP",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -4328,7 +4328,7 @@
                                     "en": "UNEP",
                                     "fr": ""
                                 },
-                                "DataLabel": "UNEP...96",
+                                "DataLabel": "UNEP",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -4340,7 +4340,7 @@
                                     "en": "Other UN agencies",
                                     "fr": ""
                                 },
-                                "DataLabel": "Other UN Agencies...97",
+                                "DataLabel": "Other UN Agencies",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -4352,7 +4352,7 @@
                                     "en": "Decentralised cooperation (with foreign municipalities)",
                                     "fr": ""
                                 },
-                                "DataLabel": "Decentralized cooperation (with foreign municipalities)...98",
+                                "DataLabel": "Decentralized cooperation (with foreign municipalities)",
                                 "Options": [
                                     {"DataLabel": "Yes", "en": "Yes", "fr": "" },
                                     {"DataLabel": "No", "en": "No", "fr": "" },
@@ -4380,7 +4380,7 @@
                                     "en": "Households",
                                     "fr": ""
                                 },
-                                "DataLabel": "Households...122",
+                                "DataLabel": "Households45",
                                 "Options": [
                                     {"DataLabel": "Raised", "en": "Raised", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
@@ -4392,7 +4392,7 @@
                                     "en": "Procurement",
                                     "fr": ""
                                 },
-                                "DataLabel": "Public markets...123",
+                                "DataLabel": "Public markets46",
                                 "Options": [
                                     {"DataLabel": "Raised", "en": "Raised", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
