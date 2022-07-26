@@ -1976,6 +1976,32 @@
                 ]
             },
             {
+                "en": "Areas of intervention, objectives, expected results, main project activities",
+                "fr": "",
+                "questions": [
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Areas of interventions",
+                            "fr": ""
+                        },
+                        "DataLabel": "Areas of intervention",
+                        "ResponseType": "freeform text",
+                        "SubjectType": "projects"
+                    },
+                    {
+                        "Type": "single",
+                        "Question": {
+                            "en": "Objectives",
+                            "fr": ""
+                        },
+                        "DataLabel": "Goals",
+                        "ResponseType": "freeform text",
+                        "SubjectType": "projects"
+                    }
+                ]
+            },
+            {
                 "en": "Actors",
                 "fr": "",
                 "questions": [

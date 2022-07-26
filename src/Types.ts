@@ -14,6 +14,7 @@ export interface SurveyQuestionDataType {
   DataLabel: string;
   Options: OptionDataType[];
   SubjectType: 'households' | 'enterprises' | 'projects' | 'dumpingSites' | 'healthFacilities' | 'townHalls';
+  ResponseType?: string;
 }
 
 export interface SurveyQuestionGroupDataType {
