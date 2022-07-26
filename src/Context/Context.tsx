@@ -7,10 +7,12 @@ const Context = createContext<CtxDataType>({
   selectedDepartments: [],
   selectedGenders: [],
   selectedEducations: [],
+  selectedFunctions: [],
   updateSelectedSubjectType: (_d: 'households' | 'enterprises' | 'projects' | 'dumpingSites' | 'healthFacilities' | 'townHalls') => {},
   updateSelectedDepartments: (_d: CheckboxValueType[]) => {},
   updateSelectedGenders: (_d: CheckboxValueType[]) => {},
   updateSelectedEducations: (_d: CheckboxValueType[]) => {},
+  updateSelectedFunctions: (_d: CheckboxValueType[]) => {},
 });
 
 export default Context;

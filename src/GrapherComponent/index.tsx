@@ -148,6 +148,7 @@ export const GrapherComponent = (props: Props) => {
     selectedDepartments,
     selectedGenders,
     selectedEducations,
+    selectedFunctions,
     updateSelectedSubjectType,
   } = useContext(Context) as CtxDataType;
 
@@ -189,6 +190,10 @@ export const GrapherComponent = (props: Props) => {
   if (selectedSubjectType === 'households') {
     filteredData = selectedGenders.length > 0 ? filteredData.filter((d:any) => selectedGenders.indexOf(d['Gender of respondent']) > -1) : filteredData;
     filteredData = selectedEducations.length > 0 ? filteredData.filter((d:any) => selectedEducations.indexOf(d['Level of education of the head of the household.']) > -1) : filteredData;
+  }
+
+  if (selectedSubjectType === 'enterprises' || selectedSubjectType === 'projects' || selectedSubjectType === 'healthFacilities' || selectedSubjectType === 'townHalls') {
+    filteredData = selectedFunctions.length > 0 ? filteredData.filter((d:any) => selectedFunctions.indexOf(d.function_resp) > -1) : filteredData;
   }
 
   const numRespondents = filteredData.length;

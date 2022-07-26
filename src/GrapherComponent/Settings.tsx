@@ -53,9 +53,11 @@ export const Settings = () => {
     selectedDepartments,
     selectedGenders,
     selectedEducations,
+    selectedFunctions,
     updateSelectedDepartments,
     updateSelectedGenders,
     updateSelectedEducations,
+    updateSelectedFunctions,
   } = useContext(Context) as CtxDataType;
 
   const departments = [
@@ -82,6 +84,14 @@ export const Settings = () => {
     { label: 'Primary school', value: 'Primary' },
     { label: 'Literacy program', value: 'Participated in a literacy program' },
     { label: 'No formal education', value: 'Unschooled' },
+  ];
+
+  const functionResp = [
+    { label: 'Clerical support', value: 'Clerical support' },
+    { label: 'Manager', value: 'Manager' },
+    { label: 'Professional', value: 'Professional' },
+    { label: 'Service worker', value: 'Service worker' },
+    { label: 'Technician', value: 'Technician' },
   ];
 
   return (
@@ -113,6 +123,21 @@ export const Settings = () => {
               </FilterTitle>
               <CheckboxContainer>
                 <Checkbox.Group options={education} defaultValue={selectedEducations} onChange={(e) => { updateSelectedEducations(e); }} />
+              </CheckboxContainer>
+            </FiltersEl>
+          </>
+        )
+      }
+      {
+        (selectedSubjectType === 'enterprises' || selectedSubjectType === 'projects' || selectedSubjectType === 'healthFacilities' || selectedSubjectType === 'townHalls')
+        && (
+          <>
+            <FiltersEl>
+              <FilterTitle>
+                Select Respondent&apos;s Function
+              </FilterTitle>
+              <CheckboxContainer>
+                <Checkbox.Group options={functionResp} defaultValue={selectedFunctions} onChange={(e) => { updateSelectedFunctions(e); }} />
               </CheckboxContainer>
             </FiltersEl>
           </>
