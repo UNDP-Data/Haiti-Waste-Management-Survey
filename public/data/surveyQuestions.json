@@ -13,7 +13,7 @@
                         },
                         "DataLabel": "What is your assessment of the volume of solid waste  produced by your household?",
                         "Options": [
-                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Raised", "en": "High", "fr": "" },
                             {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                             {"DataLabel": "Weak", "en": "Weak", "fr": "" },
                             {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
@@ -34,7 +34,7 @@
                                 },
                                 "DataLabel": "Organic waste",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" },
                                     {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
@@ -47,7 +47,7 @@
                                 },
                                 "DataLabel": "Plastic waste...16",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" },
                                     {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
@@ -60,7 +60,7 @@
                                 },
                                 "DataLabel": "Metals...17",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" },
                                     {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
@@ -73,7 +73,7 @@
                                 },
                                 "DataLabel": "Medical waste...18",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" },
                                     {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
@@ -86,7 +86,7 @@
                                 },
                                 "DataLabel": "Other...19",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" },
                                     {"DataLabel": "I do not know", "en": "I do not know", "fr": "" }
@@ -154,7 +154,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Throwing into a ravine, the river, the sea",
+                                    "en": "Throwing into a gully, the river, the sea",
                                     "fr": ""
                                 },
                                 "DataLabel": "Throwing into a ravine, the river, the sea...26",
@@ -165,7 +165,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Throwing into the plot ('jaden') or free land",
+                                    "en": "Throwing into the plot ('jaden') or empty land",
                                     "fr": ""
                                 },
                                 "DataLabel": "Throwing into the plot (\"jaden\") or free land",
@@ -176,7 +176,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Throwing into an empty lot/landfill",
+                                    "en": "Throwing into an empty field/landfill site",
                                     "fr": ""
                                 },
                                 "DataLabel": "Throwing into an empty lot/landfill...28",
@@ -198,7 +198,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Recycling (manure, handicrafts)",
+                                    "en": "Recycling (manure, handcrafted products)",
                                     "fr": ""
                                 },
                                 "DataLabel": "Recycling (manure, handicrafts)",
@@ -213,7 +213,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "How often does your household empty its poubels of solid waste?",
+                            "en": "How often does your household empty its bin of solid waste?",
                             "fr": ""
                         },
                         "DataLabel": "How often does your household empty its poubels of solid waste?",
@@ -239,7 +239,7 @@
                                 },
                                 "DataLabel": "Use/Purchase of town hall services/SNGRS...32",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" },
                                     {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
@@ -252,7 +252,7 @@
                                 },
                                 "DataLabel": "Purchase of services from a private company or an individual",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" },
                                     {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
@@ -260,12 +260,12 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Throwing into the street, sewers",
+                                    "en": "Throwing into the street, the sewers",
                                     "fr": ""
                                 },
                                 "DataLabel": "Throwing into the street, sewers...34",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" },
                                     {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
@@ -278,7 +278,7 @@
                                 },
                                 "DataLabel": "Throwing into public garbage cans/dumpsters...35",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" },
                                     {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
@@ -286,12 +286,12 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Throwing into a ravine, the river, the sea",
+                                    "en": "Throwing into a gully, the river, the sea",
                                     "fr": ""
                                 },
                                 "DataLabel": "Throwing into a ravine, the river, the sea...36",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" },
                                     {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
@@ -299,12 +299,12 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Throwing into the plot ('jaden') or free land",
+                                    "en": "Throwing into the plot ('jaden') or empty land",
                                     "fr": ""
                                 },
                                 "DataLabel": "Throwing into the plot (\"jaden\")",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" },
                                     {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
@@ -312,12 +312,12 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Throwing into an empty lot/landfill",
+                                    "en": "Throwing into an empty field/landfill",
                                     "fr": ""
                                 },
                                 "DataLabel": "Throwing into an empty lot/landfill...38",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" },
                                     {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
@@ -325,12 +325,12 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Brulage",
+                                    "en": "Burning",
                                     "fr": ""
                                 },
                                 "DataLabel": "Brulage",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" },
                                     {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
@@ -338,12 +338,12 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Composting (manure)",
+                                    "en": "Recycling (manure, handcrafted products)",
                                     "fr": ""
                                 },
                                 "DataLabel": "Composting (Manure)",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" },
                                     {"DataLabel": "Not applicable", "en": "Not applicable", "fr": "" }
@@ -368,7 +368,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Are you ready to sort the waste before disposing of it to facilitate its recovery?",
+                            "en": "Are you ready to sort the waste before disposing of it to facilitate its recycling?",
                             "fr": ""
                         },
                         "DataLabel": "Are you ready to sort the waste before disposing of it to facilitate its recovery?",
@@ -381,7 +381,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Does your household store its solid waste in sachets?",
+                            "en": "Does your household store its solid waste in bags?",
                             "fr": ""
                         },
                         "DataLabel": "Does your household store its solid waste  in sachets?",
@@ -551,19 +551,19 @@
                                 },
                                 "DataLabel": "Households",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                                 ]
                             },
                             {
                                 "Question": {
-                                    "en": "Procurement",
+                                    "en": "Public sector",
                                     "fr": ""
                                 },
                                 "DataLabel": "Procurement",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                                 ]
@@ -575,7 +575,7 @@
                                 },
                                 "DataLabel": "Enterprises",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                                 ]
@@ -587,7 +587,7 @@
                                 },
                                 "DataLabel": "Schools",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                                 ]
@@ -599,7 +599,7 @@
                                 },
                                 "DataLabel": "Hospitals/Health Centres",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                                 ]
@@ -655,7 +655,7 @@
                         },
                         "DataLabel": "In your opinion, what is the level of commitment of the town hall of your area of intervention in the management of solid waste",
                         "Options": [
-                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Raised", "en": "High", "fr": "" },
                             {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                             {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                         ],
@@ -669,7 +669,7 @@
                         },
                         "DataLabel": "In your opinion, what is the level of commitment of the population of your municipality in the management of solid waste",
                         "Options": [
-                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Raised", "en": "High", "fr": "" },
                             {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                             {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                         ],
@@ -683,7 +683,7 @@
                         },
                         "DataLabel": "In your opinion, what is the level of awareness of the population of your municipality in terms of solid waste management",
                         "Options": [
-                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Raised", "en": "High", "fr": "" },
                             {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                             {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                         ],
@@ -697,7 +697,7 @@
                         },
                         "DataLabel": "Have you observed any changes in household behaviour in the area of solid waste management over the past three years?",
                         "Options": [
-                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Raised", "en": "High", "fr": "" },
                             {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                             {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                         ],
@@ -767,7 +767,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Benne truck",
+                                    "en": "Dump truck",
                                     "fr": ""
                                 },
                                 "DataLabel": "Dump truck",
@@ -901,12 +901,12 @@
                         "Options": [
                             {"DataLabel": "Credit", "en": "Credit", "fr": "" },
                             {"DataLabel": "Credit Donation", "en": "Credit Donation", "fr": "" },
-                            {"DataLabel": "Credit Equity", "en": "Credit Equity", "fr": "" },
-                            {"DataLabel": "Don", "en": "Don", "fr": "" },
-                            {"DataLabel": "Equity", "en": "Equity", "fr": "" },
-                            {"DataLabel": "Equity Credit", "en": "Equity Credit", "fr": "" },
-                            {"DataLabel": "Equity Grant", "en": "Equity Grant", "fr": "" },
-                            {"DataLabel": "Grant Equity", "en": "Grant Equity", "fr": "" }
+                            {"DataLabel": "Credit Equity", "en": "Credit Own Funds", "fr": "" },
+                            {"DataLabel": "Don", "en": "Donation", "fr": "" },
+                            {"DataLabel": "Equity", "en": "Own Funds", "fr": "" },
+                            {"DataLabel": "Equity Credit", "en": "Own Funds Credit", "fr": "" },
+                            {"DataLabel": "Equity Grant", "en": "Own Funds Grant", "fr": "" },
+                            {"DataLabel": "Grant Equity", "en": "Grant Own Funds", "fr": "" }
                         ],
                         "SubjectType": "projects"
                     }
@@ -919,7 +919,7 @@
                     {
                         "Type": "multiquestion",
                         "Label": {
-                            "en": "Specify for us if your company /OCB offers the following services",
+                            "en": "Specify for us if your company/OCB offers the following services",
                             "fr": ""
                         },
                         "Subquestions": [
@@ -1057,7 +1057,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Collection and sale of scrap metal",
+                                    "en": "Collection and sale of metal waste",
                                     "fr": ""
                                 },
                                 "DataLabel": "Collection and sale of scrap metal...57",
@@ -1158,7 +1158,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Crafts with scrap metal",
+                                    "en": "Crafts with metal waste",
                                     "fr": ""
                                 },
                                 "DataLabel": "Crafts with scrap metal...69",
@@ -1202,7 +1202,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Crafts with glass scraps",
+                                    "en": "Crafts with glass waste",
                                     "fr": ""
                                 },
                                 "DataLabel": "Crafts with glass scraps...73",
@@ -1235,7 +1235,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Collection and sale of scrap metal",
+                                    "en": "Collection and sale of metal waste",
                                     "fr": ""
                                 },
                                 "DataLabel": "Collection and sale of scrap metal...76",
@@ -1363,7 +1363,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Minister of the Environment",
+                                    "en": "Ministry of the Environment",
                                     "fr": ""
                                 },
                                 "DataLabel": "Minister of the Environment...86",
@@ -1515,7 +1515,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Minister of the Environment",
+                                    "en": "Ministry of the Environment",
                                     "fr": ""
                                 },
                                 "DataLabel": "Minister of the Environment...101",
@@ -1591,7 +1591,7 @@
                 ]
             },
             {
-                "en": "Give us your assessments  regarding the level of waste generation of the following spaces/institutions",
+                "en": "Give us your assessments regarding the level of waste generation of the following spaces/institutions",
                 "fr": "",
                 "questions": [
                     {
@@ -1608,7 +1608,7 @@
                                 },
                                 "DataLabel": "Households",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
@@ -1620,7 +1620,7 @@
                                 },
                                 "DataLabel": "Public markets",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
@@ -1632,7 +1632,7 @@
                                 },
                                 "DataLabel": "Companies",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
@@ -1644,7 +1644,7 @@
                                 },
                                 "DataLabel": "Schools",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
@@ -1656,7 +1656,7 @@
                                 },
                                 "DataLabel": "Hospitals/Health Centers",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
@@ -1684,7 +1684,7 @@
                                 },
                                 "DataLabel": "Agricultural waste",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
@@ -1696,7 +1696,7 @@
                                 },
                                 "DataLabel": "Organic waste",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
@@ -1708,19 +1708,19 @@
                                 },
                                 "DataLabel": "plastic waste",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
                             },
                             {
                                 "Question": {
-                                    "en": "Metals",
+                                    "en": "Metal waste",
                                     "fr": ""
                                 },
                                 "DataLabel": "Metals lo",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
@@ -1732,7 +1732,7 @@
                                 },
                                 "DataLabel": "medical waste",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
@@ -1744,7 +1744,7 @@
                                 },
                                 "DataLabel": "Paper/cardboard waste",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
@@ -1756,7 +1756,7 @@
                                 },
                                 "DataLabel": "Textile waste",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
@@ -1768,7 +1768,7 @@
                                 },
                                 "DataLabel": "Others",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
@@ -1805,7 +1805,7 @@
                         "Subquestions": [
                             {
                                 "Question": {
-                                    "en": "Skin illness",
+                                    "en": "Skin disease",
                                     "fr": ""
                                 },
                                 "DataLabel": "Skin illness",
@@ -1817,7 +1817,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Breathing illness",
+                                    "en": "Respiratory disease",
                                     "fr": ""
                                 },
                                 "DataLabel": "Breathing illness",
@@ -1925,7 +1925,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Unsanitary road networks",
+                                    "en": "Insalubrity of road networks",
                                     "fr": ""
                                 },
                                 "DataLabel": "Unsanitary road networks",
@@ -1949,7 +1949,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Unsanitary public markets",
+                                    "en": "Insalubrity of public markets",
                                     "fr": ""
                                 },
                                 "DataLabel": "Unsanitary public markets",
@@ -1961,7 +1961,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Unsanitary public beaches",
+                                    "en": "Insalubrity of public beaches",
                                     "fr": ""
                                 },
                                 "DataLabel": "Unsanitary public beaches",
@@ -2000,7 +2000,7 @@
                         },
                         "DataLabel": "According to you, what is the level of commitment of the population of your muni",
                         "Options": [
-                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Raised", "en": "High", "fr": "" },
                             {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                             {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                         ],
@@ -2014,7 +2014,7 @@
                         },
                         "DataLabel": "In your opinion, what is the level of awareness of the population of your munici",
                         "Options": [
-                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Raised", "en": "High", "fr": "" },
                             {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                             {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                         ],
@@ -2113,7 +2113,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Annual project budget",
+                            "en": "Annual project budget (gourdes)",
                             "fr": ""
                         },
                         "DataLabel": "budget",
@@ -2224,7 +2224,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Objectives",
+                            "en": "Goals",
                             "fr": ""
                         },
                         "DataLabel": "Goals",
@@ -2699,7 +2699,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Metal scrap",
+                                    "en": "Metal waste",
                                     "fr": ""
                                 },
                                 "DataLabel": "Metal scrap",
@@ -2789,7 +2789,7 @@
                         "Subquestions": [
                             {
                                 "Question": {
-                                    "en": "Skin illness",
+                                    "en": "Skin disease",
                                     "fr": ""
                                 },
                                 "DataLabel": "Skin illness",
@@ -2801,7 +2801,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Breathing illness",
+                                    "en": "Respiratory disease",
                                     "fr": ""
                                 },
                                 "DataLabel": "Breathing illness",
@@ -2920,7 +2920,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Unsanitary road networks",
+                                    "en": "Insalubrity of road networks",
                                     "fr": ""
                                 },
                                 "DataLabel": "Unsanitary road networks",
@@ -2942,7 +2942,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Unsanitary public markets",
+                                    "en": "Insalubrity of public markets",
                                     "fr": ""
                                 },
                                 "DataLabel": "Unsanitary public markets",
@@ -2953,7 +2953,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Unsanitary public beaches",
+                                    "en": "Insalubrity of public beaches",
                                     "fr": ""
                                 },
                                 "DataLabel": "Unsanitary public beaches",
@@ -2990,7 +2990,7 @@
                         },
                         "DataLabel": "According to you, what is the level of commitment of the town hall of your area",
                         "Options": [
-                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Raised", "en": "High", "fr": "" },
                             {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                             {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                         ],
@@ -3004,7 +3004,7 @@
                         },
                         "DataLabel": "According to you, what is the level of commitment of the population of your area",
                         "Options": [
-                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Raised", "en": "High", "fr": "" },
                             {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                             {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                         ],
@@ -3018,7 +3018,7 @@
                         },
                         "DataLabel": "According to you, what is the level of awareness of the population of your area",
                         "Options": [
-                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Raised", "en": "High", "fr": "" },
                             {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                             {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                         ],
@@ -3124,7 +3124,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Does your H/CS have a dedicated budget for DBM management?",
+                            "en": "Does your H/HC have a dedicated budget for biomedical waste management?",
                             "fr": ""
                         },
                         "DataLabel": "Does your H/CS have a dedicated budget for DBM management?",
@@ -3206,7 +3206,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Have your H/CS staff been trained in DBM management?",
+                            "en": "Have your H/HC staff been trained in biomedical waste management?",
                             "fr": ""
                         },
                         "DataLabel": "Have your H/CS staff been trained in DBM management?",
@@ -3219,7 +3219,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Have you personally attended any training sessions on DBM management during your academic and professional journey?",
+                            "en": "Have you personally attended training sessions on biomedical waste management during your academic and professional journey?",
                             "fr": ""
                         },
                         "DataLabel": "Have you personally attended training sessions on DBM management during your aca",
@@ -3232,7 +3232,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Do you consider the subject of GDM important for your work as a medical professional?",
+                            "en": "Do you consider the subject of biomedical waste important for your work as a medical professional?",
                             "fr": ""
                         },
                         "DataLabel": "Do you consider the subject of BDM important for your work as a medical profess",
@@ -3246,7 +3246,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Is there a manual giving the main orientations concerning the DBM management within your H/CS?",
+                            "en": "Is there a manual giving the main guidelines for biomedical waste management within your H/HC?",
                             "fr": ""
                         },
                         "DataLabel": "Is there a manual giving the main guidelines for DBM management within your H/CS",
@@ -3259,7 +3259,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Have the staff of your H/CS been made aware of the risks associated with the handling of DBMs?",
+                            "en": "Have your H/HC staff been made aware of the risks associated with handling biomedical waste?",
                             "fr": ""
                         },
                         "DataLabel": "Have your H/CS staff been made aware of the risks associated with handling DBM?",
@@ -3272,7 +3272,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Does your H/CS have one or more employees responsible for the management of DBMs?",
+                            "en": "Does your H/HC have an employee(s) responsible for managing biomedical waste?",
                             "fr": ""
                         },
                         "DataLabel": "Does your H/CS have an employee(s) responsible for managing DBM?",
@@ -3291,7 +3291,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Can you estimate the amount (kg) of DBM produced by your H/CS per day?",
+                            "en": "Can you make an estimate (in kg) of the quantity (kg) of biomedical waste produced by your H/CS per day?",
                             "fr": ""
                         },
                         "DataLabel": "Can you make an estimate (in kg) of the quantity (kg) of DBM produced by your H/",
@@ -3310,7 +3310,7 @@
                         "Subquestions": [
                             {
                                 "Question": {
-                                    "en": "Sharp waste",
+                                    "en": "Pointed/sharp waste (needles, syringes, injectors, scalpel blades, empty vials, ",
                                     "fr": ""
                                 },
                                 "DataLabel": "Sharps/sharps waste",
@@ -3325,7 +3325,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Anatomical waste",
+                                    "en": "Anatomical waste (removed organs, amputated body parts, placentas)",
                                     "fr": ""
                                 },
                                 "DataLabel": "Anatomical waste",
@@ -3355,7 +3355,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Radioactive waste",
+                                    "en": "Radioactive waste (all types of waste produced from analyzes of tissues and bodi",
                                     "fr": ""
                                 },
                                 "DataLabel": "Radioactive waste",
@@ -3370,7 +3370,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Chemical waste",
+                                    "en": "Chemical waste (liquid and solid)",
                                     "fr": ""
                                 },
                                 "DataLabel": "Chemical waste",
@@ -3465,7 +3465,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Have you detected recurrent cases of diseases related to the mismanagement of DBMs in your municipality or department?",
+                            "en": "Have you detected recurrent cases of illnesses/symptoms related to poor management of DBMs in your municipality or department?",
                             "fr": ""
                         },
                         "DataLabel": "Have you detected recurrent cases of illnesses/symptoms related to poor manageme",
@@ -3571,7 +3571,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Do you sort waste according to its nature or level of dangerousness within your H/CS?",
+                            "en": "Do you sort waste according to its nature or level of danger within your H/CS?",
                             "fr": ""
                         },
                         "DataLabel": "Do you sort waste according to its nature or its level of danger within your H/C",
@@ -3590,7 +3590,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Is there a space dedicated specifically to DBM storage?",
+                            "en": "Is there a space/warehouse dedicated specifically to the storage of biomedical waste?",
                             "fr": ""
                         },
                         "DataLabel": "Is there a space/warehouse dedicated specifically to the storage of DBM?",
@@ -3603,7 +3603,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Is the DBM storage space accessible to everyone?",
+                            "en": "Is the biomedical waste storage space accessible to everyone?",
                             "fr": ""
                         },
                         "DataLabel": "Is the DBM storage space accessible to everyone?",
@@ -3741,7 +3741,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Do you think that the methods of collecting and transporting DBMs within your H/CS are safe?",
+                            "en": "Do you think the methods of collecting and transporting HBMs are safe?",
                             "fr": ""
                         },
                         "DataLabel": "Do you think the methods of collecting and transporting HBMs are safe?",
@@ -3773,7 +3773,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Do you have a clear idea of the route and final destination of the DBMs produced by your H/CS?",
+                            "en": "Do you have a clear idea of the route and final destination of the biomedical wastes produced by your H/CS?",
                             "fr": ""
                         },
                         "DataLabel": "Do you have a clear idea of the route and final destination of the DBMs produced",
@@ -3792,7 +3792,7 @@
                     {
                         "Type": "multiquestion",
                         "Label": {
-                            "en": "Are there partnership relationships between your H/CS and the following actors in relation to the management of DBMs?",
+                            "en": "Are there partnership relations between your H/CS and the following actors in relation to the management of DBMs?",
                             "fr": ""
                         },
                         "Subquestions": [
@@ -3924,7 +3924,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Does the town hall have a department in charge of the GDS in your municipality?",
+                            "en": "Does the town hall have a department in charge of SWM in your municipality?",
                             "fr": ""
                         },
                         "DataLabel": "Does the town hall have a department in charge of SWM in your municipality?",
@@ -3938,7 +3938,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Does the town hall have adequate equipment for waste collection?",
+                            "en": "Does the town hall have adequate materials for waste collection?",
                             "fr": ""
                         },
                         "DataLabel": "Does the town hall have adequate materials for waste collection?",
@@ -3972,7 +3972,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "How many employees of the company/OCB work in the solid waste sector?",
+                            "en": "How many city hall employees work in waste collection?",
                             "fr": ""
                         },
                         "DataLabel": "n_people",
@@ -4096,7 +4096,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Transport",
+                                    "en": "Transportation",
                                     "fr": ""
                                 },
                                 "DataLabel": "Transportation",
@@ -4108,7 +4108,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Landfilled",
+                                    "en": "Landfill",
                                     "fr": ""
                                 },
                                 "DataLabel": "landfilled",
@@ -4160,7 +4160,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "How often does the town hall carry out waste collection activities in the municipality?",
+                            "en": "How many collection days per month does the town hall carry out?",
                             "fr": ""
                         },
                         "DataLabel": "How many collection days per month does the town hall carry out?",
@@ -4218,7 +4218,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Transport",
+                                    "en": "Transportation",
                                     "fr": ""
                                 },
                                 "DataLabel": "Transportation5",
@@ -4230,7 +4230,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Landfilled",
+                                    "en": "Landfill",
                                     "fr": ""
                                 },
                                 "DataLabel": "landfilled6",
@@ -4266,7 +4266,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Promotion for recycling",
+                                    "en": "Promotion for recycling (including crafts)",
                                     "fr": ""
                                 },
                                 "DataLabel": "Promotion for recycling (including crafts)",
@@ -4278,7 +4278,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Sensitization",
+                                    "en": "Raising awareness",
                                     "fr": ""
                                 },
                                 "DataLabel": "Sensitization",
@@ -4294,7 +4294,7 @@
                     {
                         "Type": "single",
                         "Question": {
-                            "en": "Do we weigh the solid waste collected daily or weekly?",
+                            "en": "Is the solid waste collected weighted daily or weekly?",
                             "fr": ""
                         },
                         "DataLabel": "Do we weigh the solid waste collected per day or per week?",
@@ -4387,7 +4387,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Community-based organizations",
+                                    "en": "Community organizations",
                                     "fr": ""
                                 },
                                 "DataLabel": "Community organizations",
@@ -4415,7 +4415,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "NRSS",
+                                    "en": "SNGRS",
                                     "fr": ""
                                 },
                                 "DataLabel": "SNGRS",
@@ -4427,7 +4427,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "OCB working in sold waste recovery",
+                                    "en": "CBO working in sold waste recovery",
                                     "fr": ""
                                 },
                                 "DataLabel": "CBO working in solid waste recovery",
@@ -4530,7 +4530,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Community-based organizations",
+                                    "en": "Community organizations",
                                     "fr": ""
                                 },
                                 "DataLabel": "Community organizations25",
@@ -4559,7 +4559,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "NRSS",
+                                    "en": "SNGRS",
                                     "fr": ""
                                 },
                                 "DataLabel": "SNGRS27",
@@ -4640,31 +4640,31 @@
                                 },
                                 "DataLabel": "Households45",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
                             },
                             {
                                 "Question": {
-                                    "en": "Procurement",
+                                    "en": "Public markets",
                                     "fr": ""
                                 },
                                 "DataLabel": "Public markets46",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
                             },
                             {
                                 "Question": {
-                                    "en": "Enterprises",
+                                    "en": "Companies",
                                     "fr": ""
                                 },
                                 "DataLabel": "Companies",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
@@ -4676,7 +4676,7 @@
                                 },
                                 "DataLabel": "Schools",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
@@ -4688,7 +4688,7 @@
                                 },
                                 "DataLabel": "Hospitals/Health Centers",
                                 "Options": [
-                                    {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                                    {"DataLabel": "Raised", "en": "High", "fr": "" },
                                     {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                                     {"DataLabel": "Weak", "en": "Weak", "fr": ""}
                                 ]
@@ -4735,7 +4735,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Metals",
+                                    "en": "Metals (iron, aluminum)",
                                     "fr": ""
                                 },
                                 "DataLabel": "Metals (iron, aluminum)",
@@ -4813,7 +4813,7 @@
                         "Subquestions": [
                             {
                                 "Question": {
-                                    "en": "Skin illness",
+                                    "en": "Skin disease",
                                     "fr": ""
                                 },
                                 "DataLabel": "Skin illness",
@@ -4824,7 +4824,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Breathing illness",
+                                    "en": "Respiratory disease",
                                     "fr": ""
                                 },
                                 "DataLabel": "Breathing illness",
@@ -4925,7 +4925,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Unsanitary road networks",
+                                    "en": "Insalubrity of road networks",
                                     "fr": ""
                                 },
                                 "DataLabel": "Unsanitary road networks",
@@ -4947,7 +4947,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Obstruction of stormwater drainage ditches",
+                                    "en": "Obstruction of rainwater drainage ditches",
                                     "fr": ""
                                 },
                                 "DataLabel": "Obstruction of rainwater drainage ditches",
@@ -4958,7 +4958,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Flooding",
+                                    "en": "Floods",
                                     "fr": ""
                                 },
                                 "DataLabel": "floods",
@@ -4969,7 +4969,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Unhealthy public procurement",
+                                    "en": "Insalubrity of public markets",
                                     "fr": ""
                                 },
                                 "DataLabel": "Unsanitary public markets",
@@ -4980,7 +4980,7 @@
                             },
                             {
                                 "Question": {
-                                    "en": "Unsanitary public beaches",
+                                    "en": "Insalubrity of public beaches",
                                     "fr": ""
                                 },
                                 "DataLabel": "Unsanitary public beaches",
@@ -5028,7 +5028,7 @@
                         },
                         "DataLabel": "According to you, what is the level of commitment of the population of your muni",
                         "Options": [
-                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Raised", "en": "High", "fr": "" },
                             {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                             {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                         ],
@@ -5042,7 +5042,7 @@
                         },
                         "DataLabel": "In your opinion, what is the level of awareness of the population of your munici",
                         "Options": [
-                            {"DataLabel": "Raised", "en": "Raised", "fr": "" },
+                            {"DataLabel": "Raised", "en": "High", "fr": "" },
                             {"DataLabel": "Medium", "en": "Medium", "fr": "" },
                             {"DataLabel": "Weak", "en": "Weak", "fr": "" }
                         ],
