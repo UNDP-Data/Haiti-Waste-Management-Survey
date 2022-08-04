@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import maxBy from 'lodash.maxby';
+// import maxBy from 'lodash.maxby';
 // import orderBy from 'lodash.orderby';
 import { format } from 'd3-format';
 import { scaleLinear } from 'd3-scale';
@@ -36,9 +36,9 @@ export const HorizontalBarChart = (props: Props) => {
   };
   const graphWidth = svgWidth - margin.left - margin.right;
   const svgHeight = data.length * 25 + margin.top + margin.bottom;
-  const xMaxValue = maxBy(data, (d:any) => d.xVal) ? maxBy(data, (d:any) => d.xVal)?.xVal as number : 0;
+  /* const xMaxValue = maxBy(data, (d:any) => d.xVal) ? maxBy(data, (d:any) => d.xVal)?.xVal as number : 0; */
 
-  const widthScale = scaleLinear().domain([0, xMaxValue]).range([0, graphWidth]).nice();
+  const widthScale = scaleLinear().domain([0, 1]).range([0, graphWidth]).nice();
 
   return (
     <El>
@@ -56,7 +56,6 @@ export const HorizontalBarChart = (props: Props) => {
         >
           {
             data.map((d:any, i:number) => (
-              // if (d.xVal === undefined) return null;
               <g
                 key={i}
               >
@@ -76,7 +75,7 @@ export const HorizontalBarChart = (props: Props) => {
                   x={0}
                   height={20}
                   fill='#2b83ba'
-                  width={d.xVal !== undefined ? widthScale(d.xVal) : 0}
+                  width={d.xVal !== undefined ? widthScale(d.xVal / numRespondents) : 0}
                 />
                 {
                   (d.xVal !== undefined)
@@ -85,16 +84,16 @@ export const HorizontalBarChart = (props: Props) => {
                       fill='#212121'
                       fontWeight='bold'
                       y={i * 25}
-                      x={d.xVal !== undefined ? widthScale(d.xVal) : 0}
+                      x={d.xVal !== undefined ? widthScale(d.xVal / numRespondents) : 0}
                       dx={5}
                       textAnchor='start'
                       dy={14}
                       fontSize={12}
                     >
-                      {d.xVal}
+                      {format('.0%')(d.xVal / numRespondents)}
                       {' '}
                       (
-                      {format('.0%')(d.xVal / numRespondents)}
+                        {d.xVal}
                       )
                     </text>
                   )
