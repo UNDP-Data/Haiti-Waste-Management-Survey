@@ -1,6 +1,6 @@
-# Access All Data Visualization in DFP
+# Haiti Waste Management Survey
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses [Craco](https://www.npmjs.com/package/@craco/craco) to add a configuration layer for CRA. For this porject, we use [Typescript](https://www.typescriptlang.org/), a strongly typed programming language that builds on JavaScript. Typescript helps in better documentation of the code and communication between developers.
+This data dashboard presents results from the Haiti Waste Management Survey conducted by the Haiti Accelerator Lab. The codebase is a fork of the [Access All Data Visualization in DFP](https://github.com/UNDP-Data/Access-All-Data-Viz) project.
 
 ## Installation
 
@@ -11,8 +11,8 @@ To install the project, sinply clone the the repo and them run `npm install` in 
 Run the terminal or command prompt and then run the following
 
 ```
-git clone https://github.com/UNDP-Data/Access-All-Data-Viz.git
-cd Access-All-Data-Viz
+git clone https://github.com/UNDP-Data/Haiti-Waste-Management-Survey.git
+cd Haiti-Waste-Management-Survey
 npm install
 ```
 ### Local Development
@@ -79,8 +79,3 @@ Craco is used to add a cofiguration layer for CRA. The primary function is to st
 * __ant design__: For UI elements like dropdown, buttons, checkbox, and slider.
 * __dom-to-image__: This is used to allow users to download images of various visualization views they create.
 * __lodash__: This is used for manipulating and iterating arrays and objects.
-
-## Data and Meta Data Used
-
-* __Indicator Meta Data__: https://github.com/UNDP-Data/Indicators-MetaData
-* __Country Taxonomy__: https://github.com/UNDP-Data/Country-Taxonomy
