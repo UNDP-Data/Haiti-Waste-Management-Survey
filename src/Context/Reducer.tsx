@@ -10,6 +10,8 @@ export default (state: any, action: any) => {
       return { ...state, selectedEducations: action.payload };
     case 'UPDATE_SELECTED_FUNCTIONS':
       return { ...state, selectedFunctions: action.payload };
+    case 'UPDATE_LANGUAGE':
+      return { ...state, language: action.payload };
     default:
       return { ...state };
   }

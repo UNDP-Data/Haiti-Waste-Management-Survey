@@ -168,6 +168,67 @@ const GlobalStyle = createGlobalStyle`
   .ant-checkbox-wrapper{
     width: 100%;
   }
+
+  
+  .select-box {
+    width: 100%;
+    border: 2px solid #000;
+    min-height: 5.2rem;
+  }
+
+  .ant-select-selector{
+    min-height: 4.8rem !important;
+    border: 0 !important;
+  }
+
+  .select-box .ant-select-selection-placeholder {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: black;
+  }
+
+  .select-box::after {
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transition: translateY(-50%);
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -ms-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    background: url(https://design.undp.org/static/media/chevron-down.16c97a3f.svg) no-repeat center center;
+    content: "";
+    float: right;
+    height: 13px;
+    position: absolute;
+    pointer-events: none;
+    right: 14px;
+    top: 50%;
+    width: 20px;
+  }
+
+  .select-box .ant-select-selection-item {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: black;
+  }
+
+  .ant-select-arrow {
+    opacity: 0;
+  }
+
+  .ant-select-item-option {
+    font-size: 1.6rem;
+    border-top: 1px solid #d4d6d8;
+    line-height: 4.4rem;
+  }
+
+  .single-select-box .ant-select-selector {
+    padding-top: 1rem !important;
+  }
 `;
 
 const VizAreaEl = styled.div`
@@ -181,13 +242,13 @@ const VizAreaEl = styled.div`
 
 const App = () => {
   const [finalData, setFinalData] = useState<any | undefined>(undefined);
-  const [questionsList, setQuestionsList] = useState<any | undefined>(undefined);
   const initialState = {
     selectedSubjectType: 'households',
     selectedDepartments: [],
-    selectedGenders: [],
+    selectedGenders: 'All Genders',
     selectedEducations: [],
     selectedFunctions: [],
+    language: 'en',
   };
 
   const [state, dispatch] = useReducer(Reducer, initialState);
@@ -226,6 +287,12 @@ const App = () => {
       payload: selectedFunctions,
     });
   };
+  const updateLanguage = (selectedLanguage: 'en' | 'fr') => {
+    dispatch({
+      type: 'UPDATE_LANGUAGE',
+      payload: selectedLanguage,
+    });
+  };
 
   useEffect(() => {
     queue()
@@ -235,8 +302,7 @@ const App = () => {
       .defer(json, './data/dumpingSites.json')
       .defer(json, './data/healthFacilities.json')
       .defer(json, './data/townhalls.json')
-      .defer(json, './data/surveyQuestions.json')
-      .await((err: any, householdsData: any[], enterprisesData: any[], projectsData: any[], dumpingSitesData: any[], healthFacilitiesData: any[], townHallsData: any[], surveyQuestions: any[]) => {
+      .await((err: any, householdsData: any[], enterprisesData: any[], projectsData: any[], dumpingSitesData: any[], healthFacilitiesData: any[], townHallsData: any[]) => {
         if (err) throw err;
 
         const data = {
@@ -249,7 +315,6 @@ const App = () => {
         };
 
         setFinalData(data);
-        setQuestionsList(surveyQuestions);
       });
   }, []);
 
@@ -257,7 +322,7 @@ const App = () => {
     <>
       <GlobalStyle />
       {
-        finalData && questionsList
+        finalData
           ? (
             <>
               <Context.Provider
@@ -268,11 +333,11 @@ const App = () => {
                   updateSelectedGenders,
                   updateSelectedEducations,
                   updateSelectedFunctions,
+                  updateLanguage,
                 }}
               >
                 <GrapherComponent
                   data={finalData}
-                  questions={questionsList}
                 />
               </Context.Provider>
             </>

@@ -162,3 +162,49 @@ export const COLOR_SCALES = {
     ['#F782A5', '#D180B3', '#9F7DC5', '#727AD4', '#4978E3'],
   ],
 };
+
+export const DEPARTMENTS = [
+  { label: 'Artibonite', value: 'Artibonite' },
+  { label: 'Centre', value: 'Center' },
+  { label: 'Grand\'Anse', value: 'Grand Anse' },
+  { label: 'Nippes', value: 'nipple' },
+  { label: 'Nord', value: 'North' },
+  { label: 'Nord-Est', value: 'Northeast' },
+  { label: 'Nord-Ouest', value: 'North West' },
+  { label: 'Ouest', value: 'West' },
+  { label: 'Sud-Est', value: 'South East' },
+  { label: 'Sud', value: 'South' },
+];
+
+export const GENDERS = [
+  { label: 'All Genders', value: 'All Genders' },
+  { label: 'Female', value: 'Women' },
+  { label: 'Male', value: 'Man' },
+];
+
+export const EDUCATION = [
+  { label: 'University', value: 'University' },
+  { label: 'Secondary school', value: 'Secondary' },
+  { label: 'Primary school', value: 'Primary' },
+  { label: 'Literacy program', value: 'Participated in a literacy program' },
+  { label: 'No formal education', value: 'Unschooled' },
+];
+
+export const FUNCTIONS = [
+  { label: 'Clerical support', value: 'Clerical support' },
+  { label: 'Manager', value: 'Manager' },
+  { label: 'Professional', value: 'Professional' },
+  { label: 'Service worker', value: 'Service worker' },
+  { label: 'Technician', value: 'Technician' },
+];
+
+export const HOUSEHOLD_TITLES_KEY = [
+  'wasteGeneration',
+  'wasteDisposal',
+  'purchaseOfService',
+  'actorsInvolved',
+  'assessmentOfWaste',
+  'negativeImpact',
+  'communityCommitments',
+  'innovativeSolutions',
+];

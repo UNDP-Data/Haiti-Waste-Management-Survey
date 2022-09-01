@@ -1,34 +1,18 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
-import { Checkbox } from 'antd';
+import { Select } from 'antd';
 import { CtxDataType } from '../Types';
 import Context from '../Context/Context';
-
-// interface Props {
-//   indicators?: IndicatorMetaDataType[];
-// }
+import {
+  DEPARTMENTS, EDUCATION, FUNCTIONS, GENDERS,
+} from '../Constants';
 
 const El = styled.div`
   width: 100%;
-  height: 74rem;
-  padding: 2rem;
-  overflow: auto;
-  border-top: 1px solid var(--black-400);
-  @media (max-width: 960px) {
-    width: 100%;
-    /* box-shadow: var(--shadow-bottom); */
-    /* border-right: 0px solid var(--black-400); */
-    padding-bottom: 0;
-    height: auto;
-  }  
-`;
-
-const FiltersEl = styled.div`
-  padding: 1rem 0;
-  /* border-bottom: 1px solid var(--black-400); */
-  @media (max-width: 960px) {
-    padding: 2rem 0;
-  }  
+  display: flex;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between; 
 `;
 
 const FilterTitle = styled.div`
@@ -36,18 +20,20 @@ const FilterTitle = styled.div`
   font-weight: bold;
   display: flex;
   align-items: center;
-  margin-left: -5px;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 `;
 
-const CheckboxContainer = styled.div` 
+interface DropdownUnitProps {
+  width?: string;
+}
+
+const DrowdownEl = styled.div<DropdownUnitProps>`
+  width: ${(props) => props.width || '100%'};
+  margin-bottom: 2rem;
+  min-width: 30rem;
 `;
 
-// export const Settings = (props: Props) => {
 export const Settings = () => {
-  // const {
-  //   indicators,
-  // } = props;
   const {
     selectedSubjectType,
     selectedDepartments,
@@ -59,88 +45,98 @@ export const Settings = () => {
     updateSelectedEducations,
     updateSelectedFunctions,
   } = useContext(Context) as CtxDataType;
-
-  const departments = [
-    { label: 'Artibonite', value: 'Artibonite' },
-    { label: 'Centre', value: 'Center' },
-    { label: 'Grand\'Anse', value: 'Grand Anse' },
-    { label: 'Nippes', value: 'nipple' },
-    { label: 'Nord', value: 'North' },
-    { label: 'Nord-Est', value: 'Northeast' },
-    { label: 'Nord-Ouest', value: 'North West' },
-    { label: 'Ouest', value: 'West' },
-    { label: 'Sud-Est', value: 'South East' },
-    { label: 'Sud', value: 'South' },
-  ];
-
-  const genders = [
-    { label: 'Female', value: 'Women' },
-    { label: 'Male', value: 'Man' },
-  ];
-
-  const education = [
-    { label: 'University', value: 'University' },
-    { label: 'Secondary school', value: 'Secondary' },
-    { label: 'Primary school', value: 'Primary' },
-    { label: 'Literacy program', value: 'Participated in a literacy program' },
-    { label: 'No formal education', value: 'Unschooled' },
-  ];
-
-  const functionResp = [
-    { label: 'Clerical support', value: 'Clerical support' },
-    { label: 'Manager', value: 'Manager' },
-    { label: 'Professional', value: 'Professional' },
-    { label: 'Service worker', value: 'Service worker' },
-    { label: 'Technician', value: 'Technician' },
-  ];
-
   return (
     <El>
-      <FiltersEl>
+      <DrowdownEl
+        width={selectedSubjectType === 'dumpingSites' ? '100%' : selectedSubjectType === 'households' ? 'calc(50% - 1rem)' : 'calc(75%  - 1rem)'}
+      >
         <FilterTitle>
           Select Department
         </FilterTitle>
-        <CheckboxContainer>
-          <Checkbox.Group options={departments} defaultValue={selectedDepartments} onChange={(e) => { updateSelectedDepartments(e); }} />
-          {/* <Checkbox checked={showLabel} onChange={(e) => { updateShowLabel(e.target.checked); }}>Show Label</Checkbox> */}
-        </CheckboxContainer>
-      </FiltersEl>
+        <Select
+          className='select-box'
+          placeholder='All Departments'
+          value={selectedDepartments}
+          showSearch
+          allowClear
+          mode='multiple'
+          maxTagCount='responsive'
+          onChange={(values) => { updateSelectedDepartments(values); }}
+        >
+          {
+            DEPARTMENTS.map((d) => <Select.Option key={d.value}>{d.label}</Select.Option>)
+          }
+        </Select>
+      </DrowdownEl>
       {
         (selectedSubjectType === 'households')
         && (
           <>
-            <FiltersEl>
+            <DrowdownEl
+              width='calc(25% - 1rem)'
+            >
               <FilterTitle>
-                Select Respondent Gender
+                Select Gender
               </FilterTitle>
-              <CheckboxContainer>
-                <Checkbox.Group options={genders} defaultValue={selectedGenders} onChange={(e) => { updateSelectedGenders(e); }} />
-              </CheckboxContainer>
-            </FiltersEl>
-            <FiltersEl>
+              <Select
+                className='select-box single-select-box'
+                placeholder='All Genders'
+                value={selectedGenders}
+                onChange={(value) => { updateSelectedGenders(value); }}
+              >
+                {
+                  GENDERS.map((d) => <Select.Option key={d.value}>{d.label}</Select.Option>)
+                }
+              </Select>
+            </DrowdownEl>
+            <DrowdownEl
+              width='calc(25% - 1rem)'
+            >
               <FilterTitle>
-                Select Head of Household&apos;s Education Level
+                Select Education Level
               </FilterTitle>
-              <CheckboxContainer>
-                <Checkbox.Group options={education} defaultValue={selectedEducations} onChange={(e) => { updateSelectedEducations(e); }} />
-              </CheckboxContainer>
-            </FiltersEl>
+              <Select
+                className='select-box'
+                placeholder='All Departments'
+                value={selectedEducations}
+                showSearch
+                allowClear
+                mode='multiple'
+                maxTagCount='responsive'
+                onChange={(values) => { updateSelectedEducations(values); }}
+              >
+                {
+                  EDUCATION.map((d) => <Select.Option key={d.value}>{d.label}</Select.Option>)
+                }
+              </Select>
+            </DrowdownEl>
           </>
         )
       }
       {
-        (selectedSubjectType === 'enterprises' || selectedSubjectType === 'projects' || selectedSubjectType === 'healthFacilities' || selectedSubjectType === 'townHalls')
+        (selectedSubjectType !== 'households' && selectedSubjectType !== 'dumpingSites')
         && (
-          <>
-            <FiltersEl>
-              <FilterTitle>
-                Select Respondent&apos;s Function
-              </FilterTitle>
-              <CheckboxContainer>
-                <Checkbox.Group options={functionResp} defaultValue={selectedFunctions} onChange={(e) => { updateSelectedFunctions(e); }} />
-              </CheckboxContainer>
-            </FiltersEl>
-          </>
+        <DrowdownEl
+          width='calc(25% - 1rem)'
+        >
+          <FilterTitle>
+            Select Function
+          </FilterTitle>
+          <Select
+            className='select-box'
+            placeholder='All Functions'
+            value={selectedFunctions}
+            showSearch
+            allowClear
+            mode='multiple'
+            maxTagCount='responsive'
+            onChange={(values) => { updateSelectedFunctions(values); }}
+          >
+            {
+              FUNCTIONS.map((d) => <Select.Option key={d.value}>{d.label}</Select.Option>)
+            }
+          </Select>
+        </DrowdownEl>
         )
       }
     </El>
