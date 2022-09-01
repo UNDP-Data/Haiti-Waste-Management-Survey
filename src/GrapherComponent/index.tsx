@@ -60,7 +60,7 @@ const NotificationEl = styled.div`
   border: 1px solid var(--black-500);
   text-align: center;
   border-radius: 3px;
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0 5rem 0;
 `;
 
 interface ToggleContainerType {
@@ -118,7 +118,6 @@ export const GrapherComponent = (props: Props) => {
 
   const graphData = data[selectedSubjectType];
 
-  // filter data based on checkbox selections
   let filteredData = selectedDepartments.length > 0 ? graphData.filter((d:any) => selectedDepartments.indexOf(d.Department) > -1) : graphData;
   if (selectedSubjectType === 'households') {
     filteredData = selectedGenders !== 'All Genders' ? filteredData.filter((d:any) => selectedGenders === d['Gender of respondent']) : filteredData;
@@ -128,8 +127,6 @@ export const GrapherComponent = (props: Props) => {
   if (selectedSubjectType === 'enterprises' || selectedSubjectType === 'projects' || selectedSubjectType === 'healthFacilities' || selectedSubjectType === 'townHalls') {
     filteredData = selectedFunctions.length > 0 ? filteredData.filter((d:any) => selectedFunctions.indexOf(d.function_resp) > -1) : filteredData;
   }
-
-  const numRespondents = filteredData.length;
 
   return (
     <>
@@ -161,13 +158,13 @@ export const GrapherComponent = (props: Props) => {
           <NotificationEl>
             Showing results for
             {' '}
-            <span className='bold'>{numRespondents}</span>
+            <span className='bold'>{filteredData.length}</span>
             {' '}
             {selectedSubjectType}
             {' '}
           </NotificationEl>
           {
-            selectedSubjectType === 'households' ? <HouseHoldViz noOfRes={numRespondents} data={graphData} /> : null
+            selectedSubjectType === 'households' ? <HouseHoldViz data={filteredData} /> : null
           }
         </RootEl>
       </Container>
