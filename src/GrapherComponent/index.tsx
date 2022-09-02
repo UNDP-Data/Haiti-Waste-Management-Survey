@@ -144,7 +144,14 @@ export const GrapherComponent = (props: Props) => {
             <ToggleEl selected={language === 'fr'} onClick={() => { updateLanguage('fr'); }}>FR</ToggleEl>
           </ToggleContainer>
         </HeadingEl>
-        <p style={{ marginBottom: '2em' }}>As its first challenge, the UNDP Haiti Accelerator Lab is working on solid waste management. Solid waste is one of the major problems faced by the local authorities in Haiti. Despite the intervention of multiple actors such as the central government, the municipalities, private enterprises and NGOs, this problem remains unsolved particularly in the urban centres. To avail data for decision making and to deepen the knowledge on waste management in Haiti, the Accelerator Lab conducted a national survey to gather data on perceptions, local initiatives and public actions related to waste management. This page allows users to explore data and insights from this survey.</p>
+        <p style={{ marginBottom: '2em' }}>
+          {
+          language === 'en'
+            ? 'As its first challenge, the UNDP Haiti Accelerator Lab is working on solid waste management. Solid waste is one of the major problems faced by the local authorities in Haiti. Despite the intervention of multiple actors such as the central government, the municipalities, private enterprises and NGOs, this problem remains unsolved particularly in the urban centres. To avail data for decision making and to deepen the knowledge on waste management in Haiti, the Accelerator Lab conducted a national survey to gather data on perceptions, local initiatives and public actions related to waste management. This page allows users to explore data and insights from this survey.'
+            : 'La gestion des déchets solides est définie comme l’enjeu principal de l’UNDP Haïti Accelerator Lab. En effet, les déchets solides représentent l\'une des difficultés majeures auxquelles sont confrontées les autorités locales en Haïti. Malgré l\'intervention de multiples acteurs tels que le gouvernement central, les municipalités, les entreprises privées ou encore les ONG, ce problème reste non résolu en particulier dans les centres urbains. Afin de disposer de données destinées à la prise de décisions et au développement des connaissances sur la gestion des déchets en Haïti, l\'Accelerator Lab a mené une enquête nationale. Cette dernière a pour but de recueillir des données sur les perceptions, les initiatives locales et les actions publiques liées à la gestion des déchets. Cette page permet aux utilisateurs d\'explorer les données et les résultats de cette enquête.'
+        }
+
+        </p>
         <RootEl>
           <ToggleContainer width='100%'>
             <ToggleEl selected={selectedSubjectType === 'households'} onClick={() => { updateSelectedSubjectType('households'); }}>Households</ToggleEl>
