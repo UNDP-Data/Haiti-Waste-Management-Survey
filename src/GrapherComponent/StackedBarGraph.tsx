@@ -14,23 +14,15 @@ interface Props {
 
 const El = styled.div`
   width: 100%;
-  max-width: 62rem;
-  margin: 2rem auto;
-`;
-
-const LegendEl = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
+  max-width: 38.75rem;
+  margin: 1.25rem auto;
 `;
 
 const ColorKeyEl = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.4rem;
-  margin: 0 1rem;
+  font-size: 0.875rem;
 `;
 
 interface ColorDataType {
@@ -38,8 +30,8 @@ interface ColorDataType {
 }
 
 const ColorBox = styled.div<ColorDataType>`
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 0.875rem;
+  height: 0.875rem;
   margin-right: 0.5rem;
   background-color: ${(props) => props.color};
 `;
@@ -59,7 +51,7 @@ export const StackedBarGraph = (props: Props) => {
   const svgHeight = (BAR_HEIGHT + (2 * BAR_PADDING)) * data.length + 25;
   return (
     <El>
-      <LegendEl>
+      <div className='flex-div flex-vert-align-center flex-hor-align-center margin-top-05 margin-bottom-05'>
         {
           color.map((d, i) => (
             <ColorKeyEl key={i}>
@@ -68,7 +60,7 @@ export const StackedBarGraph = (props: Props) => {
             </ColorKeyEl>
           ))
         }
-      </LegendEl>
+      </div>
       <svg width='100%' viewBox={`0 0 ${svgWidth} ${svgHeight}`}>
         {
           data.map((d, i) => (

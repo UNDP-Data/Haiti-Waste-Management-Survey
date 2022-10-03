@@ -6,22 +6,7 @@ import Context from '../Context/Context';
 import {
   DEPARTMENTS, EDUCATION, FUNCTIONS, GENDERS,
 } from '../Constants';
-
-const El = styled.div`
-  width: 100%;
-  display: flex;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-  justify-content: space-between; 
-`;
-
-const FilterTitle = styled.div`
-  font-size: 1.6rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  margin-bottom: 0rem;
-`;
+import '../style/selectStyle.css';
 
 interface DropdownUnitProps {
   width?: string;
@@ -30,7 +15,6 @@ interface DropdownUnitProps {
 const DrowdownEl = styled.div<DropdownUnitProps>`
   width: ${(props) => props.width || '100%'};
   margin-bottom: 2rem;
-  min-width: 30rem;
 `;
 
 export const Settings = () => {
@@ -46,25 +30,26 @@ export const Settings = () => {
     updateSelectedFunctions,
   } = useContext(Context) as CtxDataType;
   return (
-    <El>
+    <div className='flex-div margin-bottom-05 flex-space-between'>
       <DrowdownEl
         width={selectedSubjectType === 'dumpingSites' ? '100%' : selectedSubjectType === 'households' ? 'calc(50% - 1rem)' : 'calc(75%  - 1rem)'}
       >
-        <FilterTitle>
+        <p className='label'>
           Select Department
-        </FilterTitle>
+        </p>
         <Select
-          className='select-box'
+          className='undp-select'
           placeholder='All Departments'
           value={selectedDepartments}
           showSearch
           allowClear
+          clearIcon={<div className='clearIcon' />}
           mode='multiple'
           maxTagCount='responsive'
           onChange={(values) => { updateSelectedDepartments(values); }}
         >
           {
-            DEPARTMENTS.map((d) => <Select.Option key={d.value}>{d.label}</Select.Option>)
+            DEPARTMENTS.map((d) => <Select.Option className='undp-select-option' key={d.value}>{d.label}</Select.Option>)
           }
         </Select>
       </DrowdownEl>
@@ -75,38 +60,39 @@ export const Settings = () => {
             <DrowdownEl
               width='calc(25% - 1rem)'
             >
-              <FilterTitle>
+              <p className='label'>
                 Select Gender
-              </FilterTitle>
+              </p>
               <Select
-                className='select-box single-select-box'
+                className='undp-select'
                 placeholder='All Genders'
                 value={selectedGenders}
                 onChange={(value) => { updateSelectedGenders(value); }}
               >
                 {
-                  GENDERS.map((d) => <Select.Option key={d.value}>{d.label}</Select.Option>)
+                  GENDERS.map((d) => <Select.Option className='undp-select-option' key={d.value}>{d.label}</Select.Option>)
                 }
               </Select>
             </DrowdownEl>
             <DrowdownEl
               width='calc(25% - 1rem)'
             >
-              <FilterTitle>
+              <p className='label'>
                 Select Education Level
-              </FilterTitle>
+              </p>
               <Select
-                className='select-box'
+                className='undp-select'
                 placeholder='All Departments'
                 value={selectedEducations}
                 showSearch
                 allowClear
                 mode='multiple'
                 maxTagCount='responsive'
+                clearIcon={<div className='clearIcon' />}
                 onChange={(values) => { updateSelectedEducations(values); }}
               >
                 {
-                  EDUCATION.map((d) => <Select.Option key={d.value}>{d.label}</Select.Option>)
+                  EDUCATION.map((d) => <Select.Option className='undp-select-option' key={d.value}>{d.label}</Select.Option>)
                 }
               </Select>
             </DrowdownEl>
@@ -119,11 +105,11 @@ export const Settings = () => {
         <DrowdownEl
           width='calc(25% - 1rem)'
         >
-          <FilterTitle>
+          <p className='label'>
             Select Function
-          </FilterTitle>
+          </p>
           <Select
-            className='select-box'
+            className='undp-select'
             placeholder='All Functions'
             value={selectedFunctions}
             showSearch
@@ -133,12 +119,12 @@ export const Settings = () => {
             onChange={(values) => { updateSelectedFunctions(values); }}
           >
             {
-              FUNCTIONS.map((d) => <Select.Option key={d.value}>{d.label}</Select.Option>)
+              FUNCTIONS.map((d) => <Select.Option className='undp-select-option' key={d.value}>{d.label}</Select.Option>)
             }
           </Select>
         </DrowdownEl>
         )
       }
-    </El>
+    </div>
   );
 };

@@ -4,11 +4,13 @@ import { describeArc } from '../utils/getArc';
 interface Props {
   data: number;
   subText: string;
+  color?: string;
 }
 
 const Container = styled.div`
-  padding: 2rem 4rem;
-  max-width: 32rem;
+  width: 100%;
+  max-width: 20rem;
+  padding: 1.25rem 2.5rem;
   width: 100%;
   margin: auto;
 `;
@@ -17,6 +19,7 @@ export const DonutChart = (props: Props) => {
   const {
     data,
     subText,
+    color,
   } = props;
   return (
     <Container>
@@ -33,7 +36,7 @@ export const DonutChart = (props: Props) => {
           d={describeArc(75, 75, 70, 0, 360 * (data / 100))}
           fill='none'
           strokeWidth={10}
-          style={{ stroke: '#006EB5' }}
+          style={{ stroke: color || '#006EB5' }}
         />
         <text
           x={75}
@@ -42,7 +45,7 @@ export const DonutChart = (props: Props) => {
           fontFamily='proxima-nova'
           fontWeight='bold'
           fontSize='30px'
-          dy={3}
+          dy={0}
         >
           {data.toFixed(1)}
           %
@@ -54,7 +57,7 @@ export const DonutChart = (props: Props) => {
           fontFamily='proxima-nova'
           fontWeight='bold'
           fontSize='20px'
-          dy={28}
+          dy={20}
         >
           {subText}
         </text>

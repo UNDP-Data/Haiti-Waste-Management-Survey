@@ -10,27 +10,22 @@ interface Props {
   color: string[];
   colorKey: string[];
   marginLeft: number;
+  groupPadding?: number;
+  textDy?: number;
 }
 
 const El = styled.div`
   width: 100%;
-  max-width: 62rem;
-  margin: 2rem auto;
-`;
-
-const LegendEl = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
+  max-width: 38.75rem;
+  margin: 1.25rem auto;
 `;
 
 const ColorKeyEl = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.4rem;
-  margin: 0 1rem;
+  font-size: 0.875rem;
+  flex-shrink: 0;
 `;
 
 interface ColorDataType {
@@ -38,8 +33,8 @@ interface ColorDataType {
 }
 
 const ColorBox = styled.div<ColorDataType>`
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 0.875rem;
+  height: 0.875rem;
   margin-right: 0.5rem;
   background-color: ${(props) => props.color};
 `;
@@ -52,12 +47,16 @@ export const GroupBarGraph = (props: Props) => {
     color,
     colorKey,
     marginLeft,
+    groupPadding,
+    textDy,
   } = props;
   const svgWidth = window.innerWidth > 620 ? 620 : window.innerWidth;
-  const svgHeight = ((GROUP_BAR_HEIGHT * data[0].length) + (2 * GROUP_BAR_PADDING)) * data.length + 25;
+  const groupBarPadding = groupPadding || GROUP_BAR_PADDING;
+  const groupTextDy = textDy || GROUP_TEXT_DY;
+  const svgHeight = ((GROUP_BAR_HEIGHT * data[0].length) + (2 * groupBarPadding)) * data.length + 25;
   return (
     <El>
-      <LegendEl>
+      <div className='flex-div flex-vert-align-center flex-hor-align-center margin-top-05 margin-bottom-05 flex-wrap'>
         {
           color.map((d, i) => (
             <ColorKeyEl key={i}>
@@ -66,11 +65,11 @@ export const GroupBarGraph = (props: Props) => {
             </ColorKeyEl>
           ))
         }
-      </LegendEl>
+      </div>
       <svg width='100%' viewBox={`0 0 ${svgWidth} ${svgHeight}`}>
         {
           data.map((d, i) => (
-            <g key={i} transform={`translate(${marginLeft},${(((GROUP_BAR_HEIGHT * data[0].length) + (2 * GROUP_BAR_PADDING)) * i) + GROUP_BAR_PADDING})`}>
+            <g key={i} transform={`translate(${marginLeft},${(((GROUP_BAR_HEIGHT * data[0].length) + (2 * groupBarPadding)) * i) + groupBarPadding})`}>
               {
                 d.map((el, j) => (
                   <g transform={`translate(0,${j * (GROUP_BAR_HEIGHT + (2 * BAR_PADDING)) + BAR_PADDING})`}>
@@ -102,13 +101,13 @@ export const GroupBarGraph = (props: Props) => {
                 x={0}
                 y={0}
                 dx={-5}
-                dy={GROUP_TEXT_DY}
+                dy={groupTextDy}
                 fontWeight='bold'
               >
                 {
                   barLabel[i].split('\n').length > 1 ? (
                     <>
-                      <tspan x={0} textAnchor='end' dx={-5} dy={25}>{barLabel[i].split('\n')[0]}</tspan>
+                      <tspan x={0} textAnchor='end' dx={-5} dy={groupTextDy - 7}>{barLabel[i].split('\n')[0]}</tspan>
                       <tspan x={0} textAnchor='end' dx={-5} dy={20}>{barLabel[i].split('\n')[1]}</tspan>
                     </>
                   )

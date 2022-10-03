@@ -11,8 +11,8 @@ interface Props {
 
 const El = styled.div`
   width: 100%;
-  max-width: 62rem;
-  margin: 2rem auto;
+  max-width: 38.75rem;
+  margin: 1.25rem auto;
 `;
 
 export const BarGraph = (props: Props) => {

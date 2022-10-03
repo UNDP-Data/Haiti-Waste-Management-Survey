@@ -1,7 +1,6 @@
 import flatten from 'lodash.flatten';
 import countBy from 'lodash.countby';
 import { useContext } from 'react';
-import styled from 'styled-components';
 import Context from '../Context/Context';
 import { HouseHoldLanguage } from '../Data/Language/household';
 import { CtxDataType } from '../Types';
@@ -14,19 +13,6 @@ import { getValue } from '../utils/getValue';
 interface Props {
   data: any;
 }
-
-const H2 = styled.h2`
-  font-size: 3.2rem;
-  font-weight: bold;
-  color: var(--primary-blue);
-  margin-bottom: 2rem;
-`;
-
-const QueTitleEl = styled.div`
-  margin-bottom: 4rem;
-  font-size: 1.8rem;
-  color: var(--black-550);
-`;
 
 export const HouseHoldViz = (props: Props) => {
   const {
@@ -83,10 +69,10 @@ export const HouseHoldViz = (props: Props) => {
   const Q19 = countBy(data, (d) => d['Have you detected any innovations related to solid waste management in your municipality?']);
   return (
     <div>
-      <H2>
+      <h3 className='undp-typography bold margin-bottom-07'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'wasteGeneration')][language]}
-      </H2>
-      <QueTitleEl>
+      </h3>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'What is your assessment of the volume of solid waste  produced by your household?')][language]}
         <BarGraph
           data={[(getValue(Q1.Raised) * 100) / data.length, (getValue(Q1.Medium) * 100) / data.length, (getValue(Q1.Weak) * 100) / data.length, ((getValue(Q1['I do not know']) + getValue(Q1.undefined)) * 100) / data.length]}
@@ -102,8 +88,8 @@ export const HouseHoldViz = (props: Props) => {
           marginLeft={100}
           ticks={[0, 20, 40, 60]}
         />
-      </QueTitleEl>
-      <QueTitleEl>
+      </div>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'At what level does your household produce the following waste?')][language]}
         <StackedBarGraph
           data={[
@@ -142,11 +128,12 @@ export const HouseHoldViz = (props: Props) => {
           }
           ticks={[0, 20, 40, 60, 80, 100]}
         />
-      </QueTitleEl>
-      <H2>
+      </div>
+      <hr className='undp-style margin-bottom-11' />
+      <h3 className='undp-typography bold margin-bottom-07'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'wasteDisposal')][language]}
-      </H2>
-      <QueTitleEl>
+      </h3>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'What is your household doing to get rid of/manage its waste?')][language]}
         <BarGraph
           data={[(getValue(Q3_1.Yes) * 100) / data.length, (getValue(Q3_2.Yes) * 100) / data.length, (getValue(Q3_3.Yes) * 100) / data.length, (getValue(Q3_4.Yes) * 100) / data.length, (getValue(Q3_5.Yes) * 100) / data.length, (getValue(Q3_6.Yes) * 100) / data.length, (getValue(Q3_7.Yes) * 100) / data.length, (getValue(Q3_8.Yes) * 100) / data.length, (getValue(Q3_9.Yes) * 100) / data.length]}
@@ -167,8 +154,8 @@ export const HouseHoldViz = (props: Props) => {
           marginLeft={100}
           ticks={[0, 20, 40, 60]}
         />
-      </QueTitleEl>
-      <QueTitleEl>
+      </div>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'How often does your household empty its bin of solid waste?')][language]}
         <BarGraph
           data={[(getValue(Q4['3 times every 15 days']) * 100) / data.length, (getValue(Q4['2 times every 15 days']) * 100) / data.length, (getValue(Q4['Once every 15 days']) * 100) / data.length, ((getValue(Q4['Not applicable']) + getValue(Q4.undefined)) * 100) / data.length]}
@@ -184,8 +171,8 @@ export const HouseHoldViz = (props: Props) => {
           marginLeft={100}
           ticks={[0, 10, 20, 30, 40]}
         />
-      </QueTitleEl>
-      <QueTitleEl>
+      </div>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'How often does your household use the following methods to dispose of its waste?')][language]}
         <StackedBarGraph
           data={[
@@ -236,42 +223,44 @@ export const HouseHoldViz = (props: Props) => {
           }
           ticks={[0, 20, 40, 60, 80, 100]}
         />
-      </QueTitleEl>
-      <QueTitleEl>
+      </div>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Does your household sort solid waste (organic, inorganic) at home?')][language]}
         <DonutChart
           data={(getValue(Q6.Yes) * 100) / data.length}
           subText={HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'yes')][language]}
         />
-      </QueTitleEl>
-      <QueTitleEl>
+      </div>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Are you ready to sort the waste before disposing of it to facilitate its recycling?')][language]}
         <DonutChart
           data={(getValue(Q7.Yes) * 100) / data.length}
           subText={HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'yes')][language]}
         />
-      </QueTitleEl>
-      <QueTitleEl>
+      </div>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Does your household store its solid waste  in sachets?')][language]}
         <DonutChart
           data={(getValue(Q8.Yes) * 100) / data.length}
           subText={HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'yes')][language]}
         />
-      </QueTitleEl>
-      <H2>
+      </div>
+      <hr className='undp-style margin-bottom-11' />
+      <h3 className='undp-typography bold margin-bottom-07'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'purchaseOfService')][language]}
-      </H2>
-      <QueTitleEl>
+      </h3>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Does your household buy garbage collection services?')][language]}
         <DonutChart
           data={(getValue(Q11.Yes) * 100) / data.length}
           subText={HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'yes')][language]}
         />
-      </QueTitleEl>
-      <H2>
+      </div>
+      <hr className='undp-style margin-bottom-11' />
+      <h3 className='undp-typography bold margin-bottom-07'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'actorsInvolved')][language]}
-      </H2>
-      <QueTitleEl>
+      </h3>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'In your opinion, what is the level of responsibility of households in the management of solid waste in your municipality?')][language]}
         <BarGraph
           data={[(getValue(Q9['Important role to play']) * 100) / data.length, (getValue(Q9['Not important role to play']) * 100) / data.length, (getValue(Q9['No role']) * 100) / data.length, ((getValue(Q9['I do not know']) + getValue(Q4.undefined)) * 100) / data.length]}
@@ -287,8 +276,8 @@ export const HouseHoldViz = (props: Props) => {
           marginLeft={100}
           ticks={[0, 20, 40, 60, 80, 100]}
         />
-      </QueTitleEl>
-      <QueTitleEl>
+      </div>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Who do you think is responsible for solid waste management in your municipality?')][language]}
         <BarGraph
           data={[(getValue(Q10.Households) * 100) / data.length, (getValue(Q10['Private companies']) * 100) / data.length, (getValue(Q10['The state']) * 100) / data.length, (getValue(Q10['The town hall']) * 100) / data.length, ((getValue(Q10['I do not know']) + getValue(Q10.undefined)) * 100) / data.length]}
@@ -305,15 +294,15 @@ export const HouseHoldViz = (props: Props) => {
           marginLeft={100}
           ticks={[0, 20, 40, 60, 80, 100]}
         />
-      </QueTitleEl>
-      <QueTitleEl>
+      </div>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Does your household buy garbage collection services?')][language]}
         <DonutChart
           data={(getValue(Q11.Yes) * 100) / data.length}
           subText={HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'yes')][language]}
         />
-      </QueTitleEl>
-      <QueTitleEl>
+      </div>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'What is the main projects/activities the following actors are involved?')][language]}
         <GroupBarGraph
           data={[
@@ -345,8 +334,8 @@ export const HouseHoldViz = (props: Props) => {
             ]
           }
         />
-      </QueTitleEl>
-      <QueTitleEl>
+      </div>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Assessments regarding the level of waste generation of the following spaces/institutions')][language]}
         <StackedBarGraph
           data={[
@@ -385,28 +374,30 @@ export const HouseHoldViz = (props: Props) => {
           }
           ticks={[0, 20, 40, 60, 80, 100]}
         />
-      </QueTitleEl>
-      <H2>
+      </div>
+      <hr className='undp-style margin-bottom-11' />
+      <h3 className='undp-typography bold margin-bottom-07'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'negativeImpact')][language]}
-      </H2>
-      <QueTitleEl>
+      </h3>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Have you detected recurrent cases of solid waste-related diseases in your municipality?')][language]}
         <DonutChart
           data={(getValue(Q14.Yes) * 100) / data.length}
           subText={HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'yes')][language]}
         />
-      </QueTitleEl>
-      <QueTitleEl>
+      </div>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Have you detected any environmental problems related to solid waste management in your municipality?')][language]}
         <DonutChart
           data={(getValue(Q15.Yes) * 100) / data.length}
           subText={HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'yes')][language]}
         />
-      </QueTitleEl>
-      <H2>
+      </div>
+      <hr className='undp-style margin-bottom-11' />
+      <h3 className='undp-typography bold margin-bottom-07'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'communityCommitments')][language]}
-      </H2>
-      <QueTitleEl>
+      </h3>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'In your opinion, what is the level of commitment of the following actors in the management of solid waste?')][language]}
         <StackedBarGraph
           data={[
@@ -436,8 +427,8 @@ export const HouseHoldViz = (props: Props) => {
           }
           ticks={[0, 20, 40, 60, 80, 100]}
         />
-      </QueTitleEl>
-      <QueTitleEl>
+      </div>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'In your opinion, what is the level of awareness of the population of your municipality in terms of solid waste management?')][language]}
         <BarGraph
           data={[(getValue(Q17.Raised) * 100) / data.length, (getValue(Q17.Medium) * 100) / data.length, (getValue(Q17.Weak) * 100) / data.length, (getValue(Q17.undefined) * 100) / data.length]}
@@ -453,8 +444,8 @@ export const HouseHoldViz = (props: Props) => {
           marginLeft={100}
           ticks={[0, 20, 40, 60, 80]}
         />
-      </QueTitleEl>
-      <QueTitleEl>
+      </div>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Have you observed any changes in household behaviour in the area of solid waste management over the past three years?')][language]}
         <BarGraph
           data={[(getValue(Q18.Raised) * 100) / data.length, (getValue(Q18.Medium) * 100) / data.length, (getValue(Q18.Weak) * 100) / data.length, (getValue(Q18.undefined) * 100) / data.length]}
@@ -470,17 +461,18 @@ export const HouseHoldViz = (props: Props) => {
           marginLeft={100}
           ticks={[0, 20, 40, 60, 80]}
         />
-      </QueTitleEl>
-      <H2>
+      </div>
+      <hr className='undp-style margin-bottom-11' />
+      <h3 className='undp-typography bold margin-bottom-07'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'innovativeSolutions')][language]}
-      </H2>
-      <QueTitleEl>
+      </h3>
+      <div className='margin-bottom-11'>
         {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Have you detected any innovations related to solid waste management in your municipality?')][language]}
         <DonutChart
           data={(getValue(Q19.Yes) * 100) / data.length}
           subText={HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'yes')][language]}
         />
-      </QueTitleEl>
+      </div>
     </div>
   );
 };

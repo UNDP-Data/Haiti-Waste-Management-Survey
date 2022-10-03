@@ -1,106 +1,18 @@
 import { useContext } from 'react';
-import styled from 'styled-components';
+import { Segmented, Select } from 'antd';
 import { CtxDataType } from '../Types';
 import { Logo } from '../Icons';
 import Context from '../Context/Context';
 import { Settings } from './Settings';
 import { HouseHoldViz } from './HouseHoldViz';
+import '../style/selectStyle.css';
+import '../style/segmentedStyle.css';
+import '../style/statCardStyle.css';
+import { EnterprisesViz } from './EnterprisesViz';
 
 interface Props {
   data: any;
 }
-
-const Container = styled.div`
-  max-width: 132rem;
-  margin: 2rem auto;
-  padding: 0 2rem;
-`;
-
-const RootEl = styled.div`
-  background-color: var(--white);
-  color: var(--black-600);
-`;
-
-const HeadingEl = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 0;
-  align-items: center;
-`;
-
-const TitleEl = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const H1 = styled.div`
-  font-size: 3rem;
-  font-weight: bold;
-  color: var(--primary-blue);
-  line-height: 2rem;
-  margin: 1rem 0 0.5rem 1rem;
-  @media (max-width: 600px) {
-    font-size: 2rem;
-  }
-`;
-const H3 = styled.div`
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 2rem;
-  margin: 0 0 0.5rem 1rem;
-  @media (max-width: 600px) {
-    font-size: 1.6rem;
-  }
-`;
-
-const NotificationEl = styled.div`
-  padding: 2rem;
-  font-size: 2rem;
-  background-color: var(--black-200);
-  border: 1px solid var(--black-500);
-  text-align: center;
-  border-radius: 3px;
-  margin: 2rem 0 5rem 0;
-`;
-
-interface ToggleContainerType {
-  width?: string;
-  margin?: string;
-}
-
-const ToggleContainer = styled.div<ToggleContainerType>`
-  height: 5rem;
-  border: 2px solid #000;
-  display: flex;
-  width: ${(props) => (props.width ? props.width : 'auto')};
-  margin: ${(props) => (props.margin ? props.width : '0')};
-`;
-
-interface ToggleDataType {
-  selected: boolean;
-}
-
-const ToggleEl = styled.div<ToggleDataType>`
-  font-size: 1.6rem;
-  font-weight: 600;
-  padding: 1rem 2rem;
-  align-items: center;
-  text-align: center;
-  flex-grow: 1;
-  text-transform: uppercase;
-  color: ${(props) => (props.selected ? 'var(--white)' : 'var(--black-700)')};
-  cursor: pointer;
-  border-right: 1px solid var(--black-500);
-  &:last-of-type {
-    border-right: 0;
-  }
-  background-color: ${(props) => (props.selected ? 'var(--primary-blue)' : 'var(--white)')};  
-  &:hover {
-    background-color: ${(props) => (props.selected ? 'var(--primary-blue)' : 'var(--blue-very-light)')}; 
-    color: ${(props) => (props.selected ? 'var(--white)' : 'var(--primary-blue)')}; 
-  }
-`;
-
 export const GrapherComponent = (props: Props) => {
   const {
     data,
@@ -130,51 +42,86 @@ export const GrapherComponent = (props: Props) => {
 
   return (
     <>
-      <Container>
-        <HeadingEl>
-          <TitleEl>
-            <Logo height={50} />
+      <div className='undp-container max-width'>
+        <div className='flex-div flex-vert-align-center flex-space-between margin-bottom-07'>
+          <div className='flex-div flex-vert-align-center'>
+            <Logo height={75} />
             <div>
-              <H1>Data Futures Platform</H1>
-              <H3>Haiti Waste Management</H3>
+              <h4 className='undp-typography' style={{ color: 'var(--blue-600)', marginBottom: 0 }}>Data Futures Platform</h4>
+              <h5 className='undp-typography' style={{ marginBottom: 0 }}>Haiti Waste Management</h5>
             </div>
-          </TitleEl>
-          <ToggleContainer>
-            <ToggleEl selected={language === 'en'} onClick={() => { updateLanguage('en'); }}>EN</ToggleEl>
-            <ToggleEl selected={language === 'fr'} onClick={() => { updateLanguage('fr'); }}>FR</ToggleEl>
-          </ToggleContainer>
-        </HeadingEl>
-        <p style={{ marginBottom: '2em' }}>
+          </div>
+          <Select
+            className='undp-select undp-language-select'
+            defaultValue='en'
+            value={language}
+            onChange={(value) => { updateLanguage(value as 'en' | 'fr'); }}
+          >
+            <Select.Option className='undp-select-option' value='en'>English</Select.Option>
+            <Select.Option className='undp-select-option' value='fr'>French</Select.Option>
+          </Select>
+        </div>
+        <p className='undp-typography margin-bottom-07'>
           {
-          language === 'en'
-            ? 'As its first challenge, the UNDP Haiti Accelerator Lab is working on solid waste management. Solid waste is one of the major problems faced by the local authorities in Haiti. Despite the intervention of multiple actors such as the central government, the municipalities, private enterprises and NGOs, this problem remains unsolved particularly in the urban centres. To avail data for decision making and to deepen the knowledge on waste management in Haiti, the Accelerator Lab conducted a national survey to gather data on perceptions, local initiatives and public actions related to waste management. This page allows users to explore data and insights from this survey.'
-            : 'La gestion des déchets solides est définie comme l’enjeu principal de l’UNDP Haïti Accelerator Lab. En effet, les déchets solides représentent l\'une des difficultés majeures auxquelles sont confrontées les autorités locales en Haïti. Malgré l\'intervention de multiples acteurs tels que le gouvernement central, les municipalités, les entreprises privées ou encore les ONG, ce problème reste non résolu en particulier dans les centres urbains. Afin de disposer de données destinées à la prise de décisions et au développement des connaissances sur la gestion des déchets en Haïti, l\'Accelerator Lab a mené une enquête nationale. Cette dernière a pour but de recueillir des données sur les perceptions, les initiatives locales et les actions publiques liées à la gestion des déchets. Cette page permet aux utilisateurs d\'explorer les données et les résultats de cette enquête.'
-        }
-
+            language === 'en'
+              ? 'As its first challenge, the UNDP Haiti Accelerator Lab is working on solid waste management. Solid waste is one of the major problems faced by the local authorities in Haiti. Despite the intervention of multiple actors such as the central government, the municipalities, private enterprises and NGOs, this problem remains unsolved particularly in the urban centres. To avail data for decision making and to deepen the knowledge on waste management in Haiti, the Accelerator Lab conducted a national survey to gather data on perceptions, local initiatives and public actions related to waste management. This page allows users to explore data and insights from this survey.'
+              : 'La gestion des déchets solides est définie comme l’enjeu principal de l’UNDP Haïti Accelerator Lab. En effet, les déchets solides représentent l\'une des difficultés majeures auxquelles sont confrontées les autorités locales en Haïti. Malgré l\'intervention de multiples acteurs tels que le gouvernement central, les municipalités, les entreprises privées ou encore les ONG, ce problème reste non résolu en particulier dans les centres urbains. Afin de disposer de données destinées à la prise de décisions et au développement des connaissances sur la gestion des déchets en Haïti, l\'Accelerator Lab a mené une enquête nationale. Cette dernière a pour but de recueillir des données sur les perceptions, les initiatives locales et les actions publiques liées à la gestion des déchets. Cette page permet aux utilisateurs d\'explorer les données et les résultats de cette enquête.'
+          }
         </p>
-        <RootEl>
-          <ToggleContainer width='100%'>
-            <ToggleEl selected={selectedSubjectType === 'households'} onClick={() => { updateSelectedSubjectType('households'); }}>Households</ToggleEl>
-            <ToggleEl selected={selectedSubjectType === 'enterprises'} onClick={() => { updateSelectedSubjectType('enterprises'); }}>Enterprises</ToggleEl>
-            <ToggleEl selected={selectedSubjectType === 'projects'} onClick={() => { updateSelectedSubjectType('projects'); }}>Projects</ToggleEl>
-            <ToggleEl selected={selectedSubjectType === 'dumpingSites'} onClick={() => { updateSelectedSubjectType('dumpingSites'); }}>Dumping Sites</ToggleEl>
-            <ToggleEl selected={selectedSubjectType === 'healthFacilities'} onClick={() => { updateSelectedSubjectType('healthFacilities'); }}>Health Facilities</ToggleEl>
-            <ToggleEl selected={selectedSubjectType === 'townHalls'} onClick={() => { updateSelectedSubjectType('townHalls'); }}>Town Halls</ToggleEl>
-          </ToggleContainer>
+        <div>
+          <div className='flex-div flex-hor-align-center margin-top-09 margin-bottom-09'>
+            <Segmented
+              className='undp-segmented'
+              value={selectedSubjectType}
+              onChange={(value) => { updateSelectedSubjectType(value as 'households' | 'enterprises' | 'projects' | 'dumpingSites' | 'healthFacilities' | 'townHalls'); }}
+              options={
+                [
+                  {
+                    label: 'Households',
+                    value: 'households',
+                  },
+                  {
+                    label: 'Enterprises',
+                    value: 'enterprises',
+                  },
+                  {
+                    label: 'Projects',
+                    value: 'projects',
+                  },
+                  {
+                    label: 'Dumping Sites',
+                    value: 'dumpingSites',
+                  },
+                  {
+                    label: 'Health Facilities',
+                    value: 'healthFacilities',
+                  },
+                  {
+                    label: 'Town Halls',
+                    value: 'townHalls',
+                  },
+                ]
+              }
+            />
+          </div>
           <Settings />
-          <NotificationEl>
-            Showing results for
-            {' '}
-            <span className='bold'>{filteredData.length}</span>
-            {' '}
-            {selectedSubjectType}
-            {' '}
-          </NotificationEl>
+          <div className='stat-card margin-bottom-10'>
+            <h4 style={{ margin: 0, fontWeight: 'normal' }} className='align-center'>
+              Showing results for
+              {' '}
+              <span className='bold'>{filteredData.length}</span>
+              {' '}
+              {selectedSubjectType}
+            </h4>
+          </div>
           {
             selectedSubjectType === 'households' ? <HouseHoldViz data={filteredData} /> : null
           }
-        </RootEl>
-      </Container>
+          {
+            selectedSubjectType === 'enterprises' ? <EnterprisesViz data={filteredData} /> : null
+          }
+        </div>
+      </div>
     </>
   );
 };
