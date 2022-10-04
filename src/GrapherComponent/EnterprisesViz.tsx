@@ -1,11 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable no-unused-vars */
 import flatten from 'lodash.flatten';
 import countBy from 'lodash.countby';
-import { useContext } from 'react';
-import Context from '../Context/Context';
-import { HouseHoldLanguage } from '../Data/Language/household';
-import { CtxDataType } from '../Types';
 import { BarGraph } from './BarGraph';
 import { DonutChart } from './DonutChart';
 import { StackedBarGraph } from './StackedBarGraph';

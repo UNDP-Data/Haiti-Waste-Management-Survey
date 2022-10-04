@@ -9,6 +9,10 @@ import '../style/selectStyle.css';
 import '../style/segmentedStyle.css';
 import '../style/statCardStyle.css';
 import { EnterprisesViz } from './EnterprisesViz';
+import { TownHallViz } from './TownHallViz';
+import { DumpingSiteViz } from './DumpingSiteViz';
+import { ProjectsViz } from './ProjectsViz';
+import { HealthFacilityViz } from './HealthFacilityViz';
 
 interface Props {
   data: any;
@@ -119,6 +123,18 @@ export const GrapherComponent = (props: Props) => {
           }
           {
             selectedSubjectType === 'enterprises' ? <EnterprisesViz data={filteredData} /> : null
+          }
+          {
+            selectedSubjectType === 'townHalls' ? <TownHallViz data={filteredData} /> : null
+          }
+          {
+            selectedSubjectType === 'dumpingSites' ? <DumpingSiteViz data={filteredData} /> : null
+          }
+          {
+            selectedSubjectType === 'projects' ? <ProjectsViz data={filteredData} /> : null
+          }
+          {
+            selectedSubjectType === 'healthFacilities' ? <HealthFacilityViz data={filteredData} /> : null
           }
         </div>
       </div>
