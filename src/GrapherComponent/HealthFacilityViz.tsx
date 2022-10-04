@@ -66,7 +66,6 @@ export const HealthFacilityViz = (props: Props) => {
   const Q23_5 = countBy(data, (d) => d.UNDP);
   const Q23_6 = countBy(data, (d) => d.UNEP);
   const Q23_7 = countBy(data, (d) => d['Other UN Agencies']);
-  console.log(Q3_1);
   return (
     <div>
       <h3 className='undp-typography bold margin-bottom-07'>
