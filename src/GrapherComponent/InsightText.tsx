@@ -1,0 +1,112 @@
+import { useContext } from 'react';
+import { CtxDataType } from '../Types';
+import Context from '../Context/Context';
+import '../style/selectStyle.css';
+
+export const InsightText = () => {
+  const {
+    language,
+    selectedSubjectType,
+  } = useContext(Context) as CtxDataType;
+  return (
+    <p className='undp-typgraphy'>
+      {
+        selectedSubjectType === 'households'
+          ? language === 'en'
+            ? 'Haitian households believe to produce medium to low amounts of waste, being burning it, throwing it into an empty landfill lot, and recycling the most common ways of waste management used by the households. Less than half of the surveyed households claim to sort solid waste into organic and inorganic at home.  Most respondents attribute the responsibility of solid waste management to town halls and consider the public sector as the highest producer of waste while households enterprises, schools, health centers are perceived as medium generators.  Households also report environmental problems related to solid waste management. Yet, most households perceive the general population as having low awareness and low behavioral changes in terms of solid waste management.'
+            : 'Les ménages haïtiens pensent produire des quantités moyennes à faibles de déchets, en les brûlant, en les jetant dans une décharge vide et en recyclant les moyens les plus courants de gestion des déchets utilisés par les ménages. Moins de la moitié des ménages interrogés déclarent trier les déchets solides en organiques et inorganiques à la maison. La plupart des répondants attribuent la responsabilité de la gestion des déchets solides aux mairies et considèrent le secteur public comme le plus gros producteur de déchets tandis que les ménages, les entreprises, les écoles, les centres de santé sont perçus comme des générateurs moyens. Les ménages signalent également des problèmes environnementaux liés à la gestion des déchets solides. Pourtant, la plupart des ménages perçoivent la population générale comme ayant une faible sensibilisation et de faibles changements de comportement en matière de gestion des déchets solides.'
+          : null
+      }
+      {
+        selectedSubjectType === 'enterprises'
+          ? language === 'en'
+            ? (
+              <>
+                Only one third of the surveyed enterprises/Community Based Organizations (CBOs) claim to have enough resources for solid waste collection such as machinery like garbage and dump trucks. The most common financing sources used by enterprises are funds/grants, donations, credits, among others. While most enterprises/CBOs offer the waste collection services and sale of solid waste, only a fifth of the surveyed enterprises offer similar services for organic waste, plastic waste, scrap metal, and paper/cardboard waste. Additionally, only half of the enterprises mention the involvement with other actors - such as town halls, private companies, and community organizations - in solid waste management.
+                <br />
+                <br />
+                Enterprises perceive households and private markets to produce higher levels of waste while enterprises, schools, and hospitals are regarded as producing low amounts of waste. Moreover, half of the respondents acclaim the participation of other actors in waste management, such as town halls, private companies, and NGOs. Over two thirds of the surveyed enterprises detect recurrent cases of solid-waste-related diseases and consider the level of commitment and awareness of the population in relation to solid waste management to be low.
+              </>
+            )
+            : (
+              <>
+                Seul un tiers des entreprises/organisations communautaires (OCB) interrogées affirment disposer de suffisamment de ressources pour la collecte des déchets solides tels que les machines telles que les poubelles et les camions à benne basculante. Les sources de financement les plus couramment utilisées par les entreprises sont les fonds/subventions, les dons, les crédits, entre autres. Alors que la plupart des entreprises/OCB offrent des services de collecte des déchets et de vente de déchets solides, seulement un cinquième des entreprises interrogées offrent des services similaires pour les déchets organiques, les déchets plastiques, la ferraille et les déchets de papier/carton. De plus, seulement la moitié des entreprises mentionnent l&apos;implication avec d&apos;autres acteurs - tels que les mairies, les entreprises privées et les organisations communautaires - dans la gestion des déchets solides.
+                <br />
+                <br />
+                Les entreprises perçoivent les ménages et les marchés privés comme produisant des niveaux plus élevés de déchets tandis que les entreprises, les écoles et les hôpitaux sont considérés comme produisant de faibles quantités de déchets. Par ailleurs, la moitié des répondants saluent la participation d&apos;autres acteurs de la gestion des déchets, comme les mairies, les entreprises privées et les ONG. Plus des deux tiers des entreprises interrogées détectent des cas récurrents de maladies liées aux déchets solides et considèrent que le niveau d&apos;engagement et de sensibilisation de la population par rapport à la gestion des déchets solides est faible.
+              </>
+            )
+          : null
+      }
+      {
+        selectedSubjectType === 'projects'
+          ? language === 'en'
+            ? (
+              <>
+                The vast majority of respondents declare that funding for waste-management related projects comes from international donors, national donors, and notables of the area. One third of the projects had partnerships with different stakeholders, most commonly being town halls, private companies, community organizations, other state institutions, and NGOs.
+                <br />
+                <br />
+                The partnership with UNDP is highly valued by the project managers; however, the quality of the partnerships with private companies/community organizations and town halls are perceived as medium and low by the project managers, respectively. In regards with the types of waste, plastic is the most produced followed by paper/cardboard and agricultural waste.
+                <br />
+                <br />
+                Thirty percent of the respondents allege having detected recurrent cases of solid-waste related diseases, most commonly diarrhea, skin diseases, malaria, and typhoid. Moreover, forty percent believe there to be environmental problems in regard to solid waste management such as obstruction and insalubrity of road networks. Lastly, four in ten respondents believe the population to have a low engagement and awareness of solid waste management.
+              </>
+            )
+            : (
+              <>
+                La grande majorité des répondants déclarent que le financement des projets liés à la gestion des déchets provient de donateurs internationaux, de donateurs nationaux et de notables de la région. Un tiers des projets avaient des partenariats avec différentes parties prenantes, le plus souvent des mairies, des entreprises privées, des organisations communautaires, d&apos;autres institutions étatiques et des ONG.
+                <br />
+                <br />
+                Le partenariat avec le PNUD est très apprécié par les chefs de projet; toutefois, la qualité des partenariats avec les entreprises privées/organismes communautaires et les mairies est respectivement perçue comme moyenne et faible par les porteurs de projet. En ce qui concerne les types de déchets, le plastique est le plus produit suivi du papier/carton et des déchets agricoles.
+                <br />
+                <br />
+                Trente pour cent des répondants affirment avoir détecté des cas récurrents de maladies liées aux déchets solides, le plus souvent la diarrhée, les maladies de la peau, le paludisme et la typhoïde. De plus, 40% pensent qu&apos;il existe des problèmes environnementaux liés à la gestion des déchets solides tels que l&apos;obstruction et l&apos;insalubrité des réseaux routiers. Enfin, quatre répondants sur dix pensent que la population a un faible engagement et une faible sensibilisation à la gestion des déchets solides.
+              </>
+            )
+          : null
+      }
+      {
+        selectedSubjectType === 'healthFacilities'
+          ? language === 'en'
+            ? (
+              <>
+                One third of health care establishments state having a dedicated budget for biomedical waste management.  Three fourths of the personnel in health care facilities claim to have attended training sessions on biomedical waste management during their academic or professional journey. Although almost all the staff state that biomedical waste is important and they claim to be aware of the associated risks of the handling of biomedical waste, very few of them declare having access to a waste management guideline manual in their health care facilities.
+                <br />
+                <br />
+                Most facilities affirm to have a responsible employee(s) for managing biomedical waste. Moreover, some claim to have detected recurrent cases of illnesses related to poor management of biomedical waste and most facilities state to sort waste according to its level of danger. Only around half believe to have proper collection of biomedical waste methods for safety.
+              </>
+            )
+            : (
+              <>
+                Un tiers des établissements de santé déclarent disposer d&apos;un budget dédié à la gestion des déchets biomédicaux. Les trois quarts du personnel des établissements de santé déclarent avoir suivi des formations sur la gestion des déchets biomédicaux au cours de leur parcours scolaire ou professionnel. Bien que la quasi-totalité du personnel déclare que les déchets biomédicaux sont importants et qu&apos;ils se disent conscients des risques associés à la manipulation des déchets biomédicaux, très peu d&apos;entre eux déclarent avoir accès à un manuel de consignes de gestion des déchets dans leurs établissements de santé.
+                <br />
+                <br />
+                La plupart des établissements affirment avoir un ou des employés responsables de la gestion des déchets biomédicaux. Par ailleurs, certains affirment avoir détecté des cas récurrents de maladies liées à une mauvaise gestion des déchets biomédicaux et la plupart des établissements déclarent trier les déchets en fonction de leur niveau de dangerosité. Seulement environ la moitié pensent avoir une collecte appropriée des méthodes de collecte des déchets biomédicaux pour la sécurité.
+              </>
+            )
+          : null
+      }
+      {
+        selectedSubjectType === 'townHalls'
+          ? language === 'en'
+            ? (
+              <>
+                Despite half of the surveyed town halls having a department in charge of solid waste management, only one fifth have adequate materials for waste collection and 3 out of 10 declared having a dedicated budget to solid waste management. Many of the surveyed town halls claim participation in waste collection, transportation, burning, and landfill, with limited number of partners contributing to these activities.
+                <br />
+                <br />
+                According to the town halls surveyed, the level of waste generation of public markets is high, households being medium generators, and companies, schools, hospitals being low generators. Over half of them allege detecting recurrent cases of solid waste-related diseases and most mention environmental problems. Yet, town halls perceive a low level of commitment on behalf of the population in terms of solid waste management.
+              </>
+            )
+            : (
+              <>
+                Bien que la moitié des mairies enquêtées disposent d&apos;un service en charge de la gestion des déchets solides, seul un cinquième dispose de matériels adéquats pour la collecte des déchets et 3 sur 10 déclarent avoir un budget dédié à la gestion des déchets solides. De nombreuses mairies interrogées revendiquent une participation à la collecte, au transport, au brûlage et à la décharge des déchets, avec un nombre limité de partenaires contribuant à ces activités.
+                <br />
+                <br />
+                Selon les mairies enquêtées, le niveau de production de déchets des marchés publics est élevé, les ménages étant des générateurs moyens, et les entreprises, écoles, hôpitaux étant des générateurs faibles. Plus de la moitié d&apos;entre eux affirment détecter des cas récurrents de maladies liées aux déchets solides et la plupart mentionnent des problèmes environnementaux. Pourtant, les mairies perçoivent un low niveau d&apos;engagement de la population en matière de gestion des déchets solides.
+              </>
+            )
+          : null
+      }
+    </p>
+  );
+};

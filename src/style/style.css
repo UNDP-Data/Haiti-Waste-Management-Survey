@@ -71,6 +71,10 @@
 }
 
 hr.undp-style {
+  border: 1px solid var(--gray-400);
+}
+
+hr.undp-style.dark {
   border: 1px solid var(--black);
 }
 

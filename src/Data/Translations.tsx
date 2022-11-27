@@ -1655,6 +1655,11 @@ export const Translations = [
     fr: 'Sélectionnez le Niveau D\'éducation',
   },
   {
+    key: 'Survey Results',
+    en: 'Survey Results',
+    fr: 'Résultats du Sondage',
+  },
+  {
     key: 'Select Function',
     en: 'Select Function',
     fr: 'Sélectionnez la Fonction',
@@ -1673,5 +1678,35 @@ export const Translations = [
     key: 'All Functions',
     en: 'All Functions',
     fr: 'Toutes les Fonctions',
+  },
+  {
+    key: 'Is the landfill site recognized/tolerated by the town hall?',
+    en: 'Is the landfill site recognized/tolerated by the town hall?',
+    fr: 'La décharge est-elle reconnue/tolérée par la mairie ?',
+  },
+  {
+    key: 'Is the landfill site under the responsibility of the town hall?',
+    en: 'Is the landfill site under the responsibility of the town hall?',
+    fr: 'La décharge est-elle sous la responsabilité de la mairie ?',
+  },
+  {
+    key: 'How do you categorize this dump site?',
+    en: 'How do you categorize this dump site?',
+    fr: 'Comment classez-vous ce dépotoir ?',
+  },
+  {
+    key: 'Can you give us the following details on the location of the landfill site?',
+    en: 'Can you give us the following details on the location of the landfill site?',
+    fr: 'Pouvez-vous nous donner les détails suivants sur l\'emplacement du site d\'enfouissement ?',
+  },
+  {
+    key: 'Can you provide us with the following information on the use of the site?',
+    en: 'Can you provide us with the following information on the use of the site?',
+    fr: 'Pouvez-vous nous fournir les informations suivantes sur l\'utilisation du site ?',
+  },
+  {
+    key: 'says wild',
+    en: 'says wild',
+    fr: 'répondu sauvage',
   },
 ];

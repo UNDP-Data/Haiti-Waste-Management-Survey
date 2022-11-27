@@ -25,35 +25,35 @@ export const DumpingSiteViz = (props: Props) => {
   return (
     <div>
       <div className='margin-bottom-11'>
-        Is the landfill site recognized/tolerated by the town hall?
+        {Translations[Translations.findIndex((el) => el.key === 'Is the landfill site recognized/tolerated by the town hall?')][language]}
         <DonutChart
           data={(getValue(Q1.yes) * 100) / data.length}
           subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Is the landfill site under the responsibility of the town hall?
+        {Translations[Translations.findIndex((el) => el.key === 'Is the landfill site under the responsibility of the town hall?')][language]}
         <DonutChart
           data={(getValue(Q2.yes) * 100) / data.length}
           subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        How do you categorize this dump site?
+        {Translations[Translations.findIndex((el) => el.key === 'How do you categorize this dump site?')][language]}
         <DonutChart
           data={(getValue(Q3.Wild) * 100) / data.length}
-          subText='says wild'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says wild')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Can you give us the following details on the location of the landfill site?
+        {Translations[Translations.findIndex((el) => el.key === 'Can you give us the following details on the location of the landfill site?')][language]}
         <DonutChart
           data={(getValue(Q4.yes) * 100) / data.length}
           subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Can you provide us with the following information on the use of the site?
+        {Translations[Translations.findIndex((el) => el.key === 'Can you provide us with the following information on the use of the site?')][language]}
         <DonutChart
           data={(getValue(Q5.yes) * 100) / data.length}
           subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
