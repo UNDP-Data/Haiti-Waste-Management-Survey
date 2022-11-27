@@ -23,7 +23,7 @@ const VizAreaEl = styled.div`
 const App = () => {
   const [finalData, setFinalData] = useState<any | undefined>(undefined);
   const initialState = {
-    selectedSubjectType: 'households',
+    selectedSubjectType: 'townHalls',
     selectedDepartments: [],
     selectedGenders: 'All Genders',
     selectedEducations: [],

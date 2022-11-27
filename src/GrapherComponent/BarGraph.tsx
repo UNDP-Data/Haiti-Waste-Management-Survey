@@ -11,7 +11,7 @@ interface Props {
 
 const El = styled.div`
   width: 100%;
-  max-width: 38.75rem;
+  max-width: 47.5rem;
   margin: 1.25rem auto;
 `;
 
@@ -23,7 +23,7 @@ export const BarGraph = (props: Props) => {
     ticks,
     marginLeft,
   } = props;
-  const svgWidth = window.innerWidth > 620 ? 620 : window.innerWidth;
+  const svgWidth = window.innerWidth > 760 ? 760 : window.innerWidth;
   const svgHeight = (BAR_HEIGHT + (2 * BAR_PADDING)) * data.length + 25;
   return (
     <El>
@@ -70,7 +70,7 @@ export const BarGraph = (props: Props) => {
                 fontWeight='bold'
               >
                 {
-                  barLabel[i].split('\n').length > 1 ? (
+                  barLabel[i] ? barLabel[i].split('\n').length > 1 ? (
                     <>
                       <tspan x={0} textAnchor='end' dx={-5} dy={22}>{barLabel[i].split('\n')[0]}</tspan>
                       <tspan x={0} textAnchor='end' dx={-5} dy={12}>{barLabel[i].split('\n')[1]}</tspan>
@@ -80,7 +80,7 @@ export const BarGraph = (props: Props) => {
                       <>
                         <tspan>{barLabel[i]}</tspan>
                       </>
-                    )
+                    ) : 'Hello'
                 }
               </text>
             </g>

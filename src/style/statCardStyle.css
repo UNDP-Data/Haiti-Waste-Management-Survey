@@ -2,13 +2,8 @@
   padding: 2rem;
   background-color: var(--gray-200);
   font-size: 1.25rem;
-  cursor: pointer;
   color: var(--black);
   transition: 300ms all;
-}
-
-.stat-card:hover {
-  background-color: var(--light-yellow);
 }
 
 .stat-card:hover h2 {

@@ -7,6 +7,7 @@ import {
   DEPARTMENTS, EDUCATION, FUNCTIONS, GENDERS,
 } from '../Constants';
 import '../style/selectStyle.css';
+import { Translations } from '../Data/Translations';
 
 interface DropdownUnitProps {
   width?: string;
@@ -19,6 +20,7 @@ const DrowdownEl = styled.div<DropdownUnitProps>`
 
 export const Settings = () => {
   const {
+    language,
     selectedSubjectType,
     selectedDepartments,
     selectedGenders,
@@ -32,14 +34,14 @@ export const Settings = () => {
   return (
     <div className='flex-div margin-bottom-05 flex-space-between'>
       <DrowdownEl
-        width={selectedSubjectType === 'dumpingSites' ? '100%' : selectedSubjectType === 'households' ? 'calc(50% - 1rem)' : 'calc(75%  - 1rem)'}
+        width={selectedSubjectType === 'dumpingSites' ? '100%' : selectedSubjectType === 'households' ? 'calc(33.33% - 1rem)' : 'calc(50%  - 1rem)'}
       >
         <p className='label'>
-          Select Department
+          {Translations[Translations.findIndex((el) => el.key === 'Select Department')][language]}
         </p>
         <Select
           className='undp-select'
-          placeholder='All Departments'
+          placeholder={Translations[Translations.findIndex((el) => el.key === 'All Departments')][language]}
           value={selectedDepartments}
           showSearch
           allowClear
@@ -58,31 +60,31 @@ export const Settings = () => {
         && (
           <>
             <DrowdownEl
-              width='calc(25% - 1rem)'
+              width='calc(33.33% - 1rem)'
             >
               <p className='label'>
                 Select Gender
               </p>
               <Select
                 className='undp-select'
-                placeholder='All Genders'
+                placeholder={Translations[Translations.findIndex((el) => el.key === 'All Genders')][language]}
                 value={selectedGenders}
                 onChange={(value) => { updateSelectedGenders(value); }}
               >
                 {
-                  GENDERS.map((d) => <Select.Option className='undp-select-option' key={d.value}>{d.label}</Select.Option>)
+                  GENDERS.map((d) => <Select.Option className='undp-select-option' key={d.value}>{Translations[Translations.findIndex((el) => el.key === d.label)][language]}</Select.Option>)
                 }
               </Select>
             </DrowdownEl>
             <DrowdownEl
-              width='calc(25% - 1rem)'
+              width='calc(33.33% - 1rem)'
             >
               <p className='label'>
-                Select Education Level
+                {Translations[Translations.findIndex((el) => el.key === 'Select Education Level')][language]}
               </p>
               <Select
                 className='undp-select'
-                placeholder='All Departments'
+                placeholder={Translations[Translations.findIndex((el) => el.key === 'All Education Levels')][language]}
                 value={selectedEducations}
                 showSearch
                 allowClear
@@ -92,7 +94,7 @@ export const Settings = () => {
                 onChange={(values) => { updateSelectedEducations(values); }}
               >
                 {
-                  EDUCATION.map((d) => <Select.Option className='undp-select-option' key={d.value}>{d.label}</Select.Option>)
+                  EDUCATION.map((d) => <Select.Option className='undp-select-option' key={d.value}>{Translations[Translations.findIndex((el) => el.key === d.label)][language]}</Select.Option>)
                 }
               </Select>
             </DrowdownEl>
@@ -103,23 +105,24 @@ export const Settings = () => {
         (selectedSubjectType !== 'households' && selectedSubjectType !== 'dumpingSites')
         && (
         <DrowdownEl
-          width='calc(25% - 1rem)'
+          width='calc(50% - 1rem)'
         >
           <p className='label'>
-            Select Function
+            {Translations[Translations.findIndex((el) => el.key === 'Select Function')][language]}
           </p>
           <Select
             className='undp-select'
-            placeholder='All Functions'
+            placeholder={Translations[Translations.findIndex((el) => el.key === 'All Functions')][language]}
             value={selectedFunctions}
             showSearch
             allowClear
+            clearIcon={<div className='clearIcon' />}
             mode='multiple'
             maxTagCount='responsive'
             onChange={(values) => { updateSelectedFunctions(values); }}
           >
             {
-              FUNCTIONS.map((d) => <Select.Option className='undp-select-option' key={d.value}>{d.label}</Select.Option>)
+              FUNCTIONS.map((d) => <Select.Option className='undp-select-option' key={d.value}>{Translations[Translations.findIndex((el) => el.key === d.label)][language]}</Select.Option>)
             }
           </Select>
         </DrowdownEl>

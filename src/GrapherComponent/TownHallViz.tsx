@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import countBy from 'lodash.countby';
 import { BarGraph } from './BarGraph';
 import { DonutChart } from './DonutChart';
 import { StackedBarGraph } from './StackedBarGraph';
 import { getValue } from '../utils/getValue';
+import { Translations } from '../Data/Translations';
+import { CtxDataType } from '../Types';
+import Context from '../Context/Context';
 
 interface Props {
   data: any;
@@ -12,6 +16,9 @@ export const TownHallViz = (props: Props) => {
   const {
     data,
   } = props;
+  const {
+    language,
+  } = useContext(Context) as CtxDataType;
   const Q1 = countBy(data, (d) => d['Does the town hall have a department in charge of SWM in your municipality?']);
   const Q2 = countBy(data, (d) => d['Does the town hall have adequate materials for waste collection?']);
   const Q3 = countBy(data, (d) => d['Does the town hall have solid waste dump sites of more than 1000 square meters?']);
@@ -81,109 +88,109 @@ export const TownHallViz = (props: Props) => {
   return (
     <div>
       <h3 className='undp-typography bold margin-bottom-07'>
-        Equipment and Infrastructure
+        {Translations[Translations.findIndex((el) => el.key === 'Equipment and Infrastructure')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Does the town hall have a department in charge of SWM in your municipality?
+        {Translations[Translations.findIndex((el) => el.key === 'Does the town hall have a department in charge of SWM in your municipality?')][language]}
         <DonutChart
           data={(getValue(Q1.Yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Does the town hall have adequate materials for waste collection?
+        {Translations[Translations.findIndex((el) => el.key === 'Does the town hall have adequate materials for waste collection?')][language]}
         <DonutChart
           data={(getValue(Q2.Yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Does the town hall have solid waste dump sites of more than 1000 square meters?
+        {Translations[Translations.findIndex((el) => el.key === 'Does the town hall have solid waste dump sites of more than 1000 square meters?')][language]}
         <DonutChart
           data={(getValue(Q3.Yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Human Resources
+        {Translations[Translations.findIndex((el) => el.key === 'Human Resources')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        How many employees of the company/OCB work in the solid waste sector?
+        {Translations[Translations.findIndex((el) => el.key === 'How many employees of the company/CBO work in the solid waste sector?')][language]}
         <BarGraph
           data={[(getValue(Q4.undefined) * 100) / data.length, (getValue(Q4['Less than 5']) * 100) / data.length, ((getValue(Q4['5 - 10']) + getValue(Q4['10 - 15'])) * 100) / data.length, (getValue(Q4['15 - 20']) * 100) / data.length, (getValue(Q4['20 - 50']) * 100) / data.length, (getValue(Q4['50 - 100']) * 100) / data.length, (getValue(Q4['Over 100']) * 100) / data.length]}
           barLabel={
             [
-              '0 or\nNo Response',
-              '< 5',
-              '5 - 15',
-              '15 - 20',
-              '20 - 50',
-              '50 - 100',
-              '>= 100',
+              Translations[Translations.findIndex((el) => el.key === '0 or No Response')][language],
+              '<5',
+              '5-15',
+              '15-20',
+              '20-50',
+              '50-100',
+              '>=100',
             ]
           }
           maxValue={70}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 20, 40, 70]}
         />
       </div>
       <div className='margin-bottom-11'>
-        How many male employees of the company/OCB work in the solid waste sector?
+        {Translations[Translations.findIndex((el) => el.key === 'How many male employees of the company/CBO work in the solid waste sector?')][language]}
         <BarGraph
           data={[(getValue(Q5.undefined) * 100) / data.length, (getValue(Q5['Less than 5']) * 100) / data.length, ((getValue(Q5['5 - 10']) + getValue(Q5['10 - 15'])) * 100) / data.length, (getValue(Q5['15 - 20']) * 100) / data.length, (getValue(Q5['20 - 50']) * 100) / data.length, (getValue(Q5['50 - 100']) * 100) / data.length, (getValue(Q5['Over 100']) * 100) / data.length]}
           barLabel={
             [
-              '0 or\nNo Response',
-              '< 5',
-              '5 - 15',
-              '15 - 20',
-              '20 - 50',
-              '50 - 100',
-              '>= 100',
+              Translations[Translations.findIndex((el) => el.key === '0 or No Response')][language],
+              '<5',
+              '5-15',
+              '15-20',
+              '20-50',
+              '50-100',
+              '>=100',
             ]
           }
           maxValue={70}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 20, 40, 70]}
         />
       </div>
       <div className='margin-bottom-11'>
-        How many women employees of the company/OCB work in the solid waste sector?
+        {Translations[Translations.findIndex((el) => el.key === 'How many women employees of the company/CBO work in the solid waste sector?')][language]}
         <BarGraph
           data={[(getValue(Q6.undefined) * 100) / data.length, (getValue(Q6['Less than 5']) * 100) / data.length, ((getValue(Q6['5 - 10']) + getValue(Q6['10 - 15'])) * 100) / data.length, (getValue(Q6['15 - 20']) * 100) / data.length, (getValue(Q6['20 - 50']) * 100) / data.length, (getValue(Q6['50 - 100']) * 100) / data.length, (getValue(Q6['Over 100']) * 100) / data.length]}
           barLabel={
             [
-              '0 or\nNo Response',
-              '< 5',
-              '5 - 15',
-              '15 - 20',
-              '20 - 50',
-              '50 - 100',
-              '>= 100',
+              Translations[Translations.findIndex((el) => el.key === '0 or No Response')][language],
+              '<5',
+              '5-15',
+              '15-20',
+              '20-50',
+              '50-100',
+              '>=100',
             ]
           }
           maxValue={70}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 20, 40, 70]}
         />
       </div>
       <h3 className='undp-typography bold margin-bottom-07'>
-        Finacial Resources
+        {Translations[Translations.findIndex((el) => el.key === 'Finacial Resources')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Does the town hall have a budget dedicated specifically to  solid waste management?
+        {Translations[Translations.findIndex((el) => el.key === 'Does the town hall have a budget dedicated specifically to solid waste management?')][language]}
         <DonutChart
           data={(getValue(Q7.Yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Activities Related to Solid Waste Collection at Town Hall Level
+        {Translations[Translations.findIndex((el) => el.key === 'Activities Related to Solid Waste Collection at Town Hall Level')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Can you tell us if the town hall carries out the following activities related to solid waste?
+        {Translations[Translations.findIndex((el) => el.key === 'Can you tell us if the town hall carries out the following activities related to solid waste?')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q8_1.Yes) * 100) / data.length, (getValue(Q8_1.No) * 100) / data.length, ((data.length - getValue(Q8_1.Yes) - getValue(Q8_1.No)) * 100) / data.length],
@@ -207,48 +214,48 @@ export const TownHallViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Waste collection',
-              'Sorting',
-              'Treatment',
-              'Transportation',
-              'Landfill',
-              'Burning',
-              'Recycling,\ncomposting',
-              'Others',
+              Translations[Translations.findIndex((el) => el.key === 'Waste collection')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Sorting')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Treatment')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Transportation')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Landfill')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Burning')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Recycling, composting')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Others')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#59BA47', '#D12800', '#AAA']}
           colorKey={
             [
-              'Yes',
-              'No',
-              'Don\'t know or no response',
+              Translations[Translations.findIndex((el) => el.key === 'Yes')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Don\'t know or no response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
         />
       </div>
       <div className='margin-bottom-11'>
-        How many collection days per month does the town hall carry out?
+        {Translations[Translations.findIndex((el) => el.key === 'How many collection days per month does the town hall carry out?')][language]}
         <BarGraph
           data={[(getValue(Q9['Three times a month']) * 100) / data.length, (getValue(Q9['Twice a month']) * 100) / data.length, (getValue(Q9['Once a month']) * 100) / data.length, ((getValue(Q9.None) + getValue(Q9.undefined)) * 100) / data.length]}
           barLabel={
             [
-              'Three days',
-              'Two days',
-              'One day',
-              'None or\nno answer',
+              Translations[Translations.findIndex((el) => el.key === 'Three days')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Two days')][language],
+              Translations[Translations.findIndex((el) => el.key === 'One day')][language],
+              Translations[Translations.findIndex((el) => el.key === 'None or no answer')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 25, 50, 75, 100]}
         />
       </div>
       <div className='margin-bottom-11'>
-        What are the solid waste activities that consume the highest resources at the town hall level?
+        {Translations[Translations.findIndex((el) => el.key === 'What are the solid waste activities that consume the highest resources at the town hall level?')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q10_1.Yes) * 100) / data.length, (getValue(Q10_1.No) * 100) / data.length, ((data.length - getValue(Q10_1.Yes) - getValue(Q10_1.No)) * 100) / data.length],
@@ -274,54 +281,54 @@ export const TownHallViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Waste collection',
-              'Sorting',
-              'Treatment',
-              'Transportation',
-              'Landfill',
-              'Burning',
-              'Recycling,\ncomposting',
-              'Promotion for\nrecycling',
-              'Raising awareness',
+              Translations[Translations.findIndex((el) => el.key === 'Waste collection')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Sorting')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Treatment')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Transportation')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Landfill')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Burning')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Recycling, composting')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Promotion for recycling')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Raising Awareness')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#59BA47', '#D12800', '#AAA']}
           colorKey={
             [
-              'Yes',
-              'No',
-              'Don\'t know or no response',
+              Translations[Translations.findIndex((el) => el.key === 'Yes')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Don\'t know or no response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Is the solid waste collected weighted daily or weekly?
+        {Translations[Translations.findIndex((el) => el.key === 'Is the solid waste collected weighted daily or weekly?')][language]}
         <DonutChart
           data={(getValue(Q11.Yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Actors
+        {Translations[Translations.findIndex((el) => el.key === 'Actors')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Are there other actors involved in solid waste management in your municipality?
+        {Translations[Translations.findIndex((el) => el.key === 'Are there other actors involved in solid waste management in your municipality?')][language]}
         <DonutChart
           data={(getValue(Q12.Yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Partnership Relations
+        {Translations[Translations.findIndex((el) => el.key === 'Partnership Relations')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Are there partnerships between the town hall and the following actors in relation to solid waste?
+        {Translations[Translations.findIndex((el) => el.key === 'Are there partnerships between the town hall and the following actors in relation to solid waste?')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q14_1.Yes) * 100) / data.length, (getValue(Q14_1.No) * 100) / data.length, ((data.length - getValue(Q14_1.Yes) - getValue(Q14_1.No)) * 100) / data.length],
@@ -345,24 +352,24 @@ export const TownHallViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Private\ncompanies',
-              'NGO',
-              'Community\norganizations',
-              'SNGRC',
-              'UNDP',
-              'UNEP',
-              'Other UN\nagencies',
-              'Decentralised\ncooperation',
+              Translations[Translations.findIndex((el) => el.key === 'Private companies')][language],
+              Translations[Translations.findIndex((el) => el.key === 'NGO')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Community organizations')][language],
+              Translations[Translations.findIndex((el) => el.key === 'SNGRC')][language],
+              Translations[Translations.findIndex((el) => el.key === 'UNDP')][language],
+              Translations[Translations.findIndex((el) => el.key === 'UNEP')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Other UN agencies')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Decentralised cooperation')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#59BA47', '#D12800', '#AAA']}
           colorKey={
             [
-              'Yes',
-              'No',
-              'Don\'t know or no response',
+              Translations[Translations.findIndex((el) => el.key === 'Yes')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Don\'t know or no response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
@@ -370,10 +377,10 @@ export const TownHallViz = (props: Props) => {
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Level of Waste Generation
+        {Translations[Translations.findIndex((el) => el.key === 'Level of Waste Generation')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Give us your assessments regarding the level of waste generation of the following spaces/institutions
+        {Translations[Translations.findIndex((el) => el.key === 'Give us your assessments regarding the level of waste generation of the following spaces/institutions')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q15_1.Raised) * 100) / data.length, (getValue(Q15_1.Medium) * 100) / data.length, (getValue(Q15_1.Weak) * 100) / data.length, (getValue(Q15_1.undefined) * 100) / data.length],
@@ -391,22 +398,22 @@ export const TownHallViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Households',
-              'Public markets',
-              'Companies',
-              'Schools',
-              'Hospitals',
+              Translations[Translations.findIndex((el) => el.key === 'Households')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Public markets')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Companies')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Schools')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Hospitals')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#006EB5', '#4F95DD', '#94C4F5', '#AAA']}
           colorKey={
             [
-              'High',
-              'Medium',
-              'Low',
-              'No response',
+              Translations[Translations.findIndex((el) => el.key === 'High')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Medium')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Low')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
@@ -414,10 +421,10 @@ export const TownHallViz = (props: Props) => {
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Type of Wastes
+        {Translations[Translations.findIndex((el) => el.key === 'Type of Wastes')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        At what level do the following types of waste meet in your municipality?
+        {Translations[Translations.findIndex((el) => el.key === 'At what level do the following types of waste meet in your municipality?')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q16_1.Raised) * 100) / data.length, (getValue(Q16_1.Medium) * 100) / data.length, (getValue(Q16_1.Weak) * 100) / data.length, (getValue(Q16_1.undefined) * 100) / data.length],
@@ -437,23 +444,23 @@ export const TownHallViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Agricultural',
-              'Plastic',
-              'Metal',
-              'Medical',
-              'Textile',
-              'Industrial',
+              Translations[Translations.findIndex((el) => el.key === 'Agricultural')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Plastic')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Metal')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Medical')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Textile')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Industrial')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#006EB5', '#4F95DD', '#94C4F5', '#AAA']}
           colorKey={
             [
-              'High',
-              'Medium',
-              'Low',
-              'No response',
+              Translations[Translations.findIndex((el) => el.key === 'High')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Medium')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Low')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
@@ -461,17 +468,17 @@ export const TownHallViz = (props: Props) => {
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Negative Impact of Solid Waste
+        {Translations[Translations.findIndex((el) => el.key === 'Negative Impact of Solid Waste')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Have you detected recurrent cases of solid waste-related diseases in your municipality?
+        {Translations[Translations.findIndex((el) => el.key === 'Have you detected recurrent cases of solid waste-related diseases in your municipality?')][language]}
         <DonutChart
           data={(getValue(Q17.Yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Specify whether you have observed the following diseases
+        {Translations[Translations.findIndex((el) => el.key === 'Specify whether you have observed the following diseases')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q18_1.Yes) * 100) / data.length, (getValue(Q18_1.No) * 100) / data.length, ((data.length - getValue(Q18_1.Yes) - getValue(Q18_1.No)) * 100) / data.length],
@@ -493,37 +500,37 @@ export const TownHallViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Skin disease',
-              'Respiratory\ndisease',
-              'Malaria',
-              'Dengue fever',
-              'Typhoid',
-              'Diarrhea',
-              'Vaginal infection',
+              Translations[Translations.findIndex((el) => el.key === 'Skin disease')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Respiratory disease')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Malaria')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Dengue fever')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Typhoid')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Diarrhea')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Vaginal infection')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#59BA47', '#D12800', '#AAA']}
           colorKey={
             [
-              'Yes',
-              'No',
-              'Don\'t know or no response',
+              Translations[Translations.findIndex((el) => el.key === 'Yes')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Don\'t know or no response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Have you detected any environmental problems related to solid waste management in your municipality?
+        {Translations[Translations.findIndex((el) => el.key === 'Have you detected any environmental problems related to solid waste management in your municipality?')][language]}
         <DonutChart
           data={(getValue(Q19.Yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Specify if you have observed the following environmental problems
+        {Translations[Translations.findIndex((el) => el.key === 'Specify if you have observed the following environmental problems')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q20_1.Yes) * 100) / data.length, (getValue(Q20_1.No) * 100) / data.length, ((data.length - getValue(Q20_1.Yes) - getValue(Q20_1.No)) * 100) / data.length],
@@ -549,25 +556,25 @@ export const TownHallViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Landfill close\nto water',
-              'Insalubrity of\nroad networks',
-              'Obstruction of\nroad networks',
-              'Obstruction of\nrainwater drains',
-              'Floods',
-              'Insalubrity of\npublic market',
-              'Insalubrity of\npublic beaches',
-              'Destruction of\nmangroves',
-              'Animal Mortality',
+              Translations[Translations.findIndex((el) => el.key === 'Landfill close to water')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Insalubrity of road networks')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Obstruction of road networks')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Obstruction of rainwater drains')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Floods')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Insalubrity of public market')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Insalubrity of public beaches')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Destruction of mangroves')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Animal Mortality')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#59BA47', '#D12800', '#AAA']}
           colorKey={
             [
-              'Yes',
-              'No',
-              'Don\'t know or no response',
+              Translations[Translations.findIndex((el) => el.key === 'Yes')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Don\'t know or no response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
@@ -575,21 +582,21 @@ export const TownHallViz = (props: Props) => {
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Community Commitment
+        {Translations[Translations.findIndex((el) => el.key === 'Community Commitment')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        In your opinion, what is the level of commitment of the population of your municipality in the management of solid waste
+        {Translations[Translations.findIndex((el) => el.key === 'In your opinion, what is the level of commitment of the population of your municipality in the management of solid waste?')][language]}
         <DonutChart
           data={(getValue(Q21.Weak) * 100) / data.length}
-          subText='says low'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says low')][language]}
           color='#D12800'
         />
       </div>
       <div className='margin-bottom-11'>
-        In your opinion, what is the level of commitment of the population of your municipality in the management of solid waste
+        {Translations[Translations.findIndex((el) => el.key === 'In your opinion, what is the level of commitment of the population of your municipality in the management of solid waste?')][language]}
         <DonutChart
           data={(getValue(Q22.Weak) * 100) / data.length}
-          subText='says low'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says low')][language]}
           color='#D12800'
         />
       </div>

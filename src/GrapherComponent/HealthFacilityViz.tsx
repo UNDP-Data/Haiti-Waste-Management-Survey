@@ -1,9 +1,13 @@
+import { useContext } from 'react';
 import countBy from 'lodash.countby';
 import { BarGraph } from './BarGraph';
 import { DonutChart } from './DonutChart';
 import { StackedBarGraph } from './StackedBarGraph';
 import { getValue } from '../utils/getValue';
 import { GroupBarGraph } from './GroupBarGraph';
+import { Translations } from '../Data/Translations';
+import { CtxDataType } from '../Types';
+import Context from '../Context/Context';
 
 interface Props {
   data: any;
@@ -13,6 +17,9 @@ export const HealthFacilityViz = (props: Props) => {
   const {
     data,
   } = props;
+  const {
+    language,
+  } = useContext(Context) as CtxDataType;
   const Q1 = countBy(data, (d) => d['Does your H/CS have a dedicated budget for DBM management?']);
   const Q2 = countBy(data, (d) => d['Has this fund increased or decreased over the past five years?']);
   const Q3_1 = countBy(data, (d) => d['Human ressources']);
@@ -69,34 +76,34 @@ export const HealthFacilityViz = (props: Props) => {
   return (
     <div>
       <h3 className='undp-typography bold margin-bottom-07'>
-        Characteristics of the Health Care Establishment
+        {Translations[Translations.findIndex((el) => el.key === 'Characteristics of the Health Care Establishment')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Does your H/HC have a dedicated budget for biomedical waste management?
+        {Translations[Translations.findIndex((el) => el.key === 'Does your H/HC have a dedicated budget for biomedical waste management?')][language]}
         <DonutChart
           data={(getValue(Q1.yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Does the town hall have adequate materials for waste collection?
+        {Translations[Translations.findIndex((el) => el.key === 'Does the town hall have adequate materials for waste collection?')][language]}
         <BarGraph
           data={[(getValue(Q2.Increases) * 100) / data.length, (getValue(Q2.Steady) * 100) / data.length, (getValue(Q2.Decreases) * 100) / data.length, (getValue(Q2.undefined) * 100) / data.length]}
           barLabel={
             [
-              'Increased',
-              'Steady',
-              'Decreased',
-              'No response',
+              Translations[Translations.findIndex((el) => el.key === 'Increased')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Steady')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Decreased')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No response')][language],
             ]
           }
           maxValue={70}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 20, 40, 70]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Give us your assessment of the availability of resources dedicated to the management of DBMs within your H/CS
+        {Translations[Translations.findIndex((el) => el.key === 'Give us your assessment of the availability of resources dedicated to the management of DBMs within your H/HC')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q3_1.Raised) * 100) / data.length, (getValue(Q3_1.Medium) * 100) / data.length, (getValue(Q3_1.Weak) * 100) / data.length, ((getValue(Q3_1.undefined) + getValue(Q3_1['Draw/total absence'])) * 100) / data.length],
@@ -110,20 +117,20 @@ export const HealthFacilityViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Human resource',
-              'Financial resource',
-              'Material resource',
+              Translations[Translations.findIndex((el) => el.key === 'Human Resource')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Financial Resource')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Material Resource')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#006EB5', '#4F95DD', '#94C4F5', '#AAA']}
           colorKey={
             [
-              'High',
-              'Medium',
-              'Low',
-              'Absence or No response',
+              Translations[Translations.findIndex((el) => el.key === 'High')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Medium')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Low')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Absence or No response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
@@ -131,48 +138,48 @@ export const HealthFacilityViz = (props: Props) => {
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Personnel
+        {Translations[Translations.findIndex((el) => el.key === 'Personnel')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Does your H/HC have a dedicated budget for biomedical waste management?
+        {Translations[Translations.findIndex((el) => el.key === 'Does your H/HC have a dedicated budget for biomedical waste management?')][language]}
         <DonutChart
           data={(getValue(Q4.yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Have you personally attended training sessions on biomedical waste management during your academic and professional journey?
+        {Translations[Translations.findIndex((el) => el.key === 'Have you personally attended training sessions on biomedical waste management during your academic and professional journey?')][language]}
         <DonutChart
           data={(getValue(Q5.yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Do you consider the subject of biomedical waste important for your work as a medical professional?
+        {Translations[Translations.findIndex((el) => el.key === 'Do you consider the subject of biomedical waste important for your work as a medical professional?')][language]}
         <DonutChart
           data={((getValue(Q6['Very important']) + getValue(Q6.Important)) * 100) / data.length}
           subText='says important'
         />
       </div>
       <div className='margin-bottom-11'>
-        Is there a manual giving the main guidelines for biomedical waste management within your H/HC?
+        {Translations[Translations.findIndex((el) => el.key === 'Is there a manual giving the main guidelines for biomedical waste management within your H/HC?')][language]}
         <DonutChart
           data={(getValue(Q7.yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Have your H/HC staff been made aware of the risks associated with handling biomedical waste?
+        {Translations[Translations.findIndex((el) => el.key === 'Have your H/HC staff been made aware of the risks associated with handling biomedical waste?')][language]}
         <DonutChart
           data={(getValue(Q8.yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Does your H/HC have an employee(s) responsible for managing biomedical waste?
+        {Translations[Translations.findIndex((el) => el.key === 'Does your H/HC have an employee(s) responsible for managing biomedical waste?')][language]}
         <DonutChart
           data={(getValue(Q9.yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <hr className='undp-style margin-bottom-11' />
@@ -180,14 +187,14 @@ export const HealthFacilityViz = (props: Props) => {
         Production of Biomedical Waste
       </h3>
       <div className='margin-bottom-11'>
-        Can you make an estimate (in kg) of the quantity (kg) of biomedical waste produced by your H/CS per day?
+        {Translations[Translations.findIndex((el) => el.key === 'Can you make an estimate (in kg) of the quantity (kg) of biomedical waste produced by your H/HC per day?')][language]}
         <DonutChart
           data={(getValue(Q10.yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Do we have an estimate of the amount of the following waste produced by your H/CS?
+        {Translations[Translations.findIndex((el) => el.key === 'Do we have an estimate of the amount of the following waste produced by your H/HC?')][language]}
         <GroupBarGraph
           data={[
             [getValue(Q11_1['Less than 5kg']), getValue(Q11_2['Less than 5kg']), getValue(Q11_3['Less than 5kg']), getValue(Q11_4['Less than 5kg']), getValue(Q11_5['Less than 5kg'])],
@@ -199,24 +206,24 @@ export const HealthFacilityViz = (props: Props) => {
           ]}
           barLabel={
             [
-              '< 5Kgs',
-              '5 - 10Kg',
-              '10 - 20Kg',
-              '20 - 50Kg',
-              '50 - 100Kg',
-              '>= 100Kg',
+              '<5Kgs',
+              '5-10Kg',
+              '10-20Kg',
+              '20-50Kg',
+              '50-100Kg',
+              '>=100Kg',
             ]
           }
           maxValue={50}
-          marginLeft={100}
+          marginLeft={125}
           color={['#7fc97f', '#beaed4', '#fdc086', '#bf5b17', '#386cb0']}
           colorKey={
             [
-              'Pointed/sharp',
-              'Anatomical',
-              'Pharmaceutical',
-              'Radioactive',
-              'Chemical',
+              Translations[Translations.findIndex((el) => el.key === 'Pointed/sharp')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Anatomical')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Pharmaceutical')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Radioactive')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Chemical')][language],
             ]
           }
           groupPadding={25}
@@ -224,7 +231,7 @@ export const HealthFacilityViz = (props: Props) => {
         />
       </div>
       <div className='margin-bottom-11'>
-        Indicate whether waste handling personnel use the following protective equipment
+        {Translations[Translations.findIndex((el) => el.key === 'Indicate whether waste handling personnel use the following protective equipment')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q12_1.yes) * 100) / data.length, (getValue(Q12_1.Nope) * 100) / data.length, ((data.length - getValue(Q12_1.yes) - getValue(Q12_1.Nope)) * 100) / data.length],
@@ -244,36 +251,36 @@ export const HealthFacilityViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Gloves',
-              'Boots',
-              'Aprons',
-              'Masks',
-              'Glasses',
-              'None',
+              Translations[Translations.findIndex((el) => el.key === 'Gloves')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Boots')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Aprons')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Masks')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Glasses')][language],
+              Translations[Translations.findIndex((el) => el.key === 'None')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#59BA47', '#D12800', '#AAA']}
           colorKey={
             [
-              'Yes',
-              'No',
-              'Don\'t know or no response',
+              Translations[Translations.findIndex((el) => el.key === 'Yes')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Don\'t know or no response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Have you detected recurrent cases of illnesses/symptoms related to poor management of DBMs in your municipality or department?
+        {Translations[Translations.findIndex((el) => el.key === 'Have you detected recurrent cases of illnesses/symptoms related to poor management of DBMs in your municipality or department?')][language]}
         <DonutChart
           data={(getValue(Q13.yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Specify whether you have observed the following diseases
+        {Translations[Translations.findIndex((el) => el.key === 'Specify whether you have observed the following diseases')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q14_1.yes) * 100) / data.length, (getValue(Q14_1.Nope) * 100) / data.length, ((data.length - getValue(Q14_1.yes) - getValue(Q14_1.Nope)) * 100) / data.length],
@@ -295,23 +302,23 @@ export const HealthFacilityViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Skin disease',
-              'Respiratory\ndisease',
-              'Malaria',
-              'Dengue fever',
-              'Typhoid',
-              'Diarrhea',
-              'Vaginal infection',
+              Translations[Translations.findIndex((el) => el.key === 'Skin disease')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Respiratory disease')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Malaria')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Dengue fever')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Typhoid')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Diarrhea')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Vaginal infection')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#59BA47', '#D12800', '#AAA']}
           colorKey={
             [
-              'Yes',
-              'No',
-              'Don\'t know or no response',
+              Translations[Translations.findIndex((el) => el.key === 'Yes')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Don\'t know or no response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
@@ -319,13 +326,13 @@ export const HealthFacilityViz = (props: Props) => {
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Containers and Other Receptacles for DBM Storage
+        {Translations[Translations.findIndex((el) => el.key === 'Containers and Other Receptacles for DBM Storage')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Do you sort waste according to its nature or level of danger within your H/CS?
+        {Translations[Translations.findIndex((el) => el.key === 'Do you sort waste according to its nature or level of danger within your H/HC?')][language]}
         <DonutChart
           data={(getValue(Q15.yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <hr className='undp-style margin-bottom-11' />
@@ -333,25 +340,25 @@ export const HealthFacilityViz = (props: Props) => {
         DBM Storage Spaces
       </h3>
       <div className='margin-bottom-11'>
-        Is there a space/warehouse dedicated specifically to the storage of biomedical waste?
+        {Translations[Translations.findIndex((el) => el.key === 'Is there a space/warehouse dedicated specifically to the storage of biomedical waste?')][language]}
         <DonutChart
           data={(getValue(Q16.yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Is the biomedical waste storage space accessible to everyone?
+        {Translations[Translations.findIndex((el) => el.key === 'Is the biomedical waste storage space accessible to everyone?')][language]}
         <DonutChart
           data={(getValue(Q17.yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Collection and Transport of DBMs
+        {Translations[Translations.findIndex((el) => el.key === 'Collection and Transport of DBMs')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Specify whether the following institutions provide DBM transportation services produced by your H/CS
+        {Translations[Translations.findIndex((el) => el.key === 'Specify whether the following institutions provide DBM transportation services produced by your H/HC')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q18_1.yes) * 100) / data.length, (getValue(Q18_1.Nope) * 100) / data.length, ((data.length - getValue(Q18_1.yes) - getValue(Q18_1.Nope)) * 100) / data.length],
@@ -371,29 +378,29 @@ export const HealthFacilityViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Town hall',
-              'Formal private\ncompanies',
-              'Informal private\ncompanies',
-              'NGOs',
-              'Community based\norganization',
-              'Others',
+              Translations[Translations.findIndex((el) => el.key === 'Town hall')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Formal private companies')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Informal private companies')][language],
+              Translations[Translations.findIndex((el) => el.key === 'NGO')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Community based organization')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Others')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#59BA47', '#D12800', '#AAA']}
           colorKey={
             [
-              'Yes',
-              'No',
-              'Don\'t know or no response',
+              Translations[Translations.findIndex((el) => el.key === 'Yes')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Don\'t know or no response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Specify whether you use the following means to transport DBMs from your H/CS to landfill sites
+        {Translations[Translations.findIndex((el) => el.key === 'Specify whether you use the following means to transport DBMs from your H/HC to landfill sites')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q19_1.yes) * 100) / data.length, (getValue(Q19_1.Nope) * 100) / data.length, ((data.length - getValue(Q19_1.yes) - getValue(Q19_1.Nope)) * 100) / data.length],
@@ -407,51 +414,51 @@ export const HealthFacilityViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Closed devices',
-              'Open devices',
-              'Others',
+              Translations[Translations.findIndex((el) => el.key === 'Closed devices')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Open devices')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Others')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#59BA47', '#D12800', '#AAA']}
           colorKey={
             [
-              'Yes',
-              'No',
-              'Don\'t know or no response',
+              Translations[Translations.findIndex((el) => el.key === 'Yes')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Don\'t know or no response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Do you think the methods of collecting and transporting HBMs are safe?
+        {Translations[Translations.findIndex((el) => el.key === 'Do you think the methods of collecting and transporting DBMs are safe?')][language]}
         <DonutChart
           data={(getValue(Q20.yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Have you ever recorded any cases of injury in the last 12 months during DBM collection and transport activities?
+        {Translations[Translations.findIndex((el) => el.key === 'Have you ever recorded any cases of injury in the last 12 months during DBM collection and transport activities?')][language]}
         <DonutChart
           data={(getValue(Q21.yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Treatment / Elimination of DBM
+        {Translations[Translations.findIndex((el) => el.key === 'Treatment / Elimination of DBM')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Do you have a clear idea of the route and final destination of the biomedical wastes produced by your H/CS?
+        {Translations[Translations.findIndex((el) => el.key === 'Do you have a clear idea of the route and final destination of the biomedical wastes produced by your H/HC?')][language]}
         <DonutChart
           data={(getValue(Q22.yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Are there partnership relations between your H/CS and the following actors in relation to the management of DBMs?
+        {Translations[Translations.findIndex((el) => el.key === 'Are there partnership relations between your H/HC and the following actors in relation to the management of DBMs?')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q23_1.yes) * 100) / data.length, (getValue(Q23_1.Nope) * 100) / data.length, ((data.length - getValue(Q23_1.yes) - getValue(Q23_1.Nope)) * 100) / data.length],
@@ -473,23 +480,23 @@ export const HealthFacilityViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Private\ncompanies',
-              'NGOs',
-              'Community based\norganization',
-              'NRSS',
-              'UNDP',
-              'UNEP',
-              'Others UN\nagencies',
+              Translations[Translations.findIndex((el) => el.key === 'Private companies')][language],
+              Translations[Translations.findIndex((el) => el.key === 'NGO')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Community based organization')][language],
+              Translations[Translations.findIndex((el) => el.key === 'NRSS')][language],
+              Translations[Translations.findIndex((el) => el.key === 'UNDP')][language],
+              Translations[Translations.findIndex((el) => el.key === 'UNEP')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Other UN agencies')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#59BA47', '#D12800', '#AAA']}
           colorKey={
             [
-              'Yes',
-              'No',
-              'Don\'t know or no response',
+              Translations[Translations.findIndex((el) => el.key === 'Yes')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Don\'t know or no response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}

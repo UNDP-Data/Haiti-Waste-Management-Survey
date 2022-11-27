@@ -56,7 +56,7 @@ export const DonutChart = (props: Props) => {
           textAnchor='middle'
           fontFamily='proxima-nova'
           fontWeight='bold'
-          fontSize='20px'
+          fontSize='16px'
           dy={20}
         >
           {subText}

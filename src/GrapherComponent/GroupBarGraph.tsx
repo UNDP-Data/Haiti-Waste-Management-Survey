@@ -16,7 +16,7 @@ interface Props {
 
 const El = styled.div`
   width: 100%;
-  max-width: 38.75rem;
+  max-width: 47.5rem;
   margin: 1.25rem auto;
 `;
 
@@ -50,7 +50,7 @@ export const GroupBarGraph = (props: Props) => {
     groupPadding,
     textDy,
   } = props;
-  const svgWidth = window.innerWidth > 620 ? 620 : window.innerWidth;
+  const svgWidth = window.innerWidth > 760 ? 760 : window.innerWidth;
   const groupBarPadding = groupPadding || GROUP_BAR_PADDING;
   const groupTextDy = textDy || GROUP_TEXT_DY;
   const svgHeight = ((GROUP_BAR_HEIGHT * data[0].length) + (2 * groupBarPadding)) * data.length + 25;

@@ -13,6 +13,7 @@ import { TownHallViz } from './TownHallViz';
 import { DumpingSiteViz } from './DumpingSiteViz';
 import { ProjectsViz } from './ProjectsViz';
 import { HealthFacilityViz } from './HealthFacilityViz';
+import { Translations } from '../Data/Translations';
 
 interface Props {
   data: any;
@@ -81,27 +82,27 @@ export const GrapherComponent = (props: Props) => {
               options={
                 [
                   {
-                    label: 'Households',
+                    label: Translations[Translations.findIndex((el) => el.key === 'Households')][language],
                     value: 'households',
                   },
                   {
-                    label: 'Enterprises',
+                    label: Translations[Translations.findIndex((el) => el.key === 'enterprises')][language],
                     value: 'enterprises',
                   },
                   {
-                    label: 'Projects',
+                    label: Translations[Translations.findIndex((el) => el.key === 'Projects')][language],
                     value: 'projects',
                   },
                   {
-                    label: 'Dumping Sites',
+                    label: Translations[Translations.findIndex((el) => el.key === 'Dumping Sites')][language],
                     value: 'dumpingSites',
                   },
                   {
-                    label: 'Health Facilities',
+                    label: Translations[Translations.findIndex((el) => el.key === 'Health Facilities')][language],
                     value: 'healthFacilities',
                   },
                   {
-                    label: 'Town Halls',
+                    label: Translations[Translations.findIndex((el) => el.key === 'Town Halls')][language],
                     value: 'townHalls',
                   },
                 ]
@@ -111,11 +112,23 @@ export const GrapherComponent = (props: Props) => {
           <Settings />
           <div className='stat-card margin-bottom-10'>
             <h4 style={{ margin: 0, fontWeight: 'normal' }} className='align-center'>
-              Showing results for
+              {language === 'en' ? 'Showing results for' : 'Affichage des résultats pour'}
               {' '}
               <span className='bold'>{filteredData.length}</span>
               {' '}
-              {selectedSubjectType}
+              {
+                selectedSubjectType === 'households'
+                  ? Translations[Translations.findIndex((el) => el.key === 'Households')][language].toLowerCase()
+                  : selectedSubjectType === 'enterprises'
+                    ? Translations[Translations.findIndex((el) => el.key === 'enterprises')][language].toLowerCase()
+                    : selectedSubjectType === 'dumpingSites'
+                      ? Translations[Translations.findIndex((el) => el.key === 'Dumping Sites')][language].toLowerCase()
+                      : selectedSubjectType === 'healthFacilities'
+                        ? Translations[Translations.findIndex((el) => el.key === 'Health Facilities')][language].toLowerCase()
+                        : selectedSubjectType === 'projects'
+                          ? Translations[Translations.findIndex((el) => el.key === 'Projects')][language].toLowerCase()
+                          : Translations[Translations.findIndex((el) => el.key === 'Town Halls')][language].toLowerCase()
+              }
             </h4>
           </div>
           {

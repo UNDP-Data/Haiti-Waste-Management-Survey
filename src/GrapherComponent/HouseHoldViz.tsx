@@ -2,7 +2,7 @@ import flatten from 'lodash.flatten';
 import countBy from 'lodash.countby';
 import { useContext } from 'react';
 import Context from '../Context/Context';
-import { HouseHoldLanguage } from '../Data/Language/household';
+import { Translations } from '../Data/Translations';
 import { CtxDataType } from '../Types';
 import { BarGraph } from './BarGraph';
 import { DonutChart } from './DonutChart';
@@ -70,27 +70,27 @@ export const HouseHoldViz = (props: Props) => {
   return (
     <div>
       <h3 className='undp-typography bold margin-bottom-07'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'wasteGeneration')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'wasteGeneration')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'What is your assessment of the volume of solid waste  produced by your household?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'What is your assessment of the volume of solid waste  produced by your household?')][language]}
         <BarGraph
           data={[(getValue(Q1.Raised) * 100) / data.length, (getValue(Q1.Medium) * 100) / data.length, (getValue(Q1.Weak) * 100) / data.length, ((getValue(Q1['I do not know']) + getValue(Q1.undefined)) * 100) / data.length]}
           barLabel={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Raised')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Medium')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Weak')][language],
-              `${HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'I do not know')][language]} or\n${HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'No response')][language]}`,
+              Translations[Translations.findIndex((el) => el.key === 'Raised')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Medium')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Weak')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No Response')][language],
             ]
           }
           maxValue={60}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 20, 40, 60]}
         />
       </div>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'At what level does your household produce the following waste?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'At what level does your household produce the following waste?')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q2_1.Raised) * 100) / data.length, (getValue(Q2_1.Medium) * 100) / data.length, (getValue(Q2_1.Weak) * 100) / data.length, ((getValue(Q2_1['I do not know']) + getValue(Q2_1.undefined)) * 100) / data.length],
@@ -108,22 +108,22 @@ export const HouseHoldViz = (props: Props) => {
           ]}
           barLabel={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'organicWaste')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'plasticWaste')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'metals')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'medicalWaste')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'others')][language],
+              Translations[Translations.findIndex((el) => el.key === 'organicWaste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'plasticWaste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'metals')][language],
+              Translations[Translations.findIndex((el) => el.key === 'medicalWaste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'others')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#006EB5', '#4F95DD', '#94C4F5', '#AAA']}
           colorKey={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Raised')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Medium')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Weak')][language],
-              `${HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'I do not know')][language]} or ${HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'No response')][language]}`,
+              Translations[Translations.findIndex((el) => el.key === 'Raised')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Medium')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Weak')][language],
+              `${Translations[Translations.findIndex((el) => el.key === 'I do not know')][language]} or ${Translations[Translations.findIndex((el) => el.key === 'No response')][language]}`,
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
@@ -131,49 +131,49 @@ export const HouseHoldViz = (props: Props) => {
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'wasteDisposal')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'wasteDisposal')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'What is your household doing to get rid of/manage its waste?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'What is your household doing to get rid of/manage its waste?')][language]}
         <BarGraph
           data={[(getValue(Q3_1.Yes) * 100) / data.length, (getValue(Q3_2.Yes) * 100) / data.length, (getValue(Q3_3.Yes) * 100) / data.length, (getValue(Q3_4.Yes) * 100) / data.length, (getValue(Q3_5.Yes) * 100) / data.length, (getValue(Q3_6.Yes) * 100) / data.length, (getValue(Q3_7.Yes) * 100) / data.length, (getValue(Q3_8.Yes) * 100) / data.length, (getValue(Q3_9.Yes) * 100) / data.length]}
           barLabel={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Throwing into public garbage cans/dumpsters')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'burning')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Use/Purchase of town hall services/SNGRS')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Purchase of servicesfrom a private company or an individual')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Throwing into a ravine, the river, the sea')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Throwing into an empty lot/landfil')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'recycling')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Throwing into the plot ("jaden") or empty land')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Throwing into the street, sewers')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Throwing into public garbage cans/dumpsters')][language],
+              Translations[Translations.findIndex((el) => el.key === 'burning')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Use/Purchase of town hall services/SNGRS')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Purchase of servicesfrom a private company or an individual')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Throwing into a ravine, the river, the sea')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Throwing into an empty lot/landfil')][language],
+              Translations[Translations.findIndex((el) => el.key === 'recycling')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Throwing into the plot ("jaden") or empty land')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Throwing into the street, sewers')][language],
             ]
           }
           maxValue={60}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 20, 40, 60]}
         />
       </div>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'How often does your household empty its bin of solid waste?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'How often does your household empty its bin of solid waste?')][language]}
         <BarGraph
           data={[(getValue(Q4['3 times every 15 days']) * 100) / data.length, (getValue(Q4['2 times every 15 days']) * 100) / data.length, (getValue(Q4['Once every 15 days']) * 100) / data.length, ((getValue(Q4['Not applicable']) + getValue(Q4.undefined)) * 100) / data.length]}
           barLabel={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === '3 times every 15 days')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === '2 times every 15 days')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Once every 15 days')][language],
-              `${HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Not applicable')][language]} or\n${HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'No response')][language]}`,
+              Translations[Translations.findIndex((el) => el.key === '3 times every 15 days')][language],
+              Translations[Translations.findIndex((el) => el.key === '2 times every 15 days')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Once every 15 days')][language],
+              `${Translations[Translations.findIndex((el) => el.key === 'Not applicable')][language]} or\n${Translations[Translations.findIndex((el) => el.key === 'No response')][language]}`,
             ]
           }
           maxValue={40}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 10, 20, 30, 40]}
         />
       </div>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'How often does your household use the following methods to dispose of its waste?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'How often does your household use the following methods to dispose of its waste?')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q5_1.Raised) * 100) / data.length, (getValue(Q5_1.Medium) * 100) / data.length, (getValue(Q5_1.Weak) * 100) / data.length, ((getValue(Q5_1['Not applicable']) + getValue(Q5_1.undefined)) * 100) / data.length],
@@ -199,111 +199,111 @@ export const HouseHoldViz = (props: Props) => {
           ]}
           barLabel={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Use/Purchase of town hall services/SNGRS')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Purchase of servicesfrom a private company or an individual')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Throwing into the street, sewers')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Throwing into public garbage cans/dumpsters')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Throwing into a ravine, the river, the sea')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Throwing into the plot ("jaden") or empty land')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Throwing into an empty lot/landfil')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'burning')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'recycling')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Use/Purchase of town hall services/SNGRS')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Purchase of servicesfrom a private company or an individual')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Throwing into the street, sewers')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Throwing into public garbage cans/dumpsters')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Throwing into a ravine, the river, the sea')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Throwing into the plot ("jaden") or empty land')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Throwing into an empty lot/landfil')][language],
+              Translations[Translations.findIndex((el) => el.key === 'burning')][language],
+              Translations[Translations.findIndex((el) => el.key === 'recycling')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#006EB5', '#4F95DD', '#94C4F5', '#AAA']}
           colorKey={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Raised')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Medium')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Weak')][language],
-              `${HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Not applicable')][language]} or ${HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'No response')][language]}`,
+              Translations[Translations.findIndex((el) => el.key === 'Raised')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Medium')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Weak')][language],
+              `${Translations[Translations.findIndex((el) => el.key === 'Not applicable')][language]} or ${Translations[Translations.findIndex((el) => el.key === 'No response')][language]}`,
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
         />
       </div>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Does your household sort solid waste (organic, inorganic) at home?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'Does your household sort solid waste (organic, inorganic) at home?')][language]}
         <DonutChart
           data={(getValue(Q6.Yes) * 100) / data.length}
-          subText={HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'yes')][language]}
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Are you ready to sort the waste before disposing of it to facilitate its recycling?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'Are you ready to sort the waste before disposing of it to facilitate its recycling?')][language]}
         <DonutChart
           data={(getValue(Q7.Yes) * 100) / data.length}
-          subText={HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'yes')][language]}
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Does your household store its solid waste  in sachets?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'Does your household store its solid waste  in sachets?')][language]}
         <DonutChart
           data={(getValue(Q8.Yes) * 100) / data.length}
-          subText={HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'yes')][language]}
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'purchaseOfService')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'purchaseOfService')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Does your household buy garbage collection services?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'Does your household buy garbage collection services?')][language]}
         <DonutChart
           data={(getValue(Q11.Yes) * 100) / data.length}
-          subText={HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'yes')][language]}
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'actorsInvolved')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'actorsInvolved')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'In your opinion, what is the level of responsibility of households in the management of solid waste in your municipality?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'In your opinion, what is the level of responsibility of households in the management of solid waste in your municipality?')][language]}
         <BarGraph
           data={[(getValue(Q9['Important role to play']) * 100) / data.length, (getValue(Q9['Not important role to play']) * 100) / data.length, (getValue(Q9['No role']) * 100) / data.length, ((getValue(Q9['I do not know']) + getValue(Q4.undefined)) * 100) / data.length]}
           barLabel={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Important role to play')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Not important role to play')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'No role')][language],
-              `${HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'I do not know')][language]} or\n${HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'No response')][language]}`,
+              Translations[Translations.findIndex((el) => el.key === 'Important role to play')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Not important role to play')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No role')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Don\'t know or no response')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 20, 40, 60, 80, 100]}
         />
       </div>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Who do you think is responsible for solid waste management in your municipality?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'Who do you think is responsible for solid waste management in your municipality?')][language]}
         <BarGraph
           data={[(getValue(Q10.Households) * 100) / data.length, (getValue(Q10['Private companies']) * 100) / data.length, (getValue(Q10['The state']) * 100) / data.length, (getValue(Q10['The town hall']) * 100) / data.length, ((getValue(Q10['I do not know']) + getValue(Q10.undefined)) * 100) / data.length]}
           barLabel={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Households')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Private companies')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'The state')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'The town hall')][language],
-              `${HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'I do not know')][language]} or\n${HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'No response')][language]}`,
+              Translations[Translations.findIndex((el) => el.key === 'Households')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Private companies')][language],
+              Translations[Translations.findIndex((el) => el.key === 'The state')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Town hall')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Don\'t know or no response')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 20, 40, 60, 80, 100]}
         />
       </div>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Does your household buy garbage collection services?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'Does your household buy garbage collection services?')][language]}
         <DonutChart
           data={(getValue(Q11.Yes) * 100) / data.length}
-          subText={HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'yes')][language]}
+          subText={Translations[Translations.findIndex((el) => el.key === 'yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'What is the main projects/activities the following actors are involved?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'What is the main projects/activities the following actors are involved?')][language]}
         <GroupBarGraph
           data={[
             [getValue(Q12_1['waste collection']), getValue(Q12_2['waste collection']), getValue(Q12_3['waste collection'])],
@@ -315,28 +315,28 @@ export const HouseHoldViz = (props: Props) => {
           ]}
           barLabel={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'wasteCollection')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'sorting')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'treatment')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'storage')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'incineration/destruction')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'recycling')][language],
+              Translations[Translations.findIndex((el) => el.key === 'wasteCollection')][language],
+              Translations[Translations.findIndex((el) => el.key === 'sorting')][language],
+              Translations[Translations.findIndex((el) => el.key === 'treatment')][language],
+              Translations[Translations.findIndex((el) => el.key === 'storage')][language],
+              Translations[Translations.findIndex((el) => el.key === 'incineration/destruction')][language],
+              Translations[Translations.findIndex((el) => el.key === 'recycling')][language],
             ]
           }
           maxValue={175}
-          marginLeft={100}
+          marginLeft={125}
           color={['#006EB5', '#59BA47', '#FBC412']}
           colorKey={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'privateCompanies')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'The town hall')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'communityOrg')][language],
+              Translations[Translations.findIndex((el) => el.key === 'privateCompanies')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Town hall')][language],
+              Translations[Translations.findIndex((el) => el.key === 'communityOrg')][language],
             ]
           }
         />
       </div>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Assessments regarding the level of waste generation of the following spaces/institutions')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'Assessments regarding the level of waste generation of the following spaces/institutions')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q13_1.Raised) * 100) / data.length, (getValue(Q13_1.Medium) * 100) / data.length, (getValue(Q13_1.Weak) * 100) / data.length, (getValue(Q13_1.undefined) * 100) / data.length],
@@ -354,22 +354,22 @@ export const HouseHoldViz = (props: Props) => {
           ]}
           barLabel={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Households')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'publicSector')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'enterprises')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'schools')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'hospitals')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Households')][language],
+              Translations[Translations.findIndex((el) => el.key === 'publicSector')][language],
+              Translations[Translations.findIndex((el) => el.key === 'enterprises')][language],
+              Translations[Translations.findIndex((el) => el.key === 'schools')][language],
+              Translations[Translations.findIndex((el) => el.key === 'hospitals')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#006EB5', '#4F95DD', '#94C4F5', '#AAA']}
           colorKey={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Raised')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Medium')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Weak')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'No response')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Raised')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Medium')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Weak')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
@@ -377,28 +377,28 @@ export const HouseHoldViz = (props: Props) => {
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'negativeImpact')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'negativeImpact')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Have you detected recurrent cases of solid waste-related diseases in your municipality?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'Have you detected recurrent cases of solid waste-related diseases in your municipality?')][language]}
         <DonutChart
           data={(getValue(Q14.Yes) * 100) / data.length}
-          subText={HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'yes')][language]}
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Have you detected any environmental problems related to solid waste management in your municipality?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'Have you detected any environmental problems related to solid waste management in your municipality?')][language]}
         <DonutChart
           data={(getValue(Q15.Yes) * 100) / data.length}
-          subText={HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'yes')][language]}
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'communityCommitments')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'communityCommitments')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'In your opinion, what is the level of commitment of the following actors in the management of solid waste?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'In your opinion, what is the level of commitment of the following actors in the management of solid waste?')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q16_1.Raised) * 100) / data.length, (getValue(Q16_1.Medium) * 100) / data.length, (getValue(Q16_1.Weak) * 100) / data.length, ((getValue(Q16_1['Not applicable']) + getValue(Q16_1.undefined)) * 100) / data.length],
@@ -410,67 +410,67 @@ export const HouseHoldViz = (props: Props) => {
           ]}
           barLabel={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'municipality')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'The town hall')][language],
+              Translations[Translations.findIndex((el) => el.key === 'municipality')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Town hall')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#006EB5', '#4F95DD', '#94C4F5', '#AAA']}
           colorKey={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Raised')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Medium')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Weak')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'No response')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Raised')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Medium')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Weak')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
         />
       </div>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'In your opinion, what is the level of awareness of the population of your municipality in terms of solid waste management?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'In your opinion, what is the level of awareness of the population of your municipality in terms of solid waste management?')][language]}
         <BarGraph
           data={[(getValue(Q17.Raised) * 100) / data.length, (getValue(Q17.Medium) * 100) / data.length, (getValue(Q17.Weak) * 100) / data.length, (getValue(Q17.undefined) * 100) / data.length]}
           barLabel={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Raised')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Medium')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Weak')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'No response')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Raised')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Medium')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Weak')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No response')][language],
             ]
           }
           maxValue={80}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 20, 40, 60, 80]}
         />
       </div>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Have you observed any changes in household behaviour in the area of solid waste management over the past three years?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'Have you observed any changes in household behaviour in the area of solid waste management over the past three years?')][language]}
         <BarGraph
           data={[(getValue(Q18.Raised) * 100) / data.length, (getValue(Q18.Medium) * 100) / data.length, (getValue(Q18.Weak) * 100) / data.length, (getValue(Q18.undefined) * 100) / data.length]}
           barLabel={
             [
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Raised')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Medium')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Weak')][language],
-              HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'No response')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Raised')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Medium')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Weak')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No response')][language],
             ]
           }
           maxValue={80}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 20, 40, 60, 80]}
         />
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'innovativeSolutions')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'innovativeSolutions')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        {HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'Have you detected any innovations related to solid waste management in your municipality?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'Have you detected any innovations related to solid waste management in your municipality?')][language]}
         <DonutChart
           data={(getValue(Q19.Yes) * 100) / data.length}
-          subText={HouseHoldLanguage[HouseHoldLanguage.findIndex((el) => el.key === 'yes')][language]}
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
     </div>

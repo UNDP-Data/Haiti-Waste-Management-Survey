@@ -1,10 +1,14 @@
 import flatten from 'lodash.flatten';
+import { useContext } from 'react';
 import countBy from 'lodash.countby';
 import { BarGraph } from './BarGraph';
 import { DonutChart } from './DonutChart';
 import { StackedBarGraph } from './StackedBarGraph';
 import { GroupBarGraph } from './GroupBarGraph';
 import { getValue } from '../utils/getValue';
+import Context from '../Context/Context';
+import { CtxDataType } from '../Types';
+import { Translations } from '../Data/Translations';
 
 interface Props {
   data: any;
@@ -14,6 +18,9 @@ export const EnterprisesViz = (props: Props) => {
   const {
     data,
   } = props;
+  const {
+    language,
+  } = useContext(Context) as CtxDataType;
   const Q1 = countBy(data, (d) => d['Does the company/CBO have enough materials for the collection of solid waste?']);
   const Q2_1 = countBy(data, (d) => d['Garbage truck']);
   const Q2_2 = countBy(data, (d) => d['Dump truck']);
@@ -123,17 +130,17 @@ export const EnterprisesViz = (props: Props) => {
   return (
     <div>
       <h3 className='undp-typography bold margin-bottom-07'>
-        Equipment and Infrastructure
+        {Translations[Translations.findIndex((el) => el.key === 'Equipment and Infrastructure')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Does the company/CBO have enough materials for the collection of solid waste?
+        {Translations[Translations.findIndex((el) => el.key === 'Does the company/CBO have enough materials for the collection of solid waste?')][language]}
         <DonutChart
           data={(getValue(Q1.Yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Can you tell us if the company/OCB has the following solid waste collection machines?
+        {Translations[Translations.findIndex((el) => el.key === 'Can you tell us if the company/CBO has the following solid waste collection machines?')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q2_1.Yes) * 100) / data.length, ((getValue(Q2_1.No) + getValue(Q2_1.undefined)) * 100) / data.length],
@@ -151,20 +158,20 @@ export const EnterprisesViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Garbage truck',
-              'Dump truck',
-              'Three-wheeled\nmotorcycle',
-              'Wheel barrows',
-              'Shovels',
+              Translations[Translations.findIndex((el) => el.key === 'Garbage truck')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Dump truck')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Three-wheeled motorcycle')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Wheel barrows')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Shovels')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#006EB5', '#AAA']}
           colorKey={
             [
-              'Yes',
-              'No or Did not respond',
+              Translations[Translations.findIndex((el) => el.key === 'Yes')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No or Did not respond')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
@@ -172,168 +179,168 @@ export const EnterprisesViz = (props: Props) => {
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Human Resources
+        {Translations[Translations.findIndex((el) => el.key === 'Human Resources')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        How many employees of the company/OCB work in the solid waste sector?
+        {Translations[Translations.findIndex((el) => el.key === 'How many employees of the company/CBO work in the solid waste sector?')][language]}
         <BarGraph
           data={[(getValue(Q3_0.true) * 100) / data.length, (getValue(Q3_1.true) * 100) / data.length, (getValue(Q3_2.true) * 100) / data.length, (getValue(Q3_3.true) * 100) / data.length, (getValue(Q3_4.true) * 100) / data.length, (getValue(Q3_5.true) * 100) / data.length, (getValue(Q3_6.true) * 100) / data.length]}
           barLabel={
             [
-              '0 or\nNo Response',
-              '< 5',
-              '5 - 15',
-              '15 - 25',
-              '25 - 50',
-              '50 - 100',
-              '>= 100',
+              Translations[Translations.findIndex((el) => el.key === '0 or No Response')][language],
+              '<5',
+              '5-15',
+              '15-25',
+              '25-50',
+              '50-100',
+              '>=100',
             ]
           }
           maxValue={70}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 20, 40, 70]}
         />
       </div>
       <div className='margin-bottom-11'>
-        How many male employees of the company/OCB work in the solid waste sector?
+        {Translations[Translations.findIndex((el) => el.key === 'How many male employees of the company/CBO work in the solid waste sector?')][language]}
         <BarGraph
           data={[(getValue(Q4_0.true) * 100) / data.length, (getValue(Q4_1.true) * 100) / data.length, (getValue(Q4_2.true) * 100) / data.length, (getValue(Q4_3.true) * 100) / data.length, (getValue(Q4_4.true) * 100) / data.length, (getValue(Q4_5.true) * 100) / data.length, (getValue(Q4_6.true) * 100) / data.length]}
           barLabel={
             [
-              '0 or\nNo Response',
-              '< 5',
-              '5 - 15',
-              '15 - 25',
-              '25 - 50',
-              '50 - 100',
-              '>= 100',
+              Translations[Translations.findIndex((el) => el.key === '0 or No Response')][language],
+              '<5',
+              '5-15',
+              '15-25',
+              '25-50',
+              '50-100',
+              '>=100',
             ]
           }
           maxValue={70}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 20, 40, 70]}
         />
       </div>
       <div className='margin-bottom-11'>
-        How many women employees of the company/OCB work in the solid waste sector?
+        {Translations[Translations.findIndex((el) => el.key === 'How many women employees of the company/CBO work in the solid waste sector?')][language]}
         <BarGraph
           data={[(getValue(Q5_0.true) * 100) / data.length, (getValue(Q5_1.true) * 100) / data.length, (getValue(Q5_2.true) * 100) / data.length, (getValue(Q5_3.true) * 100) / data.length, (getValue(Q5_4.true) * 100) / data.length, (getValue(Q5_5.true) * 100) / data.length, (getValue(Q5_6.true) * 100) / data.length]}
           barLabel={
             [
-              '0 or\nNo Response',
-              '< 5',
-              '5 - 15',
-              '15 - 25',
-              '25 - 50',
-              '50 - 100',
-              '>= 100',
+              Translations[Translations.findIndex((el) => el.key === '0 or No Response')][language],
+              '<5',
+              '5-15',
+              '15-25',
+              '25-50',
+              '50-100',
+              '>=100',
             ]
           }
           maxValue={70}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 20, 40, 70]}
         />
       </div>
       <div className='margin-bottom-11'>
-        The dominant types of employment in your company
+        {Translations[Translations.findIndex((el) => el.key === 'The dominant types of employment in your company')][language]}
         <BarGraph
           data={[(getValue(Q6.Permanent) * 100) / data.length, (getValue(Q6.Seasonal) * 100) / data.length, ((data.length - getValue(Q6.Seasonal) - getValue(Q6.Permanent)) * 100) / data.length]}
           barLabel={
             [
-              'Permanent',
-              'Seasonal',
-              'No Response',
+              Translations[Translations.findIndex((el) => el.key === 'Permanent')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Seasonal')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No response')][language],
             ]
           }
           maxValue={60}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 20, 40, 60]}
         />
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Finacial Resources
+        {Translations[Translations.findIndex((el) => el.key === 'Finacial Resources')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        What are the main sources of financing for the company/OCB?
+        {Translations[Translations.findIndex((el) => el.key === 'What are the main sources of financing for the company/CBO?')][language]}
         <BarGraph
           data={[(getValue(Q7.Equity) * 100) / data.length, (getValue(Q7['Equity Grant']) * 100) / data.length, (getValue(Q7.Don) * 100) / data.length, (getValue(Q7['Equity Credit']) * 100) / data.length, (getValue(Q7.Credit) * 100) / data.length, (getValue(Q7['Grant Equity']) * 100) / data.length, (getValue(Q7['Credit Donation']) * 100) / data.length, (getValue(Q7['Credit Equity']) * 100) / data.length, (getValue(Q7.undefined) * 100) / data.length]}
           barLabel={
             [
-              'Own Funds',
-              'Own Funds\nGrants',
-              'Donation',
-              'Own Funds\nCredits',
-              'Credit',
-              'Grant Own\nFunds',
-              'Credit Donation',
-              'Credit Own\nFunds',
-              'No Response',
+              Translations[Translations.findIndex((el) => el.key === 'Own funds')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Own funds grants')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Donation')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Own funds credits')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Credit')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Grant own funds')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Credit donation')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Credit own funds')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No response')][language],
             ]
           }
           maxValue={50}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 10, 20, 30, 40, 50]}
         />
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Activities related to solid waste collection at company level
+        {Translations[Translations.findIndex((el) => el.key === 'Activities related to solid waste collection at company level')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Percent of company/OCB offering the collection and sale of
+        {Translations[Translations.findIndex((el) => el.key === 'Percent of company/CBO offering the collection and sale of')][language]}
         <BarGraph
           data={[(getValue(Q8_1.Yes) * 100) / data.length, (getValue(Q8_2.Yes) * 100) / data.length, (getValue(Q8_3.Yes) * 100) / data.length, (getValue(Q8_4.Yes) * 100) / data.length, (getValue(Q8_5.Yes) * 100) / data.length]}
           barLabel={
             [
-              'Solid waste',
-              'Organic waste',
-              'Paper\n/cardboard waste',
-              'Plastic waste',
-              'Scrap metal',
+              Translations[Translations.findIndex((el) => el.key === 'Solid waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Organic waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Paper/cardboard waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Plastic waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Scrap metal')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 25, 50, 75, 100]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Percent of company/OCB offering industrial and semi-industrial recycling of
+        {Translations[Translations.findIndex((el) => el.key === 'Percent of company/CBO offering industrial and semi-industrial recycling of')][language]}
         <BarGraph
           data={[(getValue(Q9_1.Yes) * 100) / data.length, (getValue(Q9_2.Yes) * 100) / data.length, (getValue(Q9_3.Yes) * 100) / data.length, (getValue(Q9_4.Yes) * 100) / data.length]}
           barLabel={
             [
-              'Plastic waste',
-              'Metal waste',
-              'Paper\n/cardboard waste',
-              'Glass waste',
+              Translations[Translations.findIndex((el) => el.key === 'Plastic waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Metal waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Paper/cardboard waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Glass waste')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 25, 50, 75, 100]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Percent of company/OCB offering crafts with
+        {Translations[Translations.findIndex((el) => el.key === 'Percent of company/CBO offering crafts with')][language]}
         <BarGraph
           data={[(getValue(Q10_1.Yes) * 100) / data.length, (getValue(Q10_2.Yes) * 100) / data.length, (getValue(Q10_3.Yes) * 100) / data.length, (getValue(Q10_4.Yes) * 100) / data.length]}
           barLabel={
             [
-              'Plastic waste',
-              'Metal waste',
-              'Paper\n/cardboard waste',
-              'Glass waste',
+              Translations[Translations.findIndex((el) => el.key === 'Plastic waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Metal waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Paper/cardboard waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Glass waste')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 25, 50, 75, 100]}
         />
       </div>
       <div className='margin-bottom-11'>
-        What areas has the company/OCB made changes?
+        {Translations[Translations.findIndex((el) => el.key === 'What areas has the company/CBO made changes?')][language]}
         <BarGraph
           data={
             [
@@ -355,40 +362,40 @@ export const EnterprisesViz = (props: Props) => {
           }
           barLabel={
             [
-              'Solid waste\ncollection',
-              'Composting\norganic waste',
-              'Recycling of\nplastic waste',
-              'Recycling of\nmetal waste',
-              'Recycling of\npaper waste',
-              'Recycling of\nglass waste',
-              'Crafts with\nplastic waste',
-              'Crafts with\nscrap metal',
-              'Crafts with\npaper',
-              'Crafts with\nglass scraps',
-              'Collection & sale\nof organic waste',
-              'Collection & sale\nof plastic waste',
-              'Collection & sale\nof scrap metal',
-              'Collection & sale\nof paper waste',
+              Translations[Translations.findIndex((el) => el.key === 'Solid waste collection')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Composting organic waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Recycling of plastic waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Recycling of metal waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Recycling of paper waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Recycling of glass waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Crafts with plastic waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Crafts with scrap metal')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Crafts with paper')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Crafts with glass scraps')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Collection & sale of organic waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Collection & sale of plastic waste')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Collection & sale of scrap metal')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Collection & sale of paper waste')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           ticks={[0, 25, 50, 75, 100]}
         />
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Actors
+        {Translations[Translations.findIndex((el) => el.key === 'Actors')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Are there other actors involved in solid waste management in your municipality?
+        {Translations[Translations.findIndex((el) => el.key === 'Are there other actors involved in solid waste management in your municipality?')][language]}
         <DonutChart
           data={(getValue(Q12.Yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Give the following details regarding the areas of intervention of the following actors
+        {Translations[Translations.findIndex((el) => el.key === 'Give the following details regarding the areas of intervention of the following actors')][language]}
         <GroupBarGraph
           data={[
             [getValue(Q13_1['waste collection']), getValue(Q13_2['waste collection']), getValue(Q13_3['waste collection']), getValue(Q13_4['waste collection']), getValue(Q13_5['waste collection']), getValue(Q13_6['waste collection']), getValue(Q13_7['waste collection']), getValue(Q13_8['waste collection'])],
@@ -403,30 +410,30 @@ export const EnterprisesViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Waste collection',
-              'Sorting',
-              'Treatment',
-              'Strorage',
-              'Transportation',
-              'Landfill',
-              'Incineration\n/destruction',
-              'Recycling',
-              'Technology',
+              Translations[Translations.findIndex((el) => el.key === 'Waste collection')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Sorting')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Treatment')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Storage')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Transportation')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Landfill')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Incineration/destruction')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Recycling')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Technology')][language],
             ]
           }
           maxValue={30}
-          marginLeft={100}
+          marginLeft={125}
           color={['#1f78b4', '#b2df8a', '#33a02c', '#fb9a99', '#e31a1c', '#fdbf6f', '#ff7f00', '#cab2d6']}
           colorKey={
             [
-              'Private companies',
-              'Town hall',
-              'Cummunity organizations',
-              'NGO',
-              'Ministry of Environment',
-              'MTPTC',
-              'Other state institutions',
-              'UNDP',
+              Translations[Translations.findIndex((el) => el.key === 'Private companies')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Town hall')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Community organizations')][language],
+              Translations[Translations.findIndex((el) => el.key === 'NGO')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Ministry of Environment')][language],
+              Translations[Translations.findIndex((el) => el.key === 'MTPTC')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Other state institutions')][language],
+              Translations[Translations.findIndex((el) => el.key === 'UNDP')][language],
             ]
           }
           groupPadding={30}
@@ -435,10 +442,10 @@ export const EnterprisesViz = (props: Props) => {
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Partnership Relations
+        {Translations[Translations.findIndex((el) => el.key === 'Partnership Relations')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Are there partnerships between your company/OCB and the following actors in relation to solid waste?
+        {Translations[Translations.findIndex((el) => el.key === 'Are there partnerships between your company/CBO and the following actors in relation to solid waste?')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q14_1.Yes) * 100) / data.length, (getValue(Q14_1.No) * 100) / data.length, ((data.length - getValue(Q14_1.Yes) - getValue(Q14_1.No)) * 100) / data.length],
@@ -468,27 +475,27 @@ export const EnterprisesViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Town hall',
-              'Private\ncompanies',
-              'NGO',
-              'Community\norganizations',
-              'SNGRC',
-              'Ministry of\nEnvironment',
-              'MTPTC',
-              'Other state\ninstitutions',
-              'UNDP',
-              'UNEP',
-              'Other UN\nagencies',
+              Translations[Translations.findIndex((el) => el.key === 'Town hall')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Private companies')][language],
+              Translations[Translations.findIndex((el) => el.key === 'NGO')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Community organizations')][language],
+              Translations[Translations.findIndex((el) => el.key === 'SNGRC')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Ministry of Environment')][language],
+              Translations[Translations.findIndex((el) => el.key === 'MTPTC')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Other state institutions')][language],
+              Translations[Translations.findIndex((el) => el.key === 'UNDP')][language],
+              Translations[Translations.findIndex((el) => el.key === 'UNEP')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Other UN agencies')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#59BA47', '#D12800', '#AAA']}
           colorKey={
             [
-              'Yes',
-              'No',
-              'Don\'t know or no response',
+              Translations[Translations.findIndex((el) => el.key === 'Yes')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Don\'t know or no response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
@@ -496,10 +503,10 @@ export const EnterprisesViz = (props: Props) => {
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Level of Waste Generation
+        {Translations[Translations.findIndex((el) => el.key === 'Level of Waste Generation')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Give us your assessments regarding the level of waste generation of the following spaces/institutions
+        {Translations[Translations.findIndex((el) => el.key === 'Give us your assessments regarding the level of waste generation of the following spaces/institutions')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q15_1.Raised) * 100) / data.length, (getValue(Q15_1.Medium) * 100) / data.length, (getValue(Q15_1.Weak) * 100) / data.length, (getValue(Q15_1.undefined) * 100) / data.length],
@@ -517,22 +524,22 @@ export const EnterprisesViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Households',
-              'Public markets',
-              'Companies',
-              'Schools',
-              'Hospitals',
+              Translations[Translations.findIndex((el) => el.key === 'Households')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Public markets')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Companies')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Schools')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Hospitals')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#006EB5', '#4F95DD', '#94C4F5', '#AAA']}
           colorKey={
             [
-              'High',
-              'Medium',
-              'Low',
-              'No response',
+              Translations[Translations.findIndex((el) => el.key === 'High')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Medium')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Low')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
@@ -540,10 +547,10 @@ export const EnterprisesViz = (props: Props) => {
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Type of Wastes
+        {Translations[Translations.findIndex((el) => el.key === 'Type of Wastes')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        At what level do the following types of waste meet in your municipality?
+        {Translations[Translations.findIndex((el) => el.key === 'At what level do the following types of waste meet in your municipality?')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q16_1.Raised) * 100) / data.length, (getValue(Q16_1.Medium) * 100) / data.length, (getValue(Q16_1.Weak) * 100) / data.length, (getValue(Q16_1.undefined) * 100) / data.length],
@@ -567,25 +574,25 @@ export const EnterprisesViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Agricultural',
-              'Organic',
-              'Plastic',
-              'Metal',
-              'Medical',
-              'Paper/cardboard',
-              'Textile',
-              'Others',
+              Translations[Translations.findIndex((el) => el.key === 'Agricultural')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Organic')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Plastic')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Metal')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Medical')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Paper/cardboard')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Textile')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Others')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#006EB5', '#4F95DD', '#94C4F5', '#AAA']}
           colorKey={
             [
-              'High',
-              'Medium',
-              'Low',
-              'No response',
+              Translations[Translations.findIndex((el) => el.key === 'High')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Medium')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Low')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
@@ -593,17 +600,17 @@ export const EnterprisesViz = (props: Props) => {
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Negative Impact of Solid Waste
+        {Translations[Translations.findIndex((el) => el.key === 'Negative Impact of Solid Waste')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Have you detected recurrent cases of solid waste-related diseases in your municipality?
+        {Translations[Translations.findIndex((el) => el.key === 'Have you detected recurrent cases of solid waste-related diseases in your municipality?')][language]}
         <DonutChart
           data={(getValue(Q17.Yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Specify whether you have observed the following diseases
+        {Translations[Translations.findIndex((el) => el.key === 'Specify whether you have observed the following diseases')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q18_1.Yes) * 100) / data.length, (getValue(Q18_1.No) * 100) / data.length, ((data.length - getValue(Q18_1.Yes) - getValue(Q18_1.No)) * 100) / data.length],
@@ -625,30 +632,30 @@ export const EnterprisesViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Skin disease',
-              'Respiratory\ndisease',
-              'Malaria',
-              'Dengue fever',
-              'Typhoid',
-              'Diarrhea',
-              'Vaginal infection',
+              Translations[Translations.findIndex((el) => el.key === 'Skin disease')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Respiratory disease')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Malaria')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Dengue fever')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Typhoid')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Diarrhea')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Vaginal infection')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#59BA47', '#D12800', '#AAA']}
           colorKey={
             [
-              'Yes',
-              'No',
-              'Don\'t know or no response',
+              Translations[Translations.findIndex((el) => el.key === 'Yes')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Don\'t know or no response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
         />
       </div>
       <div className='margin-bottom-11'>
-        Specify if you have observed the following environmental problems
+        {Translations[Translations.findIndex((el) => el.key === 'Specify if you have observed the following environmental problems')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q22_1.Yes) * 100) / data.length, (getValue(Q22_1.No) * 100) / data.length, ((data.length - getValue(Q22_1.Yes) - getValue(Q22_1.No)) * 100) / data.length],
@@ -668,22 +675,22 @@ export const EnterprisesViz = (props: Props) => {
           ]}
           barLabel={
             [
-              'Landfill close\nto water',
-              'Insalubrity of\nroad networks',
-              'Obstruction of\nroad networks',
-              'Insalubrity of\npublic market',
-              'Insalubrity of\npublic beaches',
-              'Destruction of\nmangroves',
+              Translations[Translations.findIndex((el) => el.key === 'Landfill close to water')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Insalubrity of road networks')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Obstruction of road networks')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Insalubrity of public market')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Insalubrity of public beaches')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Destruction of mangroves')][language],
             ]
           }
           maxValue={100}
-          marginLeft={100}
+          marginLeft={125}
           color={['#59BA47', '#D12800', '#AAA']}
           colorKey={
             [
-              'Yes',
-              'No',
-              'Don\'t know or no response',
+              Translations[Translations.findIndex((el) => el.key === 'Yes')][language],
+              Translations[Translations.findIndex((el) => el.key === 'No')][language],
+              Translations[Translations.findIndex((el) => el.key === 'Don\'t know or no response')][language],
             ]
           }
           ticks={[0, 20, 40, 60, 80, 100]}
@@ -691,33 +698,33 @@ export const EnterprisesViz = (props: Props) => {
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Community Commitment
+        {Translations[Translations.findIndex((el) => el.key === 'Community Commitment')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        In your opinion, what is the level of commitment of the population of your municipality in the management of solid waste?
+        {Translations[Translations.findIndex((el) => el.key === 'In your opinion, what is the level of commitment of the population of your municipality in the management of solid waste?')][language]}
         <DonutChart
           data={(getValue(Q19.Weak) * 100) / data.length}
-          subText='says low'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says low')][language]}
           color='#D12800'
         />
       </div>
       <div className='margin-bottom-11'>
-        In your opinion, what is the level of awareness of the population of your municipality in terms of solid waste management?
+        {Translations[Translations.findIndex((el) => el.key === 'In your opinion, what is the level of awareness of the population of your municipality in terms of solid waste management?')][language]}
         <DonutChart
           data={(getValue(Q20.Weak) * 100) / data.length}
-          subText='says low'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says low')][language]}
           color='#D12800'
         />
       </div>
       <hr className='undp-style margin-bottom-11' />
       <h3 className='undp-typography bold margin-bottom-07'>
-        Innovative Solutions
+        {Translations[Translations.findIndex((el) => el.key === 'Innovative Solutions')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        Have you detected any innovations related to solid waste management in your municipality?
+        {Translations[Translations.findIndex((el) => el.key === 'Have you detected any innovations related to solid waste management in your municipality?')][language]}
         <DonutChart
           data={(getValue(Q21.Yes) * 100) / data.length}
-          subText='says yes'
+          subText={Translations[Translations.findIndex((el) => el.key === 'says yes')][language]}
         />
       </div>
     </div>
