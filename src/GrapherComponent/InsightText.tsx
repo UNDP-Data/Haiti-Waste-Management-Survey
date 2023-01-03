@@ -13,8 +13,32 @@ export const InsightText = () => {
       {
         selectedSubjectType === 'households'
           ? language === 'en'
-            ? 'Haitian households believe to produce medium to low amounts of waste, being burning it, throwing it into an empty landfill lot, and recycling the most common ways of waste management used by the households. Less than half of the surveyed households claim to sort solid waste into organic and inorganic at home.  Most respondents attribute the responsibility of solid waste management to town halls and consider the public sector as the highest producer of waste while households enterprises, schools, health centers are perceived as medium generators.  Households also report environmental problems related to solid waste management. Yet, most households perceive the general population as having low awareness and low behavioral changes in terms of solid waste management.'
-            : 'Les ménages haïtiens pensent produire des quantités moyennes à faibles de déchets, en les brûlant, en les jetant dans une décharge vide et en recyclant les moyens les plus courants de gestion des déchets utilisés par les ménages. Moins de la moitié des ménages interrogés déclarent trier les déchets solides en organiques et inorganiques à la maison. La plupart des répondants attribuent la responsabilité de la gestion des déchets solides aux mairies et considèrent le secteur public comme le plus gros producteur de déchets tandis que les ménages, les entreprises, les écoles, les centres de santé sont perçus comme des générateurs moyens. Les ménages signalent également des problèmes environnementaux liés à la gestion des déchets solides. Pourtant, la plupart des ménages perçoivent la population générale comme ayant une faible sensibilisation et de faibles changements de comportement en matière de gestion des déchets solides.'
+            ? (
+              <>
+                <span className='bold'>Haitian households</span>
+                {' '}
+                believe to produce
+                {' '}
+                <span className='bold'>medium to low amounts of waste</span>
+                , being burning it, throwing it into an empty landfill lot, and recycling the most common ways of waste management used by the households. Less than half of the surveyed households claim to sort solid waste into organic and inorganic at home.  Most respondents attribute the
+                {' '}
+                <span className='bold'>responsibility of solid waste management to town halls</span>
+                {' '}
+                and consider the public sector as the highest producer of waste while households enterprises, schools, health centers are perceived as medium generators. Households also report
+                {' '}
+                <span className='bold'>environmental problems related to solid waste management</span>
+                . Yet, most households perceive the general population as having
+                {' '}
+                <span className='bold'>low awareness and low behavioral changes</span>
+                {' '}
+                in terms of solid waste management.
+              </>
+            )
+            : (
+              <>
+                Les ménages haïtiens pensent produire des quantités moyennes à faibles de déchets, en les brûlant, en les jetant dans une décharge vide et en recyclant les moyens les plus courants de gestion des déchets utilisés par les ménages. Moins de la moitié des ménages interrogés déclarent trier les déchets solides en organiques et inorganiques à la maison. La plupart des répondants attribuent la responsabilité de la gestion des déchets solides aux mairies et considèrent le secteur public comme le plus gros producteur de déchets tandis que les ménages, les entreprises, les écoles, les centres de santé sont perçus comme des générateurs moyens. Les ménages signalent également des problèmes environnementaux liés à la gestion des déchets solides. Pourtant, la plupart des ménages perçoivent la population générale comme ayant une faible sensibilisation et de faibles changements de comportement en matière de gestion des déchets solides.
+              </>
+            )
           : null
       }
       {
@@ -22,10 +46,34 @@ export const InsightText = () => {
           ? language === 'en'
             ? (
               <>
-                Only one third of the surveyed enterprises/Community Based Organizations (CBOs) claim to have enough resources for solid waste collection such as machinery like garbage and dump trucks. The most common financing sources used by enterprises are funds/grants, donations, credits, among others. While most enterprises/CBOs offer the waste collection services and sale of solid waste, only a fifth of the surveyed enterprises offer similar services for organic waste, plastic waste, scrap metal, and paper/cardboard waste. Additionally, only half of the enterprises mention the involvement with other actors - such as town halls, private companies, and community organizations - in solid waste management.
+                <span className='bold'>Only 33.33%</span>
+                {' '}
+                of the surveyed enterprises/Community Based Organizations (CBOs)
+                {' '}
+                <span className='bold'>claim to have enough resources for solid waste collection</span>
+                {' '}
+                such as machinery like garbage and dump trucks. The most common financing sources used by enterprises are funds/grants, donations, credits, among others. While most enterprises/CBOs offer the waste collection services and sale of solid waste,
+                {' '}
+                <span className='bold'>only a fifth</span>
+                {' '}
+                of the surveyed enterprises
+                {' '}
+                <span className='bold'>offer similar services for organic waste, plastic waste, scrap metal, and paper/cardboard waste</span>
+                . Additionally, only half of the enterprises mention the involvement with other actors - such as town halls, private companies, and community organizations - in solid waste management.
                 <br />
                 <br />
-                Enterprises perceive households and private markets to produce higher levels of waste while enterprises, schools, and hospitals are regarded as producing low amounts of waste. Moreover, half of the respondents acclaim the participation of other actors in waste management, such as town halls, private companies, and NGOs. Over two thirds of the surveyed enterprises detect recurrent cases of solid-waste-related diseases and consider the level of commitment and awareness of the population in relation to solid waste management to be low.
+                Enterprises perceive households and private markets to produce higher levels of waste while enterprises, schools, and hospitals are regarded as producing low amounts of waste. Moreover, half of the respondents acclaim the participation of other actors in waste management, such as town halls, private companies, and NGOs. Over two thirds of the surveyed enterprises detect
+                {' '}
+                <span className='bold'>recurrent cases of solid-waste-related diseases</span>
+                {' '}
+                and consider the level of commitment and
+                {' '}
+                <span className='bold'>awareness of the population</span>
+                {' '}
+                in relation to solid waste management
+                {' '}
+                <span className='bold'>to be low</span>
+                .
               </>
             )
             : (
@@ -43,13 +91,29 @@ export const InsightText = () => {
           ? language === 'en'
             ? (
               <>
-                The vast majority of respondents declare that funding for waste-management related projects comes from international donors, national donors, and notables of the area. One third of the projects had partnerships with different stakeholders, most commonly being town halls, private companies, community organizations, other state institutions, and NGOs.
+                The vast majority of respondents declare that funding for waste-management related projects comes from international donors, national donors, and notables of the area.
+                {' '}
+                <span className='bold'>33.33%</span>
+                {' '}
+                of the projects had
+                {' '}
+                <span className='bold'>partnerships with different stakeholders</span>
+                , most commonly being town halls, private companies, community organizations, other state institutions, and NGOs.
                 <br />
                 <br />
-                The partnership with UNDP is highly valued by the project managers; however, the quality of the partnerships with private companies/community organizations and town halls are perceived as medium and low by the project managers, respectively. In regards with the types of waste, plastic is the most produced followed by paper/cardboard and agricultural waste.
+                The partnership with
+                {' '}
+                <span className='bold'>UNDP is highly valued by the project managers</span>
+                ; however, the quality of the partnerships with private companies/community organizations and town halls are perceived as medium and low by the project managers, respectively. In regards with the types of waste,
+                {' '}
+                <span className='bold'>plastic is the most produced followed by paper/cardboard and agricultural waste</span>
+                .
                 <br />
                 <br />
-                Thirty percent of the respondents allege having detected recurrent cases of solid-waste related diseases, most commonly diarrhea, skin diseases, malaria, and typhoid. Moreover, forty percent believe there to be environmental problems in regard to solid waste management such as obstruction and insalubrity of road networks. Lastly, four in ten respondents believe the population to have a low engagement and awareness of solid waste management.
+                30% of the respondents allege having detected
+                {' '}
+                <span className='bold'>recurrent cases of solid-waste related diseases</span>
+                , most commonly diarrhea, skin diseases, malaria, and typhoid. Moreover, 40% believe there to be environmental problems in regard to solid waste management such as obstruction and insalubrity of road networks. Lastly, four in ten respondents believe the population to have a low engagement and awareness of solid waste management.
               </>
             )
             : (
@@ -70,10 +134,31 @@ export const InsightText = () => {
           ? language === 'en'
             ? (
               <>
-                One third of health care establishments state having a dedicated budget for biomedical waste management.  Three fourths of the personnel in health care facilities claim to have attended training sessions on biomedical waste management during their academic or professional journey. Although almost all the staff state that biomedical waste is important and they claim to be aware of the associated risks of the handling of biomedical waste, very few of them declare having access to a waste management guideline manual in their health care facilities.
+                <span className='bold'>33.33%</span>
+                {' '}
+                of health care establishments state having a
+                {' '}
+                <span className='bold'>dedicated budget for biomedical waste management</span>
+                . Three fourths of the personnel in health care facilities claim to have attended training sessions on biomedical waste management during their academic or professional journey.
+                {' '}
+                <span className='bold'>Although almost all the staff</span>
+                {' '}
+                state that biomedical waste is important and they claim to be aware of the associated risks of the handling of biomedical waste,
+                {' '}
+                <span className='bold'>very few</span>
+                {' '}
+                of them declare
+                {' '}
+                <span className='bold'>having access to a waste management guideline manual</span>
+                {' '}
+                in their health care facilities.
                 <br />
                 <br />
-                Most facilities affirm to have a responsible employee(s) for managing biomedical waste. Moreover, some claim to have detected recurrent cases of illnesses related to poor management of biomedical waste and most facilities state to sort waste according to its level of danger. Only around half believe to have proper collection of biomedical waste methods for safety.
+                Most facilities affirm to have a responsible employee(s) for managing biomedical waste. Moreover, some claim to have detected
+                {' '}
+                <span className='bold'>recurrent cases of illnesses related to poor management of biomedical waste</span>
+                {' '}
+                and most facilities state to sort waste according to its level of danger. Only around half believe to have proper collection of biomedical waste methods for safety.
               </>
             )
             : (
@@ -91,10 +176,29 @@ export const InsightText = () => {
           ? language === 'en'
             ? (
               <>
-                Despite half of the surveyed town halls having a department in charge of solid waste management, only one fifth have adequate materials for waste collection and 3 out of 10 declared having a dedicated budget to solid waste management. Many of the surveyed town halls claim participation in waste collection, transportation, burning, and landfill, with limited number of partners contributing to these activities.
+                Despite half of the surveyed town halls having a department in charge of solid waste management,
+                {' '}
+                <span className='bold'>only 20% have adequate materials for waste collection</span>
+                {' '}
+                and 3 out of 10 declared having a dedicated budget to solid waste management. Many of the surveyed town halls claim participation in waste collection, transportation, burning, and landfill, with
+                {' '}
+                <span className='bold'>limited number of partners</span>
+                {' '}
+                contributing to these activities.
                 <br />
                 <br />
-                According to the town halls surveyed, the level of waste generation of public markets is high, households being medium generators, and companies, schools, hospitals being low generators. Over half of them allege detecting recurrent cases of solid waste-related diseases and most mention environmental problems. Yet, town halls perceive a low level of commitment on behalf of the population in terms of solid waste management.
+                According to the town halls surveyed, the level of waste generation of public markets is high, households being medium generators, and companies, schools, hospitals being low generators. Over half of them allege detecting
+                {' '}
+                <span className='bold'>recurrent cases of solid waste-related diseases</span>
+                {' '}
+                and most mention
+                {' '}
+                <span className='bold'>environmental problems</span>
+                . Yet, town halls perceive a
+                {' '}
+                <span className='bold'>low level of commitment on behalf of the population</span>
+                {' '}
+                in terms of solid waste management.
               </>
             )
             : (
