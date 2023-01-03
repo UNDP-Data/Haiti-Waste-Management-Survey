@@ -1,12 +1,10 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import { useState, useEffect, useReducer } from 'react';
-import './style/antd.css';
 import './style/style.css';
 import styled from 'styled-components';
 import { json } from 'd3-request';
 import { queue } from 'd3-queue';
 import { CheckboxValueType } from 'antd/es/checkbox/Group';
-// import { SurveyQuestionDataType } from './Types';
 import { GrapherComponent } from './GrapherComponent';
 import Reducer from './Context/Reducer';
 import Context from './Context/Context';
@@ -23,7 +21,7 @@ const VizAreaEl = styled.div`
 const App = () => {
   const [finalData, setFinalData] = useState<any | undefined>(undefined);
   const initialState = {
-    selectedSubjectType: 'townHalls',
+    selectedSubjectType: 'households',
     selectedDepartments: [],
     selectedGenders: 'All Genders',
     selectedEducations: [],

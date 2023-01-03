@@ -240,6 +240,11 @@ export const Translations = [
     key: 'Households',
   },
   {
+    en: 'Individuals',
+    fr: 'Personnes',
+    key: 'Individuals',
+  },
+  {
     en: 'Private companies',
     fr: 'Entreprises privées',
     key: 'Private companies',
@@ -410,8 +415,8 @@ export const Translations = [
     key: 'No or Did not respond',
   },
   {
-    en: 'Don\'t know or no response',
-    fr: 'Ne sait pas ou pas de réponse',
+    en: 'Don\'t know or\nno response',
+    fr: 'Ne sait pas ou\npas de réponse',
     key: 'Don\'t know or no response',
   },
   {
@@ -1695,18 +1700,148 @@ export const Translations = [
     fr: 'Comment classez-vous ce dépotoir ?',
   },
   {
-    key: 'Can you give us the following details on the location of the landfill site?',
-    en: 'Can you give us the following details on the location of the landfill site?',
-    fr: 'Pouvez-vous nous donner les détails suivants sur l\'emplacement du site d\'enfouissement ?',
+    key: 'Specify the location of the landfill site?',
+    en: 'Specify the location of the landfill site?',
+    fr: "Précisez l'emplacement du site d'enfouissement ?",
   },
   {
-    key: 'Can you provide us with the following information on the use of the site?',
-    en: 'Can you provide us with the following information on the use of the site?',
-    fr: 'Pouvez-vous nous fournir les informations suivantes sur l\'utilisation du site ?',
+    key: 'Who dumps the waste in the landfill site?',
+    en: 'Who dumps the waste in the landfill site?',
+    fr: 'Qui déverse les déchets dans le site d\'enfouissement ?',
   },
   {
     key: 'says wild',
     en: 'says wild',
     fr: 'répondu sauvage',
+  },
+  {
+    key: 'Near a water source',
+    en: 'Near a water source',
+    fr: 'près d\'un point d\'eaue',
+  },
+  {
+    key: 'Near a river',
+    en: 'Near a river',
+    fr: 'Près d\'une rivière',
+  },
+  {
+    key: 'Near the shore',
+    en: 'Near the shore',
+    fr: 'Près du rivage',
+  },
+  {
+    key: 'Near inhabited areas',
+    en: 'Near inhabited areas',
+    fr: 'Près des zones habitées',
+  },
+  {
+    key: 'Near farms',
+    en: 'Near farms',
+    fr: 'Près des fermes',
+  },
+  {
+    key: 'Near schools',
+    en: 'Near schools',
+    fr: 'Près des écoles',
+  },
+  {
+    key: 'Near hospitals',
+    en: 'Near hospitals',
+    fr: 'Près des hôpitaux',
+  },
+  {
+    key: 'What do you think is the approximate size of the landfill site?',
+    en: 'What do you think is the approximate size of the landfill site?',
+    fr: 'Selon vous, quelle est la taille approximative du site d\'enfouissement ?',
+  },
+  {
+    key: 'How often is solid waste dumped on the site?',
+    en: 'How often is solid waste dumped on the site?',
+    fr: 'À quelle fréquence les déchets solides sont-ils déversés sur le site ?',
+  },
+  {
+    key: 'Everyday',
+    en: 'Everyday',
+    fr: 'Tous les jours',
+  },
+  {
+    key: 'Every week',
+    en: 'Every week',
+    fr: 'Toutes les semaines',
+  },
+  {
+    key: 'Every 2 weeks',
+    en: 'Every 2 weeks',
+    fr: 'Toutes les 2 semaines',
+  },
+  {
+    key: 'Have you identified any environmental issues related to the landfill site in you',
+    en: 'Have you identified any environmental issues related to the landfill site in you',
+    fr: 'Avez-vous identifié des problèmes environnementaux liés au site d\'enfouissement en vous',
+  },
+  {
+    key: 'Bad smell',
+    en: 'Bad smell',
+    fr: 'Mauvaise odeur',
+  },
+  {
+    key: 'Spread of rats',
+    en: 'Spread of rats',
+    fr: 'Propagation des rats',
+  },
+  {
+    key: 'Spread of insects',
+    en: 'Spread of insects',
+    fr: 'Propagation d\'insectes',
+  },
+  {
+    key: 'Contamination of water sources',
+    en: 'Contamination of\nwater sources',
+    fr: 'Contamination des\nsources d\'eau',
+  },
+  {
+    key: 'sea pollution',
+    en: 'Sea pollution',
+    fr: 'Pollution de la mer',
+  },
+  {
+    key: 'River pollution',
+    en: 'River pollution',
+    fr: 'Pollution des rivières',
+  },
+  {
+    key: 'Unsanitary road networks',
+    en: 'Unsanitary road\nnetworks',
+    fr: 'Réseaux routiers\ninsalubres',
+  },
+  {
+    key: 'Obstruction of road networks',
+    en: 'Obstruction of\nroad networks',
+    fr: 'Obstruction des\nréseaux routiers',
+  },
+  {
+    key: 'Unsanitary public markets',
+    en: 'Unsanitary\npublic markets',
+    fr: 'Marchés\npublics insalubres',
+  },
+  {
+    key: 'Unsanitary public beaches',
+    en: 'Unsanitary\npublic beaches',
+    fr: 'Plages\npubliques insalubres',
+  },
+  {
+    key: 'According to you, what is the level of commitment of the town hall of your area',
+    en: 'According to you, what is the level of commitment of the town hall of your area?',
+    fr: 'Selon vous, quel est le niveau d\'engagement de la mairie de votre région ?',
+  },
+  {
+    key: 'According to you, what is the level of commitment of the population of your area',
+    en: 'According to you, what is the level of commitment of the population of your area?',
+    fr: 'Selon vous, quel est le niveau d\'engagement de la population de votre région ?',
+  },
+  {
+    key: 'According to you, what is the level of awareness of the population of your area',
+    en: 'According to you, what is the level of awareness of the population of your area?',
+    fr: 'Selon vous, quel est le niveau de sensibilisation de la population de votre région ?',
   },
 ];

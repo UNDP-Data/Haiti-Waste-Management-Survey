@@ -72,7 +72,7 @@ export const GroupBarGraph = (props: Props) => {
             <g key={i} transform={`translate(${marginLeft},${(((GROUP_BAR_HEIGHT * data[0].length) + (2 * groupBarPadding)) * i) + groupBarPadding})`}>
               {
                 d.map((el, j) => (
-                  <g transform={`translate(0,${j * (GROUP_BAR_HEIGHT + (2 * BAR_PADDING)) + BAR_PADDING})`}>
+                  <g key={j} transform={`translate(0,${j * (GROUP_BAR_HEIGHT + (2 * BAR_PADDING)) + BAR_PADDING})`}>
                     <rect
                       x={0}
                       y={0}

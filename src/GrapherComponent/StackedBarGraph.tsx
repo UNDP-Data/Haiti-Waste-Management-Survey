@@ -68,6 +68,7 @@ export const StackedBarGraph = (props: Props) => {
               {
                 d.map((el, j) => (
                   <rect
+                    key={j}
                     x={((svgWidth - marginLeft) * startingPos[i][j]) / maxValue}
                     y={0}
                     height={BAR_HEIGHT}
@@ -136,6 +137,7 @@ export const StackedBarGraph = (props: Props) => {
               {
                 d.map((el, j) => (((svgWidth - marginLeft) * el) / maxValue > 20 ? (
                   <text
+                    key={j}
                     fill='#fff'
                     fontSize={12}
                     textAnchor='middle'
