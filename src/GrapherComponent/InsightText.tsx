@@ -211,6 +211,62 @@ export const InsightText = () => {
             )
           : null
       }
+      {
+        selectedSubjectType === 'dumpingSites'
+          ? language === 'en'
+            ? (
+              <>
+                Despite that more than 75% of the respondents surveyed admit
+                {' '}
+                <span className='bold'>town halls tolerate/recognize the landfill site</span>
+                , only 25% state that the landfill site is under the responsibility of the town hall.  Many of the surveyed dumping sites claim the
+                {' '}
+                <span className='bold'>location of the landfill site to be near inhabited areas</span>
+                {' '}
+                and households, town halls, individuals, and private companies being the highest contributors to dumping waste.
+                <br />
+                <br />
+                According to the dumping sites surveyed, 75% claim that
+                {' '}
+                <span className='bold'>solid waste is dumped on the site every day</span>
+                . Many of them allege detecting
+                {' '}
+                <span className='bold'>solid waste-related diseases</span>
+                {' '}
+                such as skin diseases, malaria, typhoid, diarrhea, and vaginal infections among others. Additionally, many mention
+                {' '}
+                <span className='bold'>environmental problems</span>
+                {' '}
+                such as bad smell, spread of insects, unsanitary road networks, in addition to others. Yet, dumping sites perceive a low level of commitment on behalf of the population and town halls in terms of solid waste management.
+              </>
+            ) : (
+              <>
+                Bien que plus des 75% des répondants interrogés admettent que
+                {' '}
+                <span className='bold'>les mairies tolèrent/reconnaissent le site décharge</span>
+                , seulement 25% déclarent que le site décharge est sous la responsabilité de la mairie. De nombreux sites de décharge étudiés affirment que
+                {' '}
+                <span className='bold'>l&apos;emplacement du site d&apos;enfouissement se trouve à proximité de zones habitées</span>
+                {' '}
+                et que les ménages, les mairies, les particuliers et les entreprises privées sont les principaux contributeurs au déversement de déchets.
+                <br />
+                <br />
+                Selon les dépotoirs enquêtés, 75% affirment que des
+                {' '}
+                <span className='bold'>déchets solides sont déversés quotidiennement sur le site</span>
+                . Beaucoup d&apos;entre eux affirment avoir détecté des
+                {' '}
+                <span className='bold'>maladies liées aux déchets solides</span>
+                {' '}
+                telles que les maladies de la peau, le paludisme, la typhoïde, la diarrhée et les infections vaginales, entre autres. De plus, beaucoup mentionnent des
+                {' '}
+                <span className='bold'>problèmes environnementauxs</span>
+                {' '}
+                tels que les mauvaises odeurs, la propagation des insectes, les réseaux routiers insalubres, en plus d&apos;autres. Pourtant, les décharges perçoivent un faible niveau d&apos;engagement de la part de la population et des mairies en matière de gestion des déchets solides.
+              </>
+            )
+          : null
+      }
     </p>
   );
 };
