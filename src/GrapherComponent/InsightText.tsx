@@ -39,10 +39,7 @@ export const InsightText = () => {
                 D’après les données d’enquête,
                 {' '}
                 <span className='bold'>les ménages affirment avoir produit des quantités de déchets solides allant de moyennes à faibles</span>
-                . Les méthodes les plus courantes de gestion des déchets au niveau de ces derniers consistent soit à les brûler, soit à les jeter dans une décharge vide ou encore à les recycler. Moins de la moitié des ménages interrogés trient leurs déchets chez eux en mettant à part les déchets organiques et les déchets inorganiques.
-                <br />
-                <br />
-                Par ailleurs, la plupart des répondants
+                . Les méthodes les plus courantes de gestion des déchets au niveau de ces derniers consistent soit à les brûler, soit à les jeter dans une décharge vide ou encore à les recycler. Moins de la moitié des ménages interrogés trient leurs déchets chez eux en mettant à part les déchets organiques et les déchets inorganiques. Par ailleurs, la plupart des répondants
                 {' '}
                 <span className='bold'>attribuent la responsabilité de la gestion des déchets solides aux mairies</span>
                 {' '}
