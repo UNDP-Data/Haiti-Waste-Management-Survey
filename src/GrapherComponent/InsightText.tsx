@@ -36,7 +36,26 @@ export const InsightText = () => {
             )
             : (
               <>
-                Les ménages haïtiens pensent produire des quantités moyennes à faibles de déchets, en les brûlant, en les jetant dans une décharge vide et en recyclant les moyens les plus courants de gestion des déchets utilisés par les ménages. Moins de la moitié des ménages interrogés déclarent trier les déchets solides en organiques et inorganiques à la maison. La plupart des répondants attribuent la responsabilité de la gestion des déchets solides aux mairies et considèrent le secteur public comme le plus gros producteur de déchets tandis que les ménages, les entreprises, les écoles, les centres de santé sont perçus comme des générateurs moyens. Les ménages signalent également des problèmes environnementaux liés à la gestion des déchets solides. Pourtant, la plupart des ménages perçoivent la population générale comme ayant une faible sensibilisation et de faibles changements de comportement en matière de gestion des déchets solides.
+                D’après les données d’enquête,
+                {' '}
+                <span className='bold'>les ménages affirment avoir produit des quantités de déchets solides allant de moyennes à faibles</span>
+                . Les méthodes les plus courantes de gestion des déchets au niveau de ces derniers consistent soit à les brûler, soit à les jeter dans une décharge vide ou encore à les recycler. Moins de la moitié des ménages interrogés trient leurs déchets chez eux en mettant à part les déchets organiques et les déchets inorganiques.
+                <br />
+                <br />
+                Par ailleurs, la plupart des répondants
+                {' '}
+                <span className='bold'>attribuent la responsabilité de la gestion des déchets solides aux mairies</span>
+                {' '}
+                et considèrent le secteur public comme un gros producteur de déchets tandis que les ménages, les entreprises, les écoles, les centres de santé sont perçus comme des générateurs moyens.
+                <br />
+                <br />
+                Les ménages signalent également des
+                {' '}
+                <span className='bold'>problèmes environnementaux liés à la gestion des déchets solides</span>
+                . Par conséquent, la plupart des ménages perçoivent la population générale comme ayant un
+                {' '}
+                <span className='bold'>niveau de sensibilisation faible et un comportement qui ne facilite pas une bonne gestion des déchets solides</span>
+                .
               </>
             )
           : null
@@ -54,7 +73,7 @@ export const InsightText = () => {
                 {' '}
                 such as machinery like garbage and dump trucks. The most common financing sources used by enterprises are funds/grants, donations, credits, among others. While most enterprises/CBOs offer the waste collection services and sale of solid waste,
                 {' '}
-                <span className='bold'>only a fifth</span>
+                <span className='bold'>only 20%</span>
                 {' '}
                 of the surveyed enterprises
                 {' '}
@@ -78,10 +97,35 @@ export const InsightText = () => {
             )
             : (
               <>
-                Seul un tiers des entreprises/organisations communautaires (OCB) interrogées affirment disposer de suffisamment de ressources pour la collecte des déchets solides tels que les machines telles que les poubelles et les camions à benne basculante. Les sources de financement les plus couramment utilisées par les entreprises sont les fonds/subventions, les dons, les crédits, entre autres. Alors que la plupart des entreprises/OCB offrent des services de collecte des déchets et de vente de déchets solides, seulement un cinquième des entreprises interrogées offrent des services similaires pour les déchets organiques, les déchets plastiques, la ferraille et les déchets de papier/carton. De plus, seulement la moitié des entreprises mentionnent l&apos;implication avec d&apos;autres acteurs - tels que les mairies, les entreprises privées et les organisations communautaires - dans la gestion des déchets solides.
+                <span className='bold'>33.33%</span>
+                {' '}
+                des entreprises/organisations communautaires (OCB) interrogées
+                {' '}
+                <span className='bold'>affirment disposer de ressources suffisamment pour la collecte des déchets solides</span>
+                {' '}
+                , telles que les machines comme les camions d’ordures et à benne basculante. Les sources de financement les plus fréquemment utilisées par les entreprises sont les fonds/subventions, les dons, les crédits, entre autres. Alors que la plupart des entreprises/OCB offrent des services de collecte des déchets et de vente de déchets solides,
+                {' '}
+                <span className='bold'>seulement 20%</span>
+                {' '}
+                de ces entreprises interrogées
+                {' '}
+                <span className='bold'>offrent des services similaires pour les déchets organiques, les déchets plastiques, la ferraille et les déchets de papier/carton</span>
+                . De plus, seulement la moitié des entreprises mentionnent l&apos;implication avec d&apos;autres parties prenants - telles que les mairies, les entreprises privées et les organisations communautaires - dans la gestion des déchets solides.
                 <br />
                 <br />
-                Les entreprises perçoivent les ménages et les marchés privés comme produisant des niveaux plus élevés de déchets tandis que les entreprises, les écoles et les hôpitaux sont considérés comme produisant de faibles quantités de déchets. Par ailleurs, la moitié des répondants saluent la participation d&apos;autres acteurs de la gestion des déchets, comme les mairies, les entreprises privées et les ONG. Plus des deux tiers des entreprises interrogées détectent des cas récurrents de maladies liées aux déchets solides et considèrent que le niveau d&apos;engagement et de sensibilisation de la population par rapport à la gestion des déchets solides est faible.
+                Les entreprises perçoivent les ménages et les marchés privés comme des producteurs des niveaux plus élevés de déchets solides tandis que les entreprises, les écoles et les hôpitaux en sont considérés comme des producteurs de quantités faibles. Par ailleurs, la moitié des répondants confirment la participation d&apos;autres acteurs de la gestion des déchets, comme les mairies, les entreprises privées et les ONG. En outre, plus des deux tiers des entreprises interrogées détectent des
+                {' '}
+                <span className='bold'>cas récurrents de maladies liées aux déchets solides</span>
+                {' '}
+                et considèrent que le
+                {' '}
+                <span className='bold'>niveau d&apos;engagement et de sensibilisation de la populationn</span>
+                {' '}
+                par rapport à la gestion des déchets solides
+                {' '}
+                <span className='bold'>est faible</span>
+                .
+
               </>
             )
           : null
@@ -118,13 +162,29 @@ export const InsightText = () => {
             )
             : (
               <>
-                La grande majorité des répondants déclarent que le financement des projets liés à la gestion des déchets provient de donateurs internationaux, de donateurs nationaux et de notables de la région. Un tiers des projets avaient des partenariats avec différentes parties prenantes, le plus souvent des mairies, des entreprises privées, des organisations communautaires, d&apos;autres institutions étatiques et des ONG.
+                La grande majorité des répondants déclarent que le financement des projets liés à la gestion des déchets provient de donateurs internationaux, de donateurs nationaux et de notables de la région.
+                {' '}
+                <span className='bold'>33.33%</span>
+                {' '}
+                des projets avaient des
+                {' '}
+                <span className='bold'>partenariats avec différentes parties prenantes</span>
+                , le plus souvent des mairies, des entreprises privées, des organisations communautaires, d&apos;autres institutions étatiques et des ONG.
                 <br />
                 <br />
-                Le partenariat avec le PNUD est très apprécié par les chefs de projet; toutefois, la qualité des partenariats avec les entreprises privées/organismes communautaires et les mairies est respectivement perçue comme moyenne et faible par les porteurs de projet. En ce qui concerne les types de déchets, le plastique est le plus produit suivi du papier/carton et des déchets agricoles.
+                Le partenariat avec le
+                {' '}
+                <span className='bold'>PNUD est très apprécié par les chefs de projet</span>
+                ; toutefois, la qualité des partenariats avec les entreprises privées/organismes communautaires et les mairies est respectivement perçue comme moyenne et faible par les porteurs de projet. En ce qui concerne les types de déchets,
+                {' '}
+                <span className='bold'>le plastique est le plus produit suivi du papier/carton et des déchets agricoles</span>
+                .
                 <br />
                 <br />
-                Trente pour cent des répondants affirment avoir détecté des cas récurrents de maladies liées aux déchets solides, le plus souvent la diarrhée, les maladies de la peau, le paludisme et la typhoïde. De plus, 40% pensent qu&apos;il existe des problèmes environnementaux liés à la gestion des déchets solides tels que l&apos;obstruction et l&apos;insalubrité des réseaux routiers. Enfin, quatre répondants sur dix pensent que la population a un faible engagement et une faible sensibilisation à la gestion des déchets solides.
+                30% des répondants affirment avoir détecté des
+                {' '}
+                <span className='bold'>cas récurrents de maladies liées aux déchets solides</span>
+                , le plus souvent la diarrhée, les maladies de la peau, le paludisme et la typhoïde. De plus, 40% pensent qu&apos;il existe des problèmes environnementaux liés à la gestion des déchets solides tels que l&apos;obstruction et l&apos;insalubrité des réseaux routiers. Enfin, quatre répondants sur dix pensent que la population a un faible engagement et une faible sensibilisation à la gestion des déchets solides.
               </>
             )
           : null
@@ -139,7 +199,7 @@ export const InsightText = () => {
                 of health care establishments state having a
                 {' '}
                 <span className='bold'>dedicated budget for biomedical waste management</span>
-                . Three fourths of the personnel in health care facilities claim to have attended training sessions on biomedical waste management during their academic or professional journey.
+                . 75% of the personnel in health care facilities claim to have attended training sessions on biomedical waste management during their academic or professional journey.
                 {' '}
                 <span className='bold'>Although almost all the staff</span>
                 {' '}
@@ -163,10 +223,31 @@ export const InsightText = () => {
             )
             : (
               <>
-                Un tiers des établissements de santé déclarent disposer d&apos;un budget dédié à la gestion des déchets biomédicaux. Les trois quarts du personnel des établissements de santé déclarent avoir suivi des formations sur la gestion des déchets biomédicaux au cours de leur parcours scolaire ou professionnel. Bien que la quasi-totalité du personnel déclare que les déchets biomédicaux sont importants et qu&apos;ils se disent conscients des risques associés à la manipulation des déchets biomédicaux, très peu d&apos;entre eux déclarent avoir accès à un manuel de consignes de gestion des déchets dans leurs établissements de santé.
+                <span className='bold'>33.33%</span>
+                {' '}
+                des établissements de santé déclarent disposer d&apos;un
+                {' '}
+                <span className='bold'>budget dédié à la gestion des déchets biomédicaux</span>
+                . 75% du personnel des établissements de santé déclarent avoir suivi des formations sur la gestion des déchets biomédicaux au cours de leur parcours scolaire ou professionnel.
+                {' '}
+                <span className='bold'>Bien que la quasi-totalité du personnel</span>
+                {' '}
+                déclare que les déchets biomédicaux sont importants et qu&apos;ils se disent conscients des risques associés à la manipulation des déchets biomédicaux,
+                {' '}
+                <span className='bold'>très peu</span>
+                {' '}
+                d&apos;entre eux
+                {' '}
+                <span className='bold'>ont accès à un manuel de consignes de gestion des déchets</span>
+                {' '}
+                dans leurs centres de santé.
                 <br />
                 <br />
-                La plupart des établissements affirment avoir un ou des employés responsables de la gestion des déchets biomédicaux. Par ailleurs, certains affirment avoir détecté des cas récurrents de maladies liées à une mauvaise gestion des déchets biomédicaux et la plupart des établissements déclarent trier les déchets en fonction de leur niveau de dangerosité. Seulement environ la moitié pensent avoir une collecte appropriée des méthodes de collecte des déchets biomédicaux pour la sécurité.
+                La plupart des établissements affirment avoir un ou des employés responsables de la gestion des déchets biomédicaux. Par ailleurs, certains ont détecté des
+                {' '}
+                <span className='bold'>cas récurrents de maladies liées à une mauvaise gestion des déchets biomédicaux</span>
+                {' '}
+                tandis que la plupart de ces centres trient leurs déchets en fonction de leur niveau de dangerosité. Seulement la moitié pensent avoir une méthode appropriée de collecte des déchets biomédicaux.
               </>
             )
           : null
@@ -203,10 +284,26 @@ export const InsightText = () => {
             )
             : (
               <>
-                Bien que la moitié des mairies enquêtées disposent d&apos;un service en charge de la gestion des déchets solides, seul un cinquième dispose de matériels adéquats pour la collecte des déchets et 3 sur 10 déclarent avoir un budget dédié à la gestion des déchets solides. De nombreuses mairies interrogées revendiquent une participation à la collecte, au transport, au brûlage et à la décharge des déchets, avec un nombre limité de partenaires contribuant à ces activités.
+                Bien que la moitié des mairies enquêtées disposent d&apos;un service en charge de la gestion des déchets solides,
+                {' '}
+                <span className='bold'>seulement 20% dispose de matériels adéquats pour la collecte des déchets</span>
+                {' '}
+                et 3 sur 10 déclarent avoir un budget dédié à la gestion des déchets solides. De nombreuses mairies interrogées reconnaissent leur participation active à la collecte, au transport, au brûlage et à la décharge des déchets, avec
+                {' '}
+                <span className='bold'>un nombre limité de partenaires</span>
+                {' '}
+                contribuant à ces activités.
                 <br />
                 <br />
-                Selon les mairies enquêtées, le niveau de production de déchets des marchés publics est élevé, les ménages étant des générateurs moyens, et les entreprises, écoles, hôpitaux étant des générateurs faibles. Plus de la moitié d&apos;entre eux affirment détecter des cas récurrents de maladies liées aux déchets solides et la plupart mentionnent des problèmes environnementaux. Pourtant, les mairies perçoivent un low niveau d&apos;engagement de la population en matière de gestion des déchets solides.
+                Selon les mairies enquêtées, le niveau de production de déchets des marchés publics est élevé, les ménages étant des générateurs moyens, alors que les entreprises, écoles, hôpitaux sont des générateurs faibles. Plus de la moitié d&apos;entre eux affirment détecter des
+                {' '}
+                <span className='bold'>cas récurrents de maladies liées aux déchets solides</span>
+                {' '}
+                et la plupart mentionnent des problèmes environnementaux. Pourtant, les mairies perçoivent
+                {' '}
+                <span className='bold'>un niveau faible d&apos;engagement de la population</span>
+                {' '}
+                en matière de gestion des déchets solides.
               </>
             )
           : null
