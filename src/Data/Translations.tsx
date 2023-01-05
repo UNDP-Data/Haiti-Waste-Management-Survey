@@ -31,7 +31,7 @@ export const Translations = [
   },
   {
     en: 'Community Commitments',
-    fr: 'Engagements CSommunautaires',
+    fr: 'Engagements Communautaires',
     key: 'communityCommitments',
   },
   {
@@ -215,7 +215,7 @@ export const Translations = [
     key: 'Who do you think is responsible for solid waste management in your municipality?',
   },
   {
-    en: 'What is the main projects/activities the following actors are involved?',
+    en: 'What are the main projects/activities the following actors are involved in?',
     fr: 'Quels sont les projets/activités principaux auxquels les acteurs suivants participent ?',
     key: 'What is the main projects/activities the following actors are involved?',
   },
@@ -871,7 +871,12 @@ export const Translations = [
   },
   {
     key: 'At what level do the following types of waste meet in your municipality?',
-    en: 'At what level do the following types of waste meet in your municipality?',
+    en: 'At what level are the following types of waste produced in your municipality?',
+    fr: 'A quel niveau se situent les types de déchets suivants dans votre zone d\'intervention ?',
+  },
+  {
+    key: 'At what level are the following types of waste met in your municipality?',
+    en: 'At what level are the following types of waste met in your municipality?',
     fr: 'A quel niveau se situent les types de déchets suivants dans votre zone d\'intervention ?',
   },
   {
@@ -1196,7 +1201,7 @@ export const Translations = [
   },
   {
     key: 'At what level do the following types of waste in your area of intervention meet?',
-    en: 'At what level do the following types of waste in your area of intervention meet?',
+    en: 'At what level the following types of waste are met in your area of intervention?',
     fr: 'A quel niveau se situent les types de déchets suivants dans votre zone d\'intervention ?',
   },
   {
@@ -1261,7 +1266,7 @@ export const Translations = [
   },
   {
     key: 'Give us your assessment of the availability of resources dedicated to the management of DBMs within your H/HC',
-    en: 'Give us your assessment of the availability of resources dedicated to the management of DBMs within your H/HC',
+    en: 'Give us your assessment of the availability of resources dedicated to the management of biomedical waste within your H/HC',
     fr: 'Donnez-nous votre  évaluation de la disponibilité des ressources dédiées à la gestion des DBM au sein de votre H/CS',
   },
   {
@@ -1386,12 +1391,12 @@ export const Translations = [
   },
   {
     key: 'Have you detected recurrent cases of illnesses/symptoms related to poor management of DBMs in your municipality or department?',
-    en: 'Have you detected recurrent cases of illnesses/symptoms related to poor management of DBMs in your municipality or department?',
+    en: 'Have you detected recurrent cases of illnesses/symptoms related to poor management of biomedical waste in your municipality or department?',
     fr: 'Avez-vous détecté des cas récurrents de maladies/symptômes liés à une mauvaise gestion des DBM dans votre commune ou département ?',
   },
   {
     key: 'Containers and Other Receptacles for DBM Storage',
-    en: 'Containers and Other Receptacles for DBM Storage',
+    en: 'Containers and Other Receptacles for Biomedical Waste Storage',
     fr: 'Conteneurs et Autres Récipients pour Stockage DBM',
   },
   {
@@ -1401,7 +1406,7 @@ export const Translations = [
   },
   {
     key: 'DBM Storage Spaces',
-    en: 'DBM Storage Spaces',
+    en: 'Biomedical Waste Storage Spaces',
     fr: 'Espaces de Stockage DBM',
   },
   {
@@ -1416,12 +1421,12 @@ export const Translations = [
   },
   {
     key: 'Collection and Transport of DBMs',
-    en: 'Collection and Transport of DBMs',
+    en: 'Collection and Transport of Biomedical Waste',
     fr: 'Collecte et Transport des DBM',
   },
   {
     key: 'Specify whether the following institutions provide DBM transportation services produced by your H/HC',
-    en: 'Specify whether the following institutions provide DBM transportation services produced by your H/HC',
+    en: 'Specify whether the following institutions provide biomedical waste transportation services produced by your H/HC',
     fr: 'Précisez si les institutions suivantes fournissent des services de transport DBM produits par votre H/CS',
   },
   {
@@ -1441,7 +1446,7 @@ export const Translations = [
   },
   {
     key: 'Specify whether you use the following means to transport DBMs from your H/HC to landfill sites',
-    en: 'Specify whether you use the following means to transport DBMs from your H/HC to landfill sites',
+    en: 'Specify whether you use the following means to transport biomedical waste from your H/HC to landfill sites',
     fr: 'Précisez si vous utilisez les moyens suivants pour transporter les DBM de votre H/CS vers les décharges',
   },
   {
@@ -1456,17 +1461,17 @@ export const Translations = [
   },
   {
     key: 'Do you think the methods of collecting and transporting DBMs are safe?',
-    en: 'Do you think the methods of collecting and transporting DBMs are safe?',
+    en: 'Do you think the methods of collecting and transporting biomedical waste are safe?',
     fr: 'Pensez-vous que les méthodes de collecte et de transport des DBM sont sûres ?',
   },
   {
     key: 'Have you ever recorded any cases of injury in the last 12 months during DBM collection and transport activities?',
-    en: 'Have you ever recorded any cases of injury in the last 12 months during DBM collection and transport activities?',
+    en: 'Have you ever recorded any cases of injury in the last 12 months during biomedical waste collection and transport activities?',
     fr: 'Avez-vous déjà enregistré des cas de blessures au cours des 12 derniers mois lors des activités de collecte et de transport de DBM ?',
   },
   {
     key: 'Treatment / Elimination of DBM',
-    en: 'Treatment/Elimination of DBM',
+    en: 'Treatment/Elimination of Biomedical Waste',
     fr: 'Traitement/Élimination du DBM',
   },
   {
@@ -1476,7 +1481,7 @@ export const Translations = [
   },
   {
     key: 'Are there partnership relations between your H/HC and the following actors in relation to the management of DBMs?',
-    en: 'Are there partnership relations between your H/HC and the following actors in relation to the management of DBMs?',
+    en: 'Are there partnership relations between your H/HC and the following actors in relation to the management of biomedical waste?',
     fr: 'Existe-t-il des relations de partenariat entre votre H/CS et les acteurs suivants en lien avec la gestion des DBM ?',
   },
   {
@@ -1592,7 +1597,7 @@ export const Translations = [
   {
     key: 'Female',
     en: 'Female',
-    fr: 'Femelle',
+    fr: 'Femme',
   },
   {
     key: 'University',

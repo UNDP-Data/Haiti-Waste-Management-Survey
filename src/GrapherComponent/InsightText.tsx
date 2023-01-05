@@ -20,7 +20,7 @@ export const InsightText = () => {
                 believe to produce
                 {' '}
                 <span className='bold'>medium to low amounts of waste</span>
-                , being burning it, throwing it into an empty landfill lot, and recycling the most common ways of waste management used by the households. Less than half of the surveyed households claim to sort solid waste into organic and inorganic at home.  Most respondents attribute the
+                ; burning, throwing into an empty landfill lot, and recycling are the most common ways of waste management used by the households. Less than half of the surveyed households claim to sort solid waste into organic and inorganic at home.  Most respondents attribute the
                 {' '}
                 <span className='bold'>responsibility of solid waste management to town halls</span>
                 {' '}
@@ -154,7 +154,7 @@ export const InsightText = () => {
                 30% of the respondents allege having detected
                 {' '}
                 <span className='bold'>recurrent cases of solid-waste related diseases</span>
-                , most commonly diarrhea, skin diseases, malaria, and typhoid. Moreover, 40% believe there to be environmental problems in regard to solid waste management such as obstruction and insalubrity of road networks. Lastly, four in ten respondents believe the population to have a low engagement and awareness of solid waste management.
+                , most commonly diarrhea, skin diseases, malaria, and typhoid. Moreover, 40% believe there are environmental problems in regard to solid waste management such as obstruction and insalubrity of road networks. Lastly, 4 in 10 respondents believe the population to have a low engagement and awareness of solid waste management.
               </>
             )
             : (
@@ -254,11 +254,11 @@ export const InsightText = () => {
           ? language === 'en'
             ? (
               <>
-                Despite half of the surveyed town halls having a department in charge of solid waste management,
+                Despite half of the surveyed town halls are believed to have a department in charge of solid waste management,
                 {' '}
-                <span className='bold'>only 20% have adequate materials for waste collection</span>
+                <span className='bold'>only 20% are in possesion of adequate materials for waste collection</span>
                 {' '}
-                and 3 out of 10 declared having a dedicated budget to solid waste management. Many of the surveyed town halls claim participation in waste collection, transportation, burning, and landfill, with
+                . 3 out of 10 declared having a dedicated budget to solid waste management. Many of the surveyed town halls claim participation in waste collection, transportation, burning, and landfill, with
                 {' '}
                 <span className='bold'>limited number of partners</span>
                 {' '}
@@ -313,14 +313,14 @@ export const InsightText = () => {
                 Despite that more than 75% of the respondents surveyed admit
                 {' '}
                 <span className='bold'>town halls tolerate/recognize the landfill site</span>
-                , only 25% state that the landfill site is under the responsibility of the town hall.  Many of the surveyed dumping sites claim the
+                , only 25% state that the landfill site is under the responsibility of the town hall.  Many of the surveyed dumping sites are reported to have the
                 {' '}
-                <span className='bold'>location of the landfill site to be near inhabited areas</span>
+                <span className='bold'>location of their landfill site near inhabited areas</span>
                 {' '}
-                and households, town halls, individuals, and private companies being the highest contributors to dumping waste.
+                and households. From this angle town halls, individuals, and private companies being the highest contributors to dumping waste.
                 <br />
                 <br />
-                According to the dumping sites surveyed, 75% claim that
+                According to the dumping sites surveyed, 75% of the respondents claim that
                 {' '}
                 <span className='bold'>solid waste is dumped on the site every day</span>
                 . Many of them allege detecting
@@ -331,7 +331,7 @@ export const InsightText = () => {
                 {' '}
                 <span className='bold'>environmental problems</span>
                 {' '}
-                such as bad smell, spread of insects, unsanitary road networks, in addition to others. Yet, dumping sites perceive a low level of commitment on behalf of the population and town halls in terms of solid waste management.
+                such as bad smell, spread of insects, unsanitary road networks. Yet, dumping sites perceive a low level of commitment on behalf of the population and town halls in terms of solid waste management.
               </>
             ) : (
               <>

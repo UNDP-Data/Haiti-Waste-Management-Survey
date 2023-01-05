@@ -424,7 +424,7 @@ export const TownHallViz = (props: Props) => {
         {Translations[Translations.findIndex((el) => el.key === 'Type of Wastes')][language]}
       </h3>
       <div className='margin-bottom-11'>
-        {Translations[Translations.findIndex((el) => el.key === 'At what level do the following types of waste meet in your municipality?')][language]}
+        {Translations[Translations.findIndex((el) => el.key === 'At what level are the following types of waste met in your municipality?')][language]}
         <StackedBarGraph
           data={[
             [(getValue(Q16_1.Raised) * 100) / data.length, (getValue(Q16_1.Medium) * 100) / data.length, (getValue(Q16_1.Weak) * 100) / data.length, (getValue(Q16_1.undefined) * 100) / data.length],
