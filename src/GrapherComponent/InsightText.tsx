@@ -51,7 +51,7 @@ export const InsightText = () => {
                 <span className='bold'>problèmes environnementaux liés à la gestion des déchets solides</span>
                 . Par conséquent, la plupart des ménages perçoivent la population générale comme ayant un
                 {' '}
-                <span className='bold'>niveau de sensibilisation faible et un comportement qui ne facilite pas une bonne gestion des déchets solides</span>
+                <span className='bold'>niveau de sensibilisation faible et un comportement qui ne facilite pas une bonne gestion des déchets solide</span>
                 .
               </>
             )
@@ -62,7 +62,7 @@ export const InsightText = () => {
           ? language === 'en'
             ? (
               <>
-                <span className='bold'>Only 33.33%</span>
+                <span className='bold'>Only 34.5%</span>
                 {' '}
                 of the surveyed enterprises/Community Based Organizations (CBOs)
                 {' '}
@@ -94,15 +94,15 @@ export const InsightText = () => {
             )
             : (
               <>
-                <span className='bold'>33.33%</span>
+                <span className='bold'>34.5%</span>
                 {' '}
                 des entreprises/organisations communautaires (OCB) interrogées
                 {' '}
                 <span className='bold'>affirment disposer de ressources suffisamment pour la collecte des déchets solides</span>
                 {' '}
-                , telles que les machines comme les camions d’ordures et à benne basculante. Les sources de financement les plus fréquemment utilisées par les entreprises sont les fonds/subventions, les dons, les crédits, entre autres. Alors que la plupart des entreprises/OCB offrent des services de collecte des déchets et de vente de déchets solides,
+                , telles que les machines comme les camions d’ordures et à benne basculante entre autres. Les sources de financement les plus fréquemment utilisées par les entreprises sont les fonds/subventions, les dons, les crédits, entre autres. Alors que la plupart des entreprises/OCB offrent des services de collecte des déchets et de vente de déchets solides,
                 {' '}
-                <span className='bold'>seulement 20%</span>
+                <span className='bold'>seulement un cinquième</span>
                 {' '}
                 de ces entreprises interrogées
                 {' '}
@@ -110,13 +110,13 @@ export const InsightText = () => {
                 . De plus, seulement la moitié des entreprises mentionnent l&apos;implication avec d&apos;autres parties prenants - telles que les mairies, les entreprises privées et les organisations communautaires - dans la gestion des déchets solides.
                 <br />
                 <br />
-                Les entreprises perçoivent les ménages et les marchés privés comme des producteurs des niveaux plus élevés de déchets solides tandis que les entreprises, les écoles et les hôpitaux en sont considérés comme des producteurs de quantités faibles. Par ailleurs, la moitié des répondants confirment la participation d&apos;autres acteurs de la gestion des déchets, comme les mairies, les entreprises privées et les ONG. En outre, plus des deux tiers des entreprises interrogées détectent des
+                Les entreprises perçoivent les ménages et les marchés publics comme des producteurs des niveaux plus élevés de déchets solides tandis que les entreprises, les écoles et les hôpitaux en sont considérés comme des producteurs de quantités faibles. Par ailleurs, la moitié des répondants confirment la participation d&apos;autres acteurs de la gestion des déchets, comme les mairies, les entreprises privées et les ONG. En outre, plus des deux tiers des entreprises interrogées détectent des
                 {' '}
                 <span className='bold'>cas récurrents de maladies liées aux déchets solides</span>
                 {' '}
                 et considèrent que le
                 {' '}
-                <span className='bold'>niveau d&apos;engagement et de sensibilisation de la populationn</span>
+                <span className='bold'>niveau d&apos;engagement et de sensibilisation de la population</span>
                 {' '}
                 par rapport à la gestion des déchets solides
                 {' '}
@@ -134,7 +134,7 @@ export const InsightText = () => {
               <>
                 The vast majority of respondents declare that funding for waste-management related projects comes from international donors, national donors, and notables of the area.
                 {' '}
-                <span className='bold'>33.33%</span>
+                <span className='bold'>37.5%</span>
                 {' '}
                 of the projects had
                 {' '}
@@ -151,17 +151,17 @@ export const InsightText = () => {
                 .
                 <br />
                 <br />
-                30% of the respondents allege having detected
+                31.3% of the respondents allege having detected
                 {' '}
                 <span className='bold'>recurrent cases of solid-waste related diseases</span>
-                , most commonly diarrhea, skin diseases, malaria, and typhoid. Moreover, 40% believe there are environmental problems in regard to solid waste management such as obstruction and insalubrity of road networks. Lastly, 4 in 10 respondents believe the population to have a low engagement and awareness of solid waste management.
+                , most commonly diarrhea, skin diseases, malaria, and typhoid. Moreover, 40.1% believe there are environmental problems in regard to solid waste management such as obstruction and insalubrity of road networks. Lastly, 4 in 10 respondents believe the population to have a low engagement and awareness of solid waste management.
               </>
             )
             : (
               <>
-                La grande majorité des répondants déclarent que le financement des projets liés à la gestion des déchets provient de donateurs internationaux, de donateurs nationaux et de notables de la région.
+                La grande majorité des répondants déclarent que le financement des projets liés à la gestion des déchets provient de donateurs internationaux, donateurs nationaux et notables de la région.
                 {' '}
-                <span className='bold'>33.33%</span>
+                <span className='bold'>37.5%</span>
                 {' '}
                 des projets avaient des
                 {' '}
@@ -174,14 +174,18 @@ export const InsightText = () => {
                 <span className='bold'>PNUD est très apprécié par les chefs de projet</span>
                 ; toutefois, la qualité des partenariats avec les entreprises privées/organismes communautaires et les mairies est respectivement perçue comme moyenne et faible par les porteurs de projet. En ce qui concerne les types de déchets,
                 {' '}
-                <span className='bold'>le plastique est le plus produit suivi du papier/carton et des déchets agricoles</span>
+                <span className='bold'>le plastique et le papier/carton sont considérés comme ayant une production élevée</span>
+                {' '}
+                tandis qu&apos;un
+                {' '}
+                <span className='bold'>niveau moyen pour les déchets agricoles</span>
                 .
                 <br />
                 <br />
-                30% des répondants affirment avoir détecté des
+                31.3% des répondants affirment avoir détecté des
                 {' '}
                 <span className='bold'>cas récurrents de maladies liées aux déchets solides</span>
-                , le plus souvent la diarrhée, les maladies de la peau, le paludisme et la typhoïde. De plus, 40% pensent qu&apos;il existe des problèmes environnementaux liés à la gestion des déchets solides tels que l&apos;obstruction et l&apos;insalubrité des réseaux routiers. Enfin, quatre répondants sur dix pensent que la population a un faible engagement et une faible sensibilisation à la gestion des déchets solides.
+                , le plus souvent la diarrhée, les maladies de la peau, le paludisme et la typhoïde. De plus, 40.1% pensent qu&apos;il existe des problèmes environnementaux liés à la gestion des déchets solides tels que l&apos;obstruction et l&apos;insalubrité des réseaux routiers. Enfin, 4 répondants sur 10 pensent que la population a un niveau d’engagement et de sensibilisation faible par rapport à la gestion des déchets solides.
               </>
             )
           : null
@@ -191,7 +195,7 @@ export const InsightText = () => {
           ? language === 'en'
             ? (
               <>
-                <span className='bold'>33.33%</span>
+                <span className='bold'>35.7%</span>
                 {' '}
                 of health care establishments state having a
                 {' '}
@@ -220,16 +224,16 @@ export const InsightText = () => {
             )
             : (
               <>
-                <span className='bold'>33.33%</span>
+                <span className='bold'>35.7%</span>
                 {' '}
-                des établissements de santé déclarent disposer d&apos;un
+                des établissements de santé disposent d&apos;un
                 {' '}
                 <span className='bold'>budget dédié à la gestion des déchets biomédicaux</span>
-                . 75% du personnel des établissements de santé déclarent avoir suivi des formations sur la gestion des déchets biomédicaux au cours de leur parcours scolaire ou professionnel.
+                . 75% du personnel des établissements ont suivi des formations sur la gestion des déchets biomédicaux au cours de leur parcours académique ou professionnel.
                 {' '}
                 <span className='bold'>Bien que la quasi-totalité du personnel</span>
                 {' '}
-                déclare que les déchets biomédicaux sont importants et qu&apos;ils se disent conscients des risques associés à la manipulation des déchets biomédicaux,
+                déclare que les déchets biomédicaux sont importants et qu&apos;ils se disent conscients des risques associés à la manipulation des déchets biomédicaux
                 {' '}
                 <span className='bold'>très peu</span>
                 {' '}
@@ -240,11 +244,11 @@ export const InsightText = () => {
                 dans leurs centres de santé.
                 <br />
                 <br />
-                La plupart des établissements affirment avoir un ou des employés responsables de la gestion des déchets biomédicaux. Par ailleurs, certains ont détecté des
+                La plupart des établissements affirment avoir un/des employé(s) responsable(s) de la gestion des déchets biomédicaux. Par ailleurs, certains ont détecté des
                 {' '}
                 <span className='bold'>cas récurrents de maladies liées à une mauvaise gestion des déchets biomédicaux</span>
                 {' '}
-                tandis que la plupart de ces centres trient leurs déchets en fonction de leur niveau de dangerosité. Seulement la moitié pensent avoir une méthode appropriée de collecte des déchets biomédicaux.
+                tandis que la plupart de ces centres trient leurs déchets en fonction de leur niveau de dangerosité. Pour terminer, seulement la moitié pensent avoir une méthode appropriée de collecte des déchets biomédicaux.
               </>
             )
           : null
@@ -256,7 +260,7 @@ export const InsightText = () => {
               <>
                 Despite half of the surveyed town halls are believed to have a department in charge of solid waste management,
                 {' '}
-                <span className='bold'>only 20% are in possesion of adequate materials for waste collection</span>
+                <span className='bold'>only 21.3% are in possesion of adequate materials for waste collection</span>
                 {' '}
                 . 3 out of 10 declared having a dedicated budget to solid waste management. Many of the surveyed town halls claim participation in waste collection, transportation, burning, and landfill, with
                 {' '}
@@ -281,13 +285,13 @@ export const InsightText = () => {
             )
             : (
               <>
-                Bien que la moitié des mairies enquêtées disposent d&apos;un service en charge de la gestion des déchets solides,
+                Bien que trois quarts des mairies enquêtées disposent d&apos;un service en charge de la gestion des déchets solides,
                 {' '}
-                <span className='bold'>seulement 20% dispose de matériels adéquats pour la collecte des déchets</span>
+                <span className='bold'>seulement 21.3% dispose de matériels adéquats pour la collecte des déchets</span>
                 {' '}
-                et 3 sur 10 déclarent avoir un budget dédié à la gestion des déchets solides. De nombreuses mairies interrogées reconnaissent leur participation active à la collecte, au transport, au brûlage et à la décharge des déchets, avec
+                . 3 sur 10 déclarent avoir un budget dédié à la gestion des déchets solides. De nombreuses mairies interrogées reconnaissent leur participation active à la collecte, au transport, au brûlage et à la décharge des déchets, avec un
                 {' '}
-                <span className='bold'>un nombre limité de partenaires</span>
+                <span className='bold'>nombre limité de partenaires</span>
                 {' '}
                 contribuant à ces activités.
                 <br />
@@ -313,14 +317,14 @@ export const InsightText = () => {
                 Despite that more than 75% of the respondents surveyed admit
                 {' '}
                 <span className='bold'>town halls tolerate/recognize the landfill site</span>
-                , only 25% state that the landfill site is under the responsibility of the town hall.  Many of the surveyed dumping sites are reported to have the
+                , only 49% state that the landfill site is under the responsibility of the town hall.  Many of the surveyed dumping sites are reported to have the
                 {' '}
                 <span className='bold'>location of their landfill site near inhabited areas</span>
                 {' '}
                 and households. From this angle town halls, individuals, and private companies being the highest contributors to dumping waste.
                 <br />
                 <br />
-                According to the dumping sites surveyed, 75% of the respondents claim that
+                According to the dumping sites surveyed, 78.3% of the respondents claim that
                 {' '}
                 <span className='bold'>solid waste is dumped on the site every day</span>
                 . Many of them allege detecting
@@ -338,14 +342,14 @@ export const InsightText = () => {
                 Bien que plus des 75% des répondants interrogés admettent que
                 {' '}
                 <span className='bold'>les mairies tolèrent/reconnaissent le site décharge</span>
-                , seulement 25% déclarent que le site décharge est sous la responsabilité de la mairie. De nombreux sites de décharge étudiés affirment que
+                , seulement 49% déclarent que le site décharge est sous la responsabilité de la mairie. De nombreux sites de décharge étudiés affirment que
                 {' '}
                 <span className='bold'>l&apos;emplacement du site d&apos;enfouissement se trouve à proximité de zones habitées</span>
                 {' '}
                 et que les ménages, les mairies, les particuliers et les entreprises privées sont les principaux contributeurs au déversement de déchets.
                 <br />
                 <br />
-                Selon les dépotoirs enquêtés, 75% affirment que des
+                Selon les dépotoirs enquêtés, 78.3% affirment que des
                 {' '}
                 <span className='bold'>déchets solides sont déversés quotidiennement sur le site</span>
                 . Beaucoup d&apos;entre eux affirment avoir détecté des
@@ -354,7 +358,7 @@ export const InsightText = () => {
                 {' '}
                 telles que les maladies de la peau, le paludisme, la typhoïde, la diarrhée et les infections vaginales, entre autres. De plus, beaucoup mentionnent des
                 {' '}
-                <span className='bold'>problèmes environnementauxs</span>
+                <span className='bold'>problèmes environnementaux</span>
                 {' '}
                 tels que les mauvaises odeurs, la propagation des insectes, les réseaux routiers insalubres, en plus d&apos;autres. Pourtant, les décharges perçoivent un faible niveau d&apos;engagement de la part de la population et des mairies en matière de gestion des déchets solides.
               </>
