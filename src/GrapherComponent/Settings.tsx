@@ -6,7 +6,6 @@ import Context from '../Context/Context';
 import {
   DEPARTMENTS, EDUCATION, FUNCTIONS, GENDERS,
 } from '../Constants';
-import '../style/selectStyle.css';
 import { Translations } from '../Data/Translations';
 
 interface DropdownUnitProps {

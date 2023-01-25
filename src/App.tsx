@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import { useState, useEffect, useReducer } from 'react';
-import './style/style.css';
 import styled from 'styled-components';
 import { json } from 'd3-request';
 import { queue } from 'd3-queue';

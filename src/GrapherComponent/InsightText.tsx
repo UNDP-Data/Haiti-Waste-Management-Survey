@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { CtxDataType } from '../Types';
 import Context from '../Context/Context';
-import '../style/selectStyle.css';
 
 export const InsightText = () => {
   const {
